@@ -6,7 +6,7 @@ import type { SxProps } from '@mui/system';
 import { ArrowUpCircleFill } from 'gthibaud-icons-react';
 import type { ElementType, FC } from 'react';
 import toast from 'react-hot-toast';
-import { IconButton } from '../Button/Icon';
+import { IconButton } from '../_Button/Icon';
 
 interface TextFieldProps extends Omit<FilledTextFieldProps, 'variant'> {
     InputProps?: Record<string, any>;

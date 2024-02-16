@@ -5,9 +5,9 @@ import type { SxProps } from '@mui/system';
 import { animated, useSpring } from '@react-spring/web';
 import { CrossCircleFill, Magnifier } from 'gthibaud-icons-react';
 import { RefObject, type FC } from 'react';
-import { Button } from '../Button';
-import { IconButtonRaw } from '../Button/IconRaw';
 import { HorizontalContainer } from '../Container/Horizontal';
+import { Button } from '../_Button';
+import { IconButtonRaw } from '../_Button/IconRaw';
 
 export interface SearchFieldProps extends Omit<FilledTextFieldProps, 'variant'> {
     InputProps?: Record<string, any>;

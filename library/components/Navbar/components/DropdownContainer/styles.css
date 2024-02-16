@@ -1,0 +1,10 @@
+.dropdown-container {
+    border-radius: 12px;
+    box-shadow: 0 0 24px 0 var(--colors-shadow);
+    background-color: var(--colors-background-translucent);
+    backdrop-filter: blur(12px);
+    border: 1.4px solid var(--colors-border);
+    list-style: none;
+    padding: 4px 4px;
+    min-width: 180px;
+}

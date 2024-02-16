@@ -1,9 +1,32 @@
 :root {
+    font-feature-settings:
+        'ss01',
+        'cv08',
+        'cv05',
+        'calt',
+        'case',
+        'tnum' on;
     --max-width: 1100px;
     --border-radius: 12px;
     --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
         'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
         'Courier New', monospace;
+
+    --colors-primary: #0e3a2f;
+    --colors-primary-dark: #00271d;
+    --colors-primary-light: #419468;
+    --colors-secondary: #78faae;
+
+    --colors-background: #f9f9f9;
+    --colors-background-translucent: #ffffffdf;
+    --color-background-card: #ffffffee;
+    --colors-border: #dcdcdcaa;
+    --colors-text: #13171a;
+    --colors-text-primary: var(--colors-primary-light);
+    --colors-text-subtle: #3f3f41;
+    --colors-text-light: #66666e;
+    --colors-shadow: rgba(0, 0, 0, 0.16);
+    --colors-shadow-light: rgba(0, 0, 0, 0.06);
 
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -42,6 +65,15 @@
         --foreground-rgb: 255, 255, 255;
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
+
+        --colors-background: #090909;
+        --colors-background-translucent: #171717d7;
+        --colors-border: #646464aa;
+        --colors-text: #e9eaeb;
+        --colors-text-subtle: #b4b5b6;
+        --colors-text-light: #97979f;
+        --colors-shadow: rgba(255, 255, 255, 0.2);
+        --colors-shadow-light: rgba(255, 255, 255, 0.1);
 
         --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
         --secondary-glow: linear-gradient(
@@ -83,7 +115,8 @@ body {
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
+    color: var(--colors-text);
+    background-color: var(--colors-background);
     /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) */
     /* rgb(var(--background-start-rgb)); */
 }
@@ -99,11 +132,29 @@ a {
     }
 }
 
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-optical-sizing: auto;
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.5rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
 main {
-    margin-left: 212px;
-    padding: 24px;
-    width: calc(100% - 212px);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    max-width: 1024px;
+    margin: auto;
+    padding: 100px 12px 0px 12px;
 }

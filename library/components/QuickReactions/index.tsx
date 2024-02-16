@@ -1,11 +1,11 @@
 import { useTheme } from '@emotion/react';
 import { FC } from 'react';
 import { isUnderBreakpoint } from '../../hooks/useParentWidth';
-import { EmojiButton } from '../Button/Emoji';
 import { HorizontalContainer } from '../Container/Horizontal';
 import { Surface } from '../Surface';
 import { Tooltip } from '../Tooltip';
 import { Typography } from '../Typography';
+import { EmojiButton } from '../_Button/Emoji';
 
 export type QuickReaction = {
     emoji: string;

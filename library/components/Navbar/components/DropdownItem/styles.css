@@ -1,0 +1,23 @@
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: block;
+    transition: all 120ms cubic-bezier(0.01, 1.22, 0.94, 0.93);
+    font-weight: 500;
+    color: var(--colors-text-subtle);
+}
+
+.dropdown-item:hover {
+    color: var(--colors-text-primary);
+    transform: scale(1.02);
+}
+
+.dropdown-item:active {
+    transform: scale(0.86);
+    transition: all 800ms cubic-bezier(0.01, 1.22, 0.94, 0.93);
+}
+
+.dropdown-item-active {
+    color: var(--colors-text-primary);
+    transform: scale(1.02);
+}

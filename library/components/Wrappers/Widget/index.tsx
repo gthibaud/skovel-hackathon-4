@@ -1,8 +1,8 @@
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
 import { FC } from 'react';
-import { Card } from '../../Card/Card';
 import { VerticalContainer } from '../../Container/Vertical';
+import { Card } from '../../_Card/Card';
 import { WidgetWrapperProps } from './props';
 
 export const WidgetWrapper: FC<WidgetWrapperProps> = (props) => {

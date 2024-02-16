@@ -3,8 +3,8 @@ import { Box, Tooltip as TooltipMUI } from '@mui/material';
 import { ThumbUpFill } from 'gthibaud-icons-react';
 import { CSSProperties, FC } from 'react';
 import { isThemeColor } from '../../../src/theme/themeBase';
-import { Button } from '../Button';
 import { Typography } from '../Typography';
+import { Button } from '../_Button';
 
 export interface TooltipProps {
     title: string | JSX.Element | null;

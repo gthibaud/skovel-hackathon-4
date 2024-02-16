@@ -15,6 +15,7 @@
         "@mui/lab": "^5.0.0-alpha.135",
         "@mui/material": "^5.13.7",
         "@mui/x-date-pickers": "^6.9.1",
+        "@nextui-org/react": "^2.2.9",
         "@owlgrid-dev/types": "^0.0.45",
         "@react-spring/web": "^9.7.3",
         "@stripe/react-stripe-js": "^2.4.0",
@@ -24,6 +25,7 @@
         "@tanstack/react-virtual": "^3.0.0-beta.61",
         "@turf/turf": "^6.5.0",
         "@types/supercluster": "^7.1.0",
+        "add": "^2.0.6",
         "audio-recorder-polyfill": "^0.4.1",
         "autosuggest-highlight": "^3.3.4",
         "axios": "^1.4.0",
@@ -33,6 +35,7 @@
         "date-fns": "^2.30.0",
         "fast-memoize": "^2.5.2",
         "firebase": "^9.23.0",
+        "framer-motion": "^11.0.5",
         "fs-extra": "^11.1.1",
         "geolib": "^3.3.4",
         "gthibaud-icons-react": "^0.0.83",
@@ -73,8 +76,10 @@
         "stripe": "^14.14.0",
         "supercluster": "^8.0.1",
         "swiper": "^9.4.1",
+        "tailwindcss": "^3.4.1",
         "use-supercluster": "^0.4.0",
-        "vanilla-tilt": "^1.8.0"
+        "vanilla-tilt": "^1.8.0",
+        "yarn": "^1.22.21"
     },
     "prettier": "@owlgrid-dev/prettier-config",
     "devDependencies": {

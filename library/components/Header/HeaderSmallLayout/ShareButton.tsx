@@ -1,7 +1,7 @@
 import { Share } from 'gthibaud-icons-react';
 import { FC } from 'react';
 import { share } from '../../../utils/share';
-import { Button } from '../../Button';
+import { Button } from '../../_Button';
 import { usePageContext } from '../context';
 
 export const HeaderShareButton: FC = () => {

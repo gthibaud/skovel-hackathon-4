@@ -2,7 +2,7 @@ import { useTheme } from '@emotion/react';
 import { ChevronLeft } from 'gthibaud-icons-react';
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
-import { Button } from '../../Button';
+import { Button } from '../../_Button';
 import { usePageContext } from '../context';
 
 export const HeaderBackButton: FC = () => {

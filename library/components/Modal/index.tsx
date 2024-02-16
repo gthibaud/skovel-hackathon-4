@@ -1,11 +1,11 @@
 import { Modal as ModalMUI } from '@mui/material';
 import { CloseColor } from 'gthibaud-icons-react';
 import { FC, ReactElement } from 'react';
-import { generateHeight, HeightProps } from '../../props/height';
-import { IconButtonRaw } from '../Button/IconRaw';
+import { HeightProps, generateHeight } from '../../props/height';
 import { HorizontalContainer } from '../Container/Horizontal';
 import { Surface } from '../Surface';
 import { Typography } from '../Typography';
+import { IconButtonRaw } from '../_Button/IconRaw';
 
 interface ModalProps extends HeightProps {
     open: boolean;

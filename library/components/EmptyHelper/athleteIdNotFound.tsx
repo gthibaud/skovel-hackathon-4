@@ -4,10 +4,10 @@ import { t } from 'i18next';
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { generateUri } from '../../../src/routes/uriMapping';
-import { Button } from '../Button';
 import { VerticalContainer } from '../Container/Vertical';
 import { Typography } from '../Typography';
 import { PageWrapper } from '../Wrappers/Page';
+import { Button } from '../_Button';
 
 export const AthleteNotFoundHelper: FC = () => {
     const theme = useTheme();

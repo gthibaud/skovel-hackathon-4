@@ -2,8 +2,8 @@ import { Box } from '@mui/material';
 import { ThumbUpFill } from 'gthibaud-icons-react';
 import { t } from 'i18next';
 import { FC } from 'react';
-import { Button } from '../Button';
 import { Typography } from '../Typography';
+import { Button } from '../_Button';
 
 interface NotAvailableMessageProps {
     message?: string;

@@ -4,10 +4,10 @@ import { FC } from 'react';
 import { auth } from '../../../../src/api/firebase';
 import { generateGravatarUrl } from '../../../api/gravatar';
 import { Avatar } from '../../Avatar';
-import { IconButton } from '../../Button/Icon';
 import { HorizontalContainer } from '../../Container/Horizontal';
 import { VerticalContainer } from '../../Container/Vertical';
 import { Typography } from '../../Typography';
+import { IconButton } from '../../_Button/Icon';
 
 interface AdminPageWrapperProps {
     children: string | JSX.Element | JSX.Element[];

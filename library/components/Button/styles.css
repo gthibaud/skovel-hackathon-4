@@ -1,0 +1,34 @@
+.button {
+    height: 40px;
+    font-family: inherit;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 50px;
+    background-color: var(--colors-secondary);
+    color: var(--colors-primary);
+    font-weight: 590;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+        color: var(--colors-secondary);
+        background-color: var(--colors-primary);
+    }
+}
+
+.button-inverted {
+    background-color: var(--colors-primary);
+    color: var(--colors-secondary);
+
+    &:hover {
+        color: var(--colors-primary);
+        background-color: var(--colors-secondary);
+    }
+}
+
+.button-size-large {
+    text-transform: uppercase;
+    padding: 12px 24px;
+    height: auto;
+}

@@ -4,9 +4,9 @@ import { t } from 'i18next';
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { generateUri } from '../../../src/routes/uriMapping';
-import { Button } from '../Button';
 import { VerticalContainer } from '../Container/Vertical';
 import { Typography } from '../Typography';
+import { Button } from '../_Button';
 
 export const EventNotFoundHelper: FC = () => {
     const theme = useTheme();

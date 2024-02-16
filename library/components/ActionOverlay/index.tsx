@@ -4,11 +4,11 @@ import { FC } from 'react';
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import 'react-spring-bottom-sheet/dist/style.css';
 import { isUnderBreakpoint } from '../../hooks/useParentWidth';
-import { IconButton } from '../Button/Icon';
 import { HorizontalContainer } from '../Container/Horizontal';
 import { VerticalContainer } from '../Container/Vertical';
 import { Modal } from '../Modal';
 import { Typography } from '../Typography';
+import { IconButton } from '../_Button/Icon';
 import './react-spring-bottom-sheet.css';
 
 interface ActionOverlayProps {
