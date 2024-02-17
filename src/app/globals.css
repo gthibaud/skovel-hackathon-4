@@ -67,6 +67,7 @@
         --background-end-rgb: 0, 0, 0;
 
         --colors-background: #090909;
+        --colors-background-card: #090909;
         --colors-background-translucent: #171717d7;
         --colors-border: #646464aa;
         --colors-text: #e9eaeb;
@@ -116,7 +117,7 @@ body {
 
 body {
     color: var(--colors-text);
-    background-color: var(--colors-background);
+    background-color: var(--colors-primary);
     /* background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) */
     /* rgb(var(--background-start-rgb)); */
 }
@@ -157,4 +158,8 @@ main {
     max-width: 1024px;
     margin: auto;
     padding: 100px 12px 0px 12px;
+}
+
+.background-color-mask {
+    background-color: var(--colors-background);
 }

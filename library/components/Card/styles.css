@@ -1,26 +1,36 @@
 .card-container {
-    background-color: white;
+    background-color: var(--colors-background-card);
     backdrop-filter: blur(24px);
     border-radius: 12px;
     box-shadow: 0 0 24px 0 var(--colors-shadow-light);
-    padding: 24px 22px;
-    border: 1px solid rgb(227, 227, 227);
+    padding: 24px 32px;
+    border: 1px solid var(--colors-border);
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     transition: all 200ms;
+    height: auto;
+    align-self: stretch;
 
     &:hover {
         box-shadow: 0 0 24px 0 var(--colors-shadow);
     }
 }
 
-.card-container-grid {
+.card-content-grid {
     display: flex;
     flex-direction: row;
     gap: 12px;
     flex-wrap: wrap;
+}
+
+.card-content-centered {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-header {
@@ -31,6 +41,7 @@
     .card-title {
         h3 {
             font-size: 1.4rem;
+            font-weight: 599;
         }
     }
 
@@ -47,6 +58,8 @@
             &:hover {
                 color: var(--colors-text-primary);
                 fill: var(--colors-text-primary);
+                transform: scale(1.02);
+                transform-origin: left;
             }
         }
     }

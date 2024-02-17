@@ -1,0 +1,22 @@
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    .title {
+        font-weight: 500;
+        color: var(--colors-text-light);
+        text-align: center;
+    }
+
+    .countdown {
+        font-size: 1.8rem;
+        font-weight: 599;
+        color: var(--colors-primary-light);
+    }
+
+    .date {
+        color: var(--colors-text-light);
+    }
+}

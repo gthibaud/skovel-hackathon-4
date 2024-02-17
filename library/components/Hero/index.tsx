@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import './styles.css';
 
-interface BannerPictureProps {
+interface HeroProps {
     imageSrc: string;
     imageAlt: string;
     foregroundElement: JSX.Element;
 }
 
-export const BannerPicture: FC<BannerPictureProps> = (props) => {
+export const Hero: FC<HeroProps> = (props) => {
     const { imageSrc, foregroundElement } = props;
 
     return (

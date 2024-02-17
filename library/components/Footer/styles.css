@@ -1,0 +1,24 @@
+footer {
+    padding: 24px 32px;
+    background-color: var(--colors-primary);
+    margin-top: 32px;
+
+    .footer-content {
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        color: white;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-left {
+        flex-grow: 1;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+}

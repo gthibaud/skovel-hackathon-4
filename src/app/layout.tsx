@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import { Footer } from '../../library/components/Footer';
 import { Navbar } from '../../library/components/Navbar';
 import './globals.css';
 
@@ -41,14 +42,17 @@ export default function RootLayout({
             {/* <ThemeProviderMUI theme={muiTheme}> */}
             {/* <ThemeProvider theme={mergeObjects(themeBase, currentTheme)}> */}
             <body>
-                <Navbar />
-                {children}
-                <script
-                    type="text/javascript"
-                    src="vanilla-tilt.js"
-                    async
-                    defer
-                ></script>
+                <div className="background-color-mask">
+                    <Navbar />
+                    {children}
+                    <Footer />
+                    <script
+                        type="text/javascript"
+                        src="vanilla-tilt.js"
+                        async
+                        defer
+                    ></script>
+                </div>
             </body>
             {/* </ThemeProvider> */}
             {/* </ThemeProviderMUI> */}
