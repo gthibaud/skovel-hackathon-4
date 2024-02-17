@@ -8,7 +8,7 @@ export const Footer = () => {
                 <div className="footer-left">© CapyRun – {new Date().getFullYear()}</div>
                 <div className="footer-right">
                     <a
-                        href="mailto:gregoire@creastel.com"
+                        href="mailto:hello@skovel.com"
                         className="hover:underline"
                     >
                         Contact
@@ -20,11 +20,11 @@ export const Footer = () => {
                         Terms of Service
                     </Link>
                     <a
-                        href="https://creastel.com"
+                        href="https://skovel.com"
                         target="_blank"
                         className="hover:underline"
                     >
-                        Creastel
+                        Skovel
                     </a>
                 </div>
             </div>

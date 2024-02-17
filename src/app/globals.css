@@ -32,27 +32,23 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 
-    --primary-glow: conic-gradient(
-        from 180deg at 50% 50%,
-        #16abff33 0deg,
-        #0885ff33 55deg,
-        #54d6ff33 120deg,
-        #0071ff33 160deg,
-        transparent 360deg
-    );
+    --primary-glow: conic-gradient(from 180deg at 50% 50%,
+            #16abff33 0deg,
+            #0885ff33 55deg,
+            #54d6ff33 120deg,
+            #0071ff33 160deg,
+            transparent 360deg);
     --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
     --tile-start-rgb: 239, 245, 249;
     --tile-end-rgb: 228, 232, 233;
-    --tile-border: conic-gradient(
-        #00000080,
-        #00000040,
-        #00000030,
-        #00000020,
-        #00000010,
-        #00000010,
-        #00000080
-    );
+    --tile-border: conic-gradient(#00000080,
+            #00000040,
+            #00000030,
+            #00000020,
+            #00000010,
+            #00000010,
+            #00000080);
 
     --callout-rgb: 238, 240, 241;
     --callout-border-rgb: 172, 175, 176;
@@ -66,35 +62,34 @@
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
 
+        --colors-primary-light: #78faae;
+        --colors-secondary: #78faae;
+
         --colors-background: #090909;
         --colors-background-card: #090909;
         --colors-background-translucent: #171717d7;
         --colors-border: #646464aa;
-        --colors-text: #e9eaeb;
-        --colors-text-subtle: #b4b5b6;
-        --colors-text-light: #97979f;
-        --colors-shadow: rgba(255, 255, 255, 0.2);
-        --colors-shadow-light: rgba(255, 255, 255, 0.1);
+        --colors-text: #d8dadb;
+        --colors-text-subtle: #c7cacb;
+        --colors-text-light: #a1a1a6;
+        --colors-shadow: rgba(255, 255, 255, 0.1);
+        --colors-shadow-light: rgba(255, 255, 255, 0.05);
 
         --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-        --secondary-glow: linear-gradient(
-            to bottom right,
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0.3)
-        );
+        --secondary-glow: linear-gradient(to bottom right,
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0.3));
 
         --tile-start-rgb: 2, 13, 46;
         --tile-end-rgb: 2, 5, 19;
-        --tile-border: conic-gradient(
-            #ffffff80,
-            #ffffff40,
-            #ffffff30,
-            #ffffff20,
-            #ffffff10,
-            #ffffff10,
-            #ffffff80
-        );
+        --tile-border: conic-gradient(#ffffff80,
+                #ffffff40,
+                #ffffff30,
+                #ffffff20,
+                #ffffff10,
+                #ffffff10,
+                #ffffff80);
 
         --callout-rgb: 20, 20, 20;
         --callout-border-rgb: 108, 108, 108;
@@ -139,18 +134,6 @@ a {
     font-optical-sizing: auto;
 }
 
-h2 {
-    margin-bottom: 8px;
-}
-
-p {
-    line-height: 1.5rem;
-
-    &:not(:last-child) {
-        margin-bottom: 2rem;
-    }
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -158,6 +141,7 @@ main {
     max-width: 1024px;
     margin: auto;
     padding: 100px 12px 0px 12px;
+    color: var(--colors-text);
 }
 
 .background-color-mask {

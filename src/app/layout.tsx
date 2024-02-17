@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { Footer } from '../../library/components/Footer';
 import { Navbar } from '../../library/components/Navbar';
+import { menu } from '../data/menu';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -43,7 +44,7 @@ export default function RootLayout({
             {/* <ThemeProvider theme={mergeObjects(themeBase, currentTheme)}> */}
             <body>
                 <div className="background-color-mask">
-                    <Navbar />
+                    <Navbar menuItems={menu} />
                     {children}
                     <Footer />
                     <script

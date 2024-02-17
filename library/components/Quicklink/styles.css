@@ -1,0 +1,40 @@
+.quicklinks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+
+    .quicklink {
+        background-color: var(--colors-background-card);
+        backdrop-filter: blur(24px);
+        border-radius: 16px;
+        box-shadow: 0 0 24px 0 var(--colors-shadow-light);
+        padding: 24px 24px;
+        border: 1px solid var(--colors-border);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        transition: all 200ms;
+        height: auto;
+
+        &:hover {
+            box-shadow: 0 0 24px 0 var(--colors-shadow);
+            transform: scale(0.98);
+        }
+
+        &:active {
+            transform: scale(0.96);
+        }
+
+        .icon {
+            margin: 0;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 12px 0px;
+            margin: 0;
+        }
+    }
+}

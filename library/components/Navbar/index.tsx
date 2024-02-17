@@ -1,15 +1,19 @@
 'use client';
 
+import { MenuItem } from '@/data/menu';
 import { Backdrop } from '@mui/material';
-import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { ChevronDown } from '../../icons/chevron-down';
 import { Button } from '../Button';
 import { NavbarItem } from './components/NavbarItem/index';
 import './styles.css';
 
-export const Navbar = () => {
-    const router = useRouter();
+interface NavbarProps {
+    menuItems: MenuItem[];
+}
+
+export const Navbar: FC<NavbarProps> = (props) => {
+    const { menuItems } = props; // TODO use menuItems
 
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
@@ -48,10 +52,10 @@ export const Navbar = () => {
                     onMouseOver={() => setIsFocused(true)}
                     onMouseOut={() => setIsFocused(false)}
                     ref={menuContainerRef}
-                    // data-tilt
-                    // data-tilt-max="1.5"
-                    // data-tilt-speed="400"
-                    // data-tilt-perspective="500"
+                // data-tilt
+                // data-tilt-max="1.5"
+                // data-tilt-speed="400"
+                // data-tilt-perspective="500"
                 >
                     <NavbarItem
                         title={
@@ -88,11 +92,7 @@ export const Navbar = () => {
                     <NavbarItem
                         title="Informations"
                         to="/about"
-                        dropdownItems={[
-                            { title: 'Règlement', to: '/about/rules' },
-                            { title: 'Partenaires', to: '/about/partners' },
-                            { title: 'Contact', to: '/about/contact' },
-                        ]}
+                        dropdownItems={menuItems.filter((item) => item.to === '/about')[0]?.items}
                     />
                     <NavbarItem
                         title="Épreuves"

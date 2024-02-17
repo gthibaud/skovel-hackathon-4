@@ -1,6 +1,7 @@
 import { Skeleton } from '@mui/material';
 import { FC } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import './styles.css';
 
 interface MarkdownProps {
     isLoading?: boolean;
@@ -14,6 +15,6 @@ export const Markdown: FC<MarkdownProps> = ({ isLoading, children = '' }) => {
             height="100%"
         />
     ) : (
-        <ReactMarkdown>{children}</ReactMarkdown>
+        <ReactMarkdown className='markdown'>{children}</ReactMarkdown>
     );
 };

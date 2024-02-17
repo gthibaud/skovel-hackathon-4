@@ -27,7 +27,7 @@ export default function Home() {
                         <p className="date">Départ le 24/08/2024 au Markstein (68)</p>
                         <div className="actions">
                             <Button
-                                to="/infos"
+                                to="/about"
                                 size="large"
                             >
                                 Plus d&apos;infos
