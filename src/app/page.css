@@ -9,12 +9,14 @@
 .presentation {
     text-align: center;
     font-size: 20px;
+    margin-bottom: 16px;
 }
 
 .date {
     font-size: 18px;
     color: var(--colors-text-light);
     text-align: center;
+    margin-bottom: 24px;
 }
 
 .actions {

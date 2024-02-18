@@ -12,14 +12,19 @@
         border: 1px solid var(--colors-border);
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
         width: 100%;
         transition: all 200ms;
         height: auto;
+        color: var(--colors-text-primary);
+        fill: var(--colors-text-primary);
 
         &:hover {
             box-shadow: 0 0 24px 0 var(--colors-shadow);
             transform: scale(0.98);
+            color: var(--colors-primary-light);
+            fill: var(--colors-primary-light);
+            border-color: var(--colors-primary-light);
         }
 
         &:active {
@@ -28,6 +33,7 @@
 
         .icon {
             margin: 0;
+            fill: inherit;
         }
 
         .title {

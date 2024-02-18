@@ -1,12 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
-'use client';
-
 import { FC } from 'react';
 import './PulsingDot.css';
 
 interface PulsingDotProps {
-    color: string;
+    color?: string;
     size?: number;
 }
 

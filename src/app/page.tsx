@@ -7,7 +7,7 @@ import './page.css';
 
 export default function Home() {
     return (
-        <main>
+        <main className='home'>
             <Hero
                 imageSrc="banner.jpeg"
                 imageAlt="Banner image"

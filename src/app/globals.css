@@ -72,6 +72,7 @@
         --colors-text: #d8dadb;
         --colors-text-subtle: #c7cacb;
         --colors-text-light: #a1a1a6;
+        --colors-text-primary: #c4cbc9;
         --colors-shadow: rgba(255, 255, 255, 0.1);
         --colors-shadow-light: rgba(255, 255, 255, 0.05);
 
@@ -138,10 +139,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 1024px;
+    max-width: 880px;
     margin: auto;
     padding: 100px 12px 0px 12px;
     color: var(--colors-text);
+}
+
+.home {
+    max-width: 1024px;
 }
 
 .background-color-mask {

@@ -1,4 +1,3 @@
-'use client'
 import { MenuItem } from "@/data/menu";
 import Link from "next/link";
 import { FC } from "react";
@@ -9,21 +8,21 @@ interface QuicklinkProps {
 }
 
 export const Quicklink: FC<QuicklinkProps> = (props) => {
-    const { title, to, icon: Icon } = props.quicklink;
+    const { title, to, iconFill: Icon } = props.quicklink;
 
     return (
         <Link href={to} className="quicklink">
+            {/* Using the slot pattern to render the icon (https://stackoverflow.com/questions/76614923/how-to-pass-a-component-as-a-prop-using-next-13) */}
             {Icon &&
-                <div className="icon">
-                    <Icon
-                        style={{
-                            display: 'flex',
-                            margin: '0',
-                        }}
-                        color="white"
-                        size={48}
-                    />
-                </div>
+                <Icon.type
+                    {...Icon.props}
+                    style={{
+                        display: 'flex',
+                        margin: '0',
+                    }}
+                    size={42}
+                    className="icon"
+                />
             }
             <div className="title">{title}</div>
         </Link>

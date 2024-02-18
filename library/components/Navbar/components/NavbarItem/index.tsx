@@ -3,13 +3,14 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useRef, useState } from 'react';
 
+import { MenuItem } from '@/data/menu';
 import { DropdownContainer } from '../DropdownContainer';
 import './styles.css';
 
 interface NavbarItemProps {
     title: string | JSX.Element | JSX.Element[];
     to: string;
-    dropdownItems?: any[];
+    dropdownItems?: MenuItem[];
     style?: 'default' | 'button' | 'title' | 'light';
 }
 

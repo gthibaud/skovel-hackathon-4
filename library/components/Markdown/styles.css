@@ -1,9 +1,24 @@
 .markdown {
-    p {
+
+    p,
+    ul,
+    blockquote,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         line-height: 1.5rem;
 
         &:not(:last-child) {
             margin-bottom: 2rem;
+        }
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 1.4rem;
         }
     }
 

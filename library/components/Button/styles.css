@@ -14,7 +14,7 @@
     &:hover {
         color: var(--colors-secondary);
         background-color: var(--colors-primary);
-        transform: scale(1.02);
+        transform: scale(0.98);
     }
 }
 

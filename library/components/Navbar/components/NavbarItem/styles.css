@@ -19,12 +19,12 @@
 }
 
 .navbar-item-focused {
-    color: var(--colors-text-primary);
+    color: var(--colors-primary-light);
     transform: scale(1.02);
 }
 
 .navbar-item-active {
-    color: var(--colors-text-primary);
+    color: var(--colors-primary-light);
     transform: scale(1.02);
 }
 

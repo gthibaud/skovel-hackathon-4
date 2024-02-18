@@ -1,6 +1,6 @@
 import { menu } from "@/data/menu";
 import { QuicklinksContainer } from "../../../library/components/Quicklink/Container";
-// import './page.css';
+import './page.css';
 
 export default function Courses() {
     const menuItems = menu.filter((item) => item.to === "/about")[0]?.items;

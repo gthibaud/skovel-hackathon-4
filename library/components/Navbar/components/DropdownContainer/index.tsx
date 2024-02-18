@@ -1,11 +1,12 @@
 import { FC, MutableRefObject, useEffect, useState } from 'react';
 
+import { MenuItem } from '@/data/menu';
 import { Collapse } from '@mui/material';
 import { DropdownItem } from '../DropdownItem';
 import './styles.css';
 
 interface DropdownContainerProps {
-    dropdownItems: DropdownItem[];
+    dropdownItems: MenuItem[];
     isFocused: boolean;
     setIsFocused: (isFocused: boolean) => void;
     parentRef: MutableRefObject<HTMLDivElement | null>;
