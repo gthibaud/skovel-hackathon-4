@@ -12,10 +12,12 @@ interface NavbarItemProps {
     to: string;
     dropdownItems?: MenuItem[];
     style?: 'default' | 'button' | 'title' | 'light';
+    onClick: () => void;
+    className?: string;
 }
 
 export const NavbarItem: FC<NavbarItemProps> = (props) => {
-    const { title, to, dropdownItems, style = 'default' } = props;
+    const { title, to, dropdownItems, style = 'default', onClick, className } = props;
 
     const buttonRef = useRef<HTMLDivElement | null>(null);
 
@@ -39,9 +41,12 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
     return (
         <>
             <div
-                className={`navbar-item-top`}
+                className={`navbar-item-top ${className}`}
                 ref={buttonRef}
-                onClick={() => router.push(to)}
+                onClick={() => {
+                    router.push(to)
+                    onClick()
+                }}
                 onMouseOver={() => setIsButtonFocused(true)}
                 onMouseOut={() => setIsButtonFocused(false)}
             >
@@ -61,6 +66,7 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
                     setIsFocused={setIsDropdownFocused}
                     dropdownItems={dropdownItems}
                     parentRef={buttonRef}
+                    onClick={onClick}
                 />
             )}
         </>

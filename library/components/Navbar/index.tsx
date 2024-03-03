@@ -2,9 +2,12 @@
 
 import { MenuItem } from '@/data/menu';
 import { Backdrop } from '@mui/material';
+import { Cross } from 'gthibaud-icons-react';
 import { FC, useEffect, useRef, useState } from 'react';
 import { ChevronDown } from '../../icons/chevron-down';
+import { Menu } from '../../icons/menu';
 import { Button } from '../Button';
+import { MobileItem } from './components/MobileItem';
 import { NavbarItem } from './components/NavbarItem/index';
 import './styles.css';
 
@@ -16,6 +19,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
     const { menuItems } = props; // TODO use menuItems
 
     const [isFocused, setIsFocused] = useState<boolean>(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
     const menuContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -44,89 +48,130 @@ export const Navbar: FC<NavbarProps> = (props) => {
         }
     }, [menuContainerRef]);
 
+    const handleClick = () => {
+        setIsMobileMenuOpen(false)
+        setIsFocused(false)
+    }
+
     return (
         <>
             <menu className="menu-container">
                 <div
                     className={`menu-card ${isFocused ? 'focused' : ''}`}
                     onMouseOver={() => setIsFocused(true)}
-                    onMouseOut={() => setIsFocused(false)}
+                    onMouseOut={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
                 // data-tilt
                 // data-tilt-max="1.5"
                 // data-tilt-speed="400"
                 // data-tilt-perspective="500"
                 >
-                    <NavbarItem
-                        title={
-                            <span>
-                                <img
-                                    src="/capybarace-logo.png"
-                                    alt="Logo"
-                                />
-                                CapybaRun
-                            </span>
-                        }
-                        to="/"
-                        style="title"
-                    />
-                    <NavbarItem
-                        title={
-                            <span style={{ display: 'flex', alignItems: 'center' }}>
-                                2024 <ChevronDown style={{ fontSize: '1em' }} />
-                            </span>
-                        }
-                        to="/2024"
-                        dropdownItems={[
-                            { title: 'Édition 2023', to: '/2022' },
-                            { title: 'Édition 2022', to: '/2022' },
-                            { title: 'Édition 2019', to: '/2022' },
-                        ]}
-                        style="light"
-                    />
-                    <div className="pad-container" />
-                    <NavbarItem
-                        title="Actualités"
-                        to="/events"
-                    />
-                    <NavbarItem
-                        title="Informations"
-                        to="/about"
-                        dropdownItems={menuItems.filter((item) => item.to === '/about')[0]?.items}
-                    />
-                    <NavbarItem
-                        title="Épreuves"
-                        to="/races"
-                        dropdownItems={[
-                            { title: '90 Km', to: '/races/90k' },
-                            { title: '200 Km', to: '/races/200k' },
-                        ]}
-                    />
-                    <div className="margin-container" />
-                    <NavbarItem
-                        title={
-                            <Button
+                    <div className="menu-container-horizontal">
+                        <NavbarItem
+                            onClick={handleClick}
+                            title={
+                                <span>
+                                    <img
+                                        src="/capybarace-logo.png"
+                                        alt="Logo"
+                                    />
+                                    CapybaRun
+                                </span>
+                            }
+                            to="/"
+                            style="title"
+                        />
+                        <NavbarItem
+                            onClick={handleClick}
+                            title={
+                                <span style={{ display: 'flex', alignItems: 'center' }}>
+                                    2024 <ChevronDown style={{ fontSize: '1em' }} />
+                                </span>
+                            }
+                            to="/2024"
+                            dropdownItems={[
+                                { title: 'Édition 2023', to: '/2022' },
+                                { title: 'Édition 2022', to: '/2022' },
+                                { title: 'Édition 2019', to: '/2022' },
+                            ]}
+                            style="light"
+                        />
+                        <div className="pad-container" />
+                        <div className='menu-items'>
+                            <NavbarItem
+                                title="Actualités"
+                                to="/events"
+                                onClick={handleClick}
+                            />
+                            <NavbarItem
+                                title="Informations"
+                                to="/about"
+                                onClick={handleClick}
+                                dropdownItems={menuItems.filter((item) => item.to === '/about')[0]?.items}
+                            />
+                            <NavbarItem
+                                title="Épreuves"
+                                to="/races"
+                                onClick={handleClick}
+                                dropdownItems={[
+                                    { title: '90 Km', to: '/races/90k' },
+                                    { title: '200 Km', to: '/races/200k' },
+                                ]}
+                            />
+                            <div className="margin-container" />
+                            <NavbarItem
+                                onClick={handleClick}
+                                title={
+                                    <Button
+                                        to="/register"
+                                        variant="inverted"
+                                    >
+                                        S'inscrire
+                                    </Button>
+                                }
                                 to="/register"
-                                variant="inverted"
+                                style="button"
+                            />
+                        </div>
+                        <div className='menu-open-button'>
+                            <Button
+                                onClick={() => {
+                                    const open = isMobileMenuOpen;
+                                    setIsMobileMenuOpen(!open)
+                                    setIsFocused(!open)
+                                }}
                             >
-                                S'inscrire
+                                {isMobileMenuOpen ? <Cross /> : <Menu />}
                             </Button>
-                        }
-                        to="/register"
-                        style="button"
-                    />
-                    <div
-                        className="menu-container-backdrop"
-                        style={{
-                            position: 'absolute',
-                            height: menuContainerDimensions.height,
-                            width: menuContainerDimensions.width,
-                            top: menuContainerDimensions.top,
-                            left: menuContainerDimensions.left,
-                            backdropFilter: 'blur(12px)',
-                            WebkitBackdropFilter: 'blur(12px)',
-                        }}
-                    />
+                        </div>
+                        <div
+                            className="menu-container-backdrop"
+                            style={{
+                                position: 'absolute',
+                                height: menuContainerDimensions.height,
+                                width: menuContainerDimensions.width,
+                                top: menuContainerDimensions.top,
+                                left: menuContainerDimensions.left,
+                                backdropFilter: 'blur(12px)',
+                                WebkitBackdropFilter: 'blur(12px)',
+                            }}
+                        />
+                    </div>
+                    <div className='vertical-menu' style={{
+                        height: isMobileMenuOpen ? '100%' : '0',
+                        overflow: 'hidden',
+                        transition: 'height 0.3s ease-in-out',
+                    }}>
+                        {menuItems.map((item, index) => (
+                            <MobileItem
+                                key={index}
+                                title={item.title}
+                                to={item.to}
+                                dropdownItems={item.items}
+                                onClick={handleClick}
+                            />
+                        ))}
+                    </div>
                 </div>
             </menu>
             <Backdrop
@@ -139,7 +184,10 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 }}
                 open={isFocused}
                 transitionDuration={500}
-                onClick={() => setIsFocused(false)}
+                onClick={() => {
+                    setIsFocused(false)
+                    setIsMobileMenuOpen(false)
+                }}
             />
         </>
     );

@@ -10,6 +10,9 @@
     font-size: 1rem;
     cursor: pointer;
     transition: all 200ms;
+    text-align: center;
+    display: flex;
+    align-items: center;
 
     &:hover {
         color: var(--colors-secondary);

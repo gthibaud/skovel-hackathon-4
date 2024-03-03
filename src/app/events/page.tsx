@@ -1,11 +1,10 @@
-// import './page.css';
+import './styles.css';
 
 export default function Events() {
     return (
-        <>
-            <h1>Feed</h1>
-            <p>Todo button stay informed</p>
-            <p>Todo list</p>
-        </>
+        <main>
+            <h1>Events</h1>
+            <p>Work in progress</p>
+        </main>
     );
 }

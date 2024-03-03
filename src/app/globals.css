@@ -143,6 +143,7 @@ main {
     margin: auto;
     padding: 100px 12px 0px 12px;
     color: var(--colors-text);
+    min-height: calc(100vh - 100px);
 }
 
 .home {

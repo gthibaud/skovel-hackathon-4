@@ -11,6 +11,7 @@ export type DropdownItem = {
 
 interface DropdownItemProps {
     dropdownItem: MenuItem;
+    onClick: () => void;
 }
 
 export const DropdownItem: FC<DropdownItemProps> = (props) => {
@@ -25,7 +26,10 @@ export const DropdownItem: FC<DropdownItemProps> = (props) => {
         <li>
             <a
                 className={`dropdown-item dropdown-item-${isActive ? 'active' : ''}`}
-                onClick={() => router.push(to)}
+                onClick={() => {
+                    router.push(to)
+                    props.onClick()
+                }}
             >
                 {/* Using the slot pattern to render the icon (https://stackoverflow.com/questions/76614923/how-to-pass-a-component-as-a-prop-using-next-13) */}
                 {Icon &&

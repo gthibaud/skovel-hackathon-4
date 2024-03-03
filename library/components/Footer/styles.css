@@ -12,6 +12,15 @@ footer {
         flex-direction: row;
     }
 
+    @media (max-width: 730px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+    }
+
     .footer-left {
         flex-grow: 1;
     }

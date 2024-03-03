@@ -10,10 +10,11 @@ interface DropdownContainerProps {
     isFocused: boolean;
     setIsFocused: (isFocused: boolean) => void;
     parentRef: MutableRefObject<HTMLDivElement | null>;
+    onClick: () => void;
 }
 
 export const DropdownContainer: FC<DropdownContainerProps> = (props) => {
-    const { dropdownItems, setIsFocused, isFocused, parentRef } = props;
+    const { dropdownItems, setIsFocused, isFocused, parentRef, onClick } = props;
 
     const [containerPositionLeft, setContainerPositionLeft] = useState<number>(0);
     const [containerPositionTop, setContainerPositionTop] = useState<number>(0);
@@ -48,6 +49,7 @@ export const DropdownContainer: FC<DropdownContainerProps> = (props) => {
                         <DropdownItem
                             key={index}
                             dropdownItem={item}
+                            onClick={onClick}
                         />
                     ))}
                 </ul>

@@ -1,5 +1,5 @@
 .menu-container {
-    height: 104px;
+    min-height: 104px;
     width: 100%;
     padding: 24px;
     position: fixed;
@@ -13,15 +13,15 @@
     max-width: 952px;
     width: auto;
     margin: 0 auto;
-    border-radius: 100px;
+    border-radius: 30px;
     background-color: var(--colors-background-translucent);
     height: 100%;
     box-shadow: 0 0 24px 0 var(--colors-shadow);
     transition: all 200ms ease-in-out;
-    padding: 8px;
+    padding: 8px 10px;
     border: 1.4px solid var(--colors-border);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
     /* &:hover {
@@ -40,6 +40,15 @@
         font-weight: 500;
         color: var(--colors-text);
     }
+}
+
+.menu-container-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 42px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* The filters are not defined in the menu-card to avoid the following issue: https: //stackoverflow.com/questions/52937708/why-does-applying-a-css-filter-on-the-parent-break-the-child-positioning */
@@ -75,4 +84,39 @@
     box-shadow: 0 0 24px 0 var(--colors-shadow);
     border: 1.4px solid rgb(187, 187, 187) aa;
     background-color: var(--colors-background);
+}
+
+.menu-container-mobile {
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-open-button {
+    display: none;
+}
+
+/* Dont display large menu on screens under 730px */
+@media (max-width: 730px) {
+    .menu-items {
+        display: none;
+    }
+
+    .menu-open-button {
+        display: block;
+    }
+}
+
+@media (min-width: 730px) {
+    .vertical-menu {
+        height: 0;
+    }
+}
+
+.vertical-menu {
+    height: 100%;
 }

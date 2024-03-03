@@ -29,6 +29,7 @@
     width: fit-content;
     height: fit-content;
     border-radius: 16px;
+    margin: 0px 24px;
     background-color: var(--colors-background-translucent);
     backdrop-filter: blur(12px);
 
@@ -45,5 +46,6 @@
 
     h1 {
         margin-bottom: 24px;
+        text-align: center;
     }
 }
