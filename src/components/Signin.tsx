@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Button } from '../../library/components/_Button';
+import { Button } from '../../library/components/Button';
 
 export const Signin = () => {
     const [name, setName] = useState('');

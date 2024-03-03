@@ -4,7 +4,7 @@ import { auth } from '@/api/firebase';
 import { TextField } from '@mui/material';
 import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
-import { Button } from '../../library/components/_Button';
+import { Button } from '../../library/components/Button';
 
 export const Login = () => {
     const [email, setEmail] = useState('');

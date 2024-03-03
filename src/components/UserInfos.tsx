@@ -3,7 +3,7 @@
 import { auth } from '@/api/firebase';
 import { User } from 'firebase/auth';
 import { FC } from 'react';
-import { Button } from '../../library/components/_Button';
+import { Button } from '../../library/components/Button';
 
 interface UserProps {
     user: User;

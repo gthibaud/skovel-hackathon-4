@@ -82,6 +82,15 @@
         "yarn": "^1.22.21"
     },
     "prettier": "@owlgrid-dev/prettier-config",
+    "lint-staged": {
+        "*.{json,md,css}": [
+            "prettier --write"
+        ],
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "tslint -p tsconfig.json"
+        ]
+    },
     "devDependencies": {
         "@owlgrid-dev/prettier-config": "^0.0.6",
         "@types/autosuggest-highlight": "^3.2.0",

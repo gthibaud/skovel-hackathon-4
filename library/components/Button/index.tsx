@@ -6,12 +6,13 @@ interface ButtonProps {
     children: string | JSX.Element | JSX.Element[];
     variant?: '' | 'inverted';
     to?: string;
-    onClick?: () => void;
+    onClick?: (e: any) => void;
     size?: 'small' | 'medium' | 'large';
+    isLoading?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const { children, variant = '', to, onClick, size = 'medium' } = props;
+    const { children, variant = '', to, onClick, size = 'medium', isLoading = false } = props;
 
     if (to) {
         return (
@@ -19,7 +20,7 @@ export const Button: FC<ButtonProps> = (props) => {
                 href={to || '/'}
                 className={`button button-${variant} button-size-${size}`}
             >
-                {children}
+                {isLoading ? '...' : children}
             </Link>
         );
     }
@@ -29,7 +30,7 @@ export const Button: FC<ButtonProps> = (props) => {
             className={`button button-${variant} button-size-${size}`}
             onClick={onClick}
         >
-            {children}
+            {isLoading ? '...' : children}
         </div>
     );
 };
