@@ -27,6 +27,8 @@ export type MenuItem = {
     iconFill?: ReactElement;
     items?: MenuItem[];
     summary?: string;
+    pictureProfile?: string;
+    position?: 'left' | 'center' | 'right';
 };
 
 export const menu: MenuItem[] = [
@@ -35,16 +37,20 @@ export const menu: MenuItem[] = [
         to: '/',
         icon: <HomeRounded />,
         iconFill: <HomeRoundedFill />,
+        pictureProfile: '/images/capybarace-logo.png',
+        position: 'left',
     },
     {
         title: 'Actualités',
         to: '/events',
         icon: <Events />,
         iconFill: <EventsFill />,
+        position: 'center',
     },
     {
         title: 'Informations',
         to: '/about',
+        position: 'center',
         items: [
             {
                 title: 'La course',
@@ -100,6 +106,7 @@ export const menu: MenuItem[] = [
     {
         title: 'Épreuves',
         to: '/races',
+        position: 'center',
         items: [
             {
                 title: '200 Km',
@@ -123,5 +130,6 @@ export const menu: MenuItem[] = [
         to: '/register',
         icon: <Ticket />,
         iconFill: <TicketFill />,
+        position: 'right',
     },
 ];

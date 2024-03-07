@@ -1,6 +1,6 @@
 'use client';
 
-import { MenuItem } from '@/data/menu';
+import { MenuItem, menu } from '@/data/menu';
 import { Backdrop } from '@mui/material';
 import { Cross } from 'gthibaud-icons-react';
 import { FC, useEffect, useRef, useState } from 'react';
@@ -49,9 +49,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
     }, [menuContainerRef]);
 
     const handleClick = () => {
-        setIsMobileMenuOpen(false)
-        setIsFocused(false)
-    }
+        setIsMobileMenuOpen(false);
+        setIsFocused(false);
+    };
 
     return (
         <>
@@ -61,10 +61,10 @@ export const Navbar: FC<NavbarProps> = (props) => {
                     onMouseOver={() => setIsFocused(true)}
                     onMouseOut={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
-                // data-tilt
-                // data-tilt-max="1.5"
-                // data-tilt-speed="400"
-                // data-tilt-perspective="500"
+                    // data-tilt
+                    // data-tilt-max="1.5"
+                    // data-tilt-speed="400"
+                    // data-tilt-perspective="500"
                 >
                     <div className="menu-container-horizontal">
                         <NavbarItem
@@ -97,48 +97,44 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             style="light"
                         />
                         <div className="pad-container" />
-                        <div className='menu-items'>
-                            <NavbarItem
-                                title="Actualités"
-                                to="/events"
-                                onClick={handleClick}
-                            />
-                            <NavbarItem
-                                title="Informations"
-                                to="/about"
-                                onClick={handleClick}
-                                dropdownItems={menuItems.filter((item) => item.to === '/about')[0]?.items}
-                            />
-                            <NavbarItem
-                                title="Épreuves"
-                                to="/races"
-                                onClick={handleClick}
-                                dropdownItems={[
-                                    { title: '90 Km', to: '/races/90k' },
-                                    { title: '200 Km', to: '/races/200k' },
-                                ]}
-                            />
+                        <div className="menu-items">
+                            {menu
+                                .filter((m) => m.position === 'center')
+                                .map((item, index) => (
+                                    <NavbarItem
+                                        key={index}
+                                        title={item.title}
+                                        to={item.to}
+                                        dropdownItems={item.items}
+                                        onClick={handleClick}
+                                    />
+                                ))}
                             <div className="margin-container" />
-                            <NavbarItem
-                                onClick={handleClick}
-                                title={
-                                    <Button
-                                        to="/register"
-                                        variant="inverted"
-                                    >
-                                        S'inscrire
-                                    </Button>
-                                }
-                                to="/register"
-                                style="button"
-                            />
+                            {menu
+                                .filter((m) => m.position === 'right')
+                                .map((item, index) => (
+                                    <NavbarItem
+                                        key={index}
+                                        title={
+                                            <Button
+                                                to="/register"
+                                                variant="inverted"
+                                            >
+                                                S'inscrire
+                                            </Button>
+                                        }
+                                        to={item.to}
+                                        onClick={handleClick}
+                                        style="button"
+                                    />
+                                ))}
                         </div>
-                        <div className='menu-open-button'>
+                        <div className="menu-open-button">
                             <Button
                                 onClick={() => {
                                     const open = isMobileMenuOpen;
-                                    setIsMobileMenuOpen(!open)
-                                    setIsFocused(!open)
+                                    setIsMobileMenuOpen(!open);
+                                    setIsFocused(!open);
                                 }}
                             >
                                 {isMobileMenuOpen ? <Cross /> : <Menu />}
@@ -157,11 +153,14 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             }}
                         />
                     </div>
-                    <div className='vertical-menu' style={{
-                        height: isMobileMenuOpen ? '100%' : '0',
-                        overflow: 'hidden',
-                        transition: 'height 0.3s ease-in-out',
-                    }}>
+                    <div
+                        className="vertical-menu"
+                        style={{
+                            height: isMobileMenuOpen ? '100%' : '0',
+                            overflow: 'hidden',
+                            transition: 'height 0.3s ease-in-out',
+                        }}
+                    >
                         {menuItems.map((item, index) => (
                             <MobileItem
                                 key={index}
@@ -185,8 +184,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 open={isFocused}
                 transitionDuration={500}
                 onClick={() => {
-                    setIsFocused(false)
-                    setIsMobileMenuOpen(false)
+                    setIsFocused(false);
+                    setIsMobileMenuOpen(false);
                 }}
             />
         </>
