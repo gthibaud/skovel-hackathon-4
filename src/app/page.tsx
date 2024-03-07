@@ -1,6 +1,7 @@
 import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuickinks } from '@/components/RaceQuicklinks';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
@@ -64,32 +65,41 @@ export default function Home() {
                     <Countdown startDate={1724493600} />
                 </Card>
             </div>
-            <Card
-                title="La course la plus folle de l'année"
-                actionTitle="À propos"
-                actionTo="/about"
-            >
-                <span
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        gap: 16,
-                    }}
+            <div className="bento">
+                <Card
+                    title="La course la plus folle de l'année"
+                    actionTitle="À propos"
+                    actionTo="/about"
+                    style={{ flex: 2 }}
                 >
-                    <p>
-                        La CapybaRun est un trail de 200Km sans assistance au cœur des Vosges. La
-                        course se déroule sur 3 jours et vous emmènera à travers les plus beaux
-                        paysages de la région. Prenez le départ d&apos;une aventure humaine et
-                        sportive qui vous permettra de repousser vos limites et de découvrir des
-                        paysages à couper le souffle.
-                    </p>
+                    La CapybaRun est un trail de 200Km sans assistance au cœur des Vosges. La course
+                    se déroule sur 3 jours et vous emmènera à travers les plus beaux paysages de la
+                    région. Prenez le départ d&apos;une aventure humaine et sportive qui vous
+                    permettra de repousser vos limites et de découvrir des paysages à couper le
+                    souffle.
+                </Card>
+                <Card
+                    title={'Aftermovie 2023'}
+                    actionTo="/2023"
+                    actionTitle="Édition 2023"
+                    style={{ flex: 3 }}
+                >
                     <VideoPlayer
                         src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-"
-                        height={500}
+                        height={300}
                         width={'auto'}
                     />
-                </span>
+                </Card>
+            </div>
+            <Card
+                title={'Une question ?'}
+                actionTo="/about/questions"
+                actionTitle="FAQ"
+                style={{ flex: 3 }}
+            >
+                <Link href="/about/questions">
+                    <SearchField placeholder="Rechercher une information" />
+                </Link>
             </Card>
             <div className="bento">
                 <Card
@@ -98,18 +108,30 @@ export default function Home() {
                     actionTo="/about/access"
                     style={{ flex: 2 }}
                 >
-                    <Map
-                        longitude={7.028784}
-                        latitude={47.926232}
-                    />
+                    <span
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '1rem',
+                        }}
+                    >
+                        <p>
+                            Les Vosges seront le décor de la Capybarace, avec un départ et une
+                            arrivée au Markstein (68).
+                        </p>
+                        <Map
+                            longitude={7.028784}
+                            latitude={47.926232}
+                        />
+                    </span>
                 </Card>
                 <Card
-                    title={'Une question ?'}
-                    actionTo="/about/questions"
-                    actionTitle="FAQ"
+                    title="Dernières actualités"
+                    actionTitle="Toutes les actualités"
+                    actionTo="/events"
                     style={{ flex: 3 }}
                 >
-                    <SearchField placeholder="Rechercher une information" />
+                    todo
                 </Card>
             </div>
             <Card
@@ -120,12 +142,20 @@ export default function Home() {
                 <p>Ils rendent la course possible :</p>
                 <PartnersCarousel />
             </Card>
-            <Card
-                title="Dernières actualités"
-                actionTitle="Toutes les actualités"
-                actionTo="/events"
-            >
-                todo
+            <Card>
+                <span>
+                    Vous n'avez pas trouvé la réponse à votre question ? Contactez-nous !
+                    <Button
+                        to="/contact"
+                        style={{
+                            width: 'fit-content',
+                            margin: 'auto',
+                            marginTop: '1rem',
+                        }}
+                    >
+                        Contacter l'organisation
+                    </Button>
+                </span>
             </Card>
         </main>
     );

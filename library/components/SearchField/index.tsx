@@ -13,10 +13,11 @@ import './styles.css';
 interface SearchFieldProps {
     placeholder?: string;
     autoFocus?: boolean;
+    onFocus?: () => void;
 }
 
 export const SearchField: FC<SearchFieldProps> = (props) => {
-    const { placeholder, autoFocus } = props;
+    const { placeholder, autoFocus, onFocus } = props;
 
     return (
         <div className="search-container">
@@ -25,6 +26,7 @@ export const SearchField: FC<SearchFieldProps> = (props) => {
                 <AriaInput
                     placeholder={placeholder}
                     autoFocus={autoFocus}
+                    onFocus={onFocus}
                 />
                 <Text slot="description" />
                 <Button>
