@@ -1,6 +1,7 @@
 'use client';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import { FC, useEffect, useState } from 'react';
-import MapGL from 'react-map-gl/maplibre';
+import MapGL, { MapRef, Marker } from 'react-map-gl/maplibre';
 
 interface MapProps {
     longitude: number;
@@ -10,6 +11,12 @@ interface MapProps {
 export const Map: FC<MapProps> = (props) => {
     const { longitude, latitude } = props;
     const [darkMode, setDarkMode] = useState<boolean>(false);
+
+    const [map, setMap] = useState<MapRef | null>(null);
+
+    useEffect(() => {
+        map?.resize();
+    }, [map]);
 
     useEffect(() => {
         return window
@@ -26,14 +33,24 @@ export const Map: FC<MapProps> = (props) => {
     };
 
     return (
-        <MapGL
-            initialViewState={{
-                longitude,
-                latitude,
-                zoom: 12,
-            }}
-            mapStyle={getStyleUrl()}
-            attributionControl={false}
-        ></MapGL>
+        <div style={{ width: '100%', height: 300 }}>
+            <MapGL
+                initialViewState={{
+                    latitude,
+                    longitude,
+                    zoom: 4,
+                }}
+                attributionControl={false}
+                mapStyle={getStyleUrl()}
+                style={{ width: '100%', height: 300 }}
+                ref={setMap}
+            >
+                <Marker
+                    latitude={latitude}
+                    longitude={longitude}
+                    color="var(--colors-primary-light)"
+                />
+            </MapGL>
+        </div>
     );
 };

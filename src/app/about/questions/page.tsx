@@ -3,7 +3,7 @@ import './styles.css';
 import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
-import { Input } from '../../../../library/components/Input';
+import { SearchField } from '../../../../library/components/SearchField';
 
 export default function Partners() {
     return (
@@ -17,9 +17,8 @@ export default function Partners() {
                 </Link>{' '}
                 FAQ
             </h1>
-            <Input
+            <SearchField
                 autoFocus
-                type="text"
                 placeholder="Rechercher une information"
             />
             <Card>

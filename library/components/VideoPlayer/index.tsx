@@ -1,8 +1,8 @@
-import { Theme, useTheme } from '@emotion/react';
+'use client';
+
 import { FC, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ReactPlayer, { ReactPlayerProps } from 'react-player';
-import { Image } from '../Image';
 import './styles.css';
 
 interface VideoProps extends ReactPlayerProps {
@@ -11,7 +11,6 @@ interface VideoProps extends ReactPlayerProps {
     // Pause the video when it is outside the view
     pauseVideoOutsideView?: boolean;
     height?: number | string;
-    borderRadius?: keyof Theme['radius'];
 }
 
 export const VideoPlayer: FC<VideoProps> = (props) => {
@@ -22,7 +21,6 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
         pauseVideoOutsideView: stopVideoOutsideView = true,
         borderRadius = 'primary',
     } = props;
-    const theme = useTheme();
 
     const [isLoaded, setIsLoaded] = useState(false);
     const [isVisibleForFirstTime, setIsVisibleForFirstTime] = useState(false);
@@ -53,8 +51,8 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
                 display: 'block',
                 position: 'relative',
                 overflow: 'hidden',
-                borderRadius: theme.radius[borderRadius as keyof Theme['radius']],
-                transition: theme.transition.primary,
+                borderRadius: 'var(--border-radius)',
+                transition: 'all 200ms ease-out',
                 height,
                 width: '100%',
             }}
@@ -71,7 +69,7 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
                     top: 0,
                 }}
             >
-                <Image
+                {/* <Image
                     src={thumbnailSrc}
                     innerRef={thumbnailRef}
                     alt="thumbnail"
@@ -83,17 +81,6 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
                         transition: 'all 0.9s ease-in-out',
                         width: '100%',
                         height,
-                        zoom: 1.1,
-                    }}
-                />
-                {/* <img
-                    ref={thumbnailRef}
-                    src={thumbnailSrc}
-                    style={{
-                        opacity: isLoaded ? 0 : 1,
-                        transition: 'all 0.9s ease-in-out',
-                        width: '100%',
-                        height: 'auto',
                         zoom: 1.1,
                     }}
                 /> */}

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Container } from '../../Container';
-import { SearchField } from '../../SearchField';
+import { SearchField } from '../../_SearchField';
 import { usePageContext } from '../context';
 
 interface HeaderSearchFieldProps {

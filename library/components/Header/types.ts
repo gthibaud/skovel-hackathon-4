@@ -2,7 +2,7 @@ import { Theme } from '@emotion/react';
 import { IconProps } from '@mui/material';
 import { UseQueryResult } from '@tanstack/react-query';
 import { FC } from 'react';
-import { SearchFieldProps } from '../SearchField';
+import { SearchFieldProps } from '../_SearchField';
 
 export type PageContext = {
     title?: string | JSX.Element | undefined; // Page title

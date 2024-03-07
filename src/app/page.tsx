@@ -6,6 +6,8 @@ import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
 import { Map } from '../../library/components/Map';
+import { SearchField } from '../../library/components/SearchField';
+import { VideoPlayer } from '../../library/components/VideoPlayer';
 import './page.css';
 
 export default function Home() {
@@ -67,10 +69,27 @@ export default function Home() {
                 actionTitle="À propos"
                 actionTo="/about"
             >
-                La CapybaRun est un trail de 200Km sans assistance au cœur des Vosges. La course se
-                déroule sur 3 jours et vous emmènera à travers les plus beaux paysages de la région.
-                Prenez le départ d&apos;une aventure humaine et sportive qui vous permettra de
-                repousser vos limites et de découvrir des paysages à couper le souffle.
+                <span
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        gap: 16,
+                    }}
+                >
+                    <p>
+                        La CapybaRun est un trail de 200Km sans assistance au cœur des Vosges. La
+                        course se déroule sur 3 jours et vous emmènera à travers les plus beaux
+                        paysages de la région. Prenez le départ d&apos;une aventure humaine et
+                        sportive qui vous permettra de repousser vos limites et de découvrir des
+                        paysages à couper le souffle.
+                    </p>
+                    <VideoPlayer
+                        src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-"
+                        height={500}
+                        width={'auto'}
+                    />
+                </span>
             </Card>
             <div className="bento">
                 <Card
@@ -87,10 +106,10 @@ export default function Home() {
                 <Card
                     title={'Une question ?'}
                     actionTo="/about/questions"
-                    actionTitle="En savoir plus"
+                    actionTitle="FAQ"
                     style={{ flex: 3 }}
                 >
-                    <p>Last questions</p>
+                    <SearchField placeholder="Rechercher une information" />
                 </Card>
             </div>
             <Card
