@@ -1,9 +1,11 @@
+import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuickinks } from '@/components/RaceQuicklinks';
 import Image from 'next/image';
 import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
+import { Map } from '../../library/components/Map';
 import './page.css';
 
 export default function Home() {
@@ -77,29 +79,18 @@ export default function Home() {
                     actionTo="/about/access"
                     style={{ flex: 2 }}
                 >
-                    TODO fix map issue
-                    {/* <Map
+                    <Map
                         longitude={7.028784}
                         latitude={47.926232}
-                    /> */}
+                    />
                 </Card>
                 <Card
-                    title={'À propos'}
-                    actionTo="/about"
+                    title={'Une question ?'}
+                    actionTo="/about/questions"
                     actionTitle="En savoir plus"
                     style={{ flex: 3 }}
                 >
-                    <p>
-                        Starting: <b>24/08/2024 - 10h</b>
-                        <br />
-                        Price: <b>150€</b>
-                        <br />
-                        Distance: <b>200Km</b>
-                        <br />
-                        Duration: <b>3 days</b>
-                        <br />
-                        Difficulty: <b>Hard</b>
-                    </p>
+                    <p>Last questions</p>
                 </Card>
             </div>
             <Card
@@ -107,8 +98,8 @@ export default function Home() {
                 actionTitle="Tous nos partenaires"
                 actionTo="/partners"
             >
-                <p>Ils rendent la course possible:</p>
-                {/* <Image src="/partner1.png" alt="Partner 1" width={200} height={200} /> */}
+                <p>Ils rendent la course possible :</p>
+                <PartnersCarousel />
             </Card>
             <Card
                 title="Dernières actualités"

@@ -1,0 +1,60 @@
+.partners-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+
+    .logo-img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+    }
+}
+
+.embla {
+    overflow: hidden;
+    height: 120px;
+}
+
+.embla__container {
+    display: flex;
+    height: 100%;
+    touch-action: pan-y;
+    margin-left: calc(1rem * -1);
+    backface-visibility: hidden;
+}
+
+.embla__slide {
+    /* 4 items per slide */
+    flex: 0 0 calc(100% / 5);
+    /* 2rem each side */
+    margin: 0px 2rem;
+    min-width: 0;
+    height: 100%;
+}
+
+.partner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    transition: transform 200ms ease-out;
+
+    .logo-img {
+        filter: grayscale(0%);
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
