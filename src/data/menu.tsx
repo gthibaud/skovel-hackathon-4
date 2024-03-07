@@ -1,5 +1,24 @@
-import { Calendar, DocumentText, DocumentTextFill, Events, EventsFill, FlagCheckered, Handsparkles, HandsparklesFill, HomeRounded, HomeRoundedFill, InfoCircle, InfoCircleFill, People, PeopleFill, QuestionMarkCircle, QuestionMarkCircleFill, Ticket, TicketFill } from "gthibaud-icons-react";
-import { ReactElement } from "react";
+import {
+    Calendar,
+    DocumentText,
+    DocumentTextFill,
+    Events,
+    EventsFill,
+    FlagCheckered,
+    Handsparkles,
+    HandsparklesFill,
+    HomeRounded,
+    HomeRoundedFill,
+    InfoCircle,
+    InfoCircleFill,
+    People,
+    PeopleFill,
+    QuestionMarkCircle,
+    QuestionMarkCircleFill,
+    Ticket,
+    TicketFill,
+} from 'gthibaud-icons-react';
+import { ReactElement } from 'react';
 
 export type MenuItem = {
     title: string;
@@ -7,91 +26,102 @@ export type MenuItem = {
     icon?: ReactElement;
     iconFill?: ReactElement;
     items?: MenuItem[];
-}
+    summary?: string;
+};
 
 export const menu: MenuItem[] = [
     {
-        title: "CapybaRun",
-        to: "/",
+        title: 'CapybaRun',
+        to: '/',
         icon: <HomeRounded />,
-        iconFill: <HomeRoundedFill />
+        iconFill: <HomeRoundedFill />,
     },
     {
-        title: "Actualités",
-        to: "/events",
+        title: 'Actualités',
+        to: '/events',
         icon: <Events />,
-        iconFill: <EventsFill />
+        iconFill: <EventsFill />,
     },
     {
-        title: "Informations",
-        to: "/about",
+        title: 'Informations',
+        to: '/about',
         items: [
             {
-                title: "La course",
-                to: "/about/the-race",
+                title: 'La course',
+                to: '/about/the-race',
                 icon: <FlagCheckered />,
-                iconFill: <FlagCheckered />
+                iconFill: <FlagCheckered />,
+                summary: 'La Capyrun, son histoire et ses particularités.',
             },
             {
-                title: "Programme",
-                to: "/about/program",
+                title: 'Programme',
+                to: '/about/program',
                 icon: <Calendar />,
-                iconFill: <Calendar />
+                iconFill: <Calendar />,
+                summary: 'Découvrez le programme de la course.',
             },
             {
-                title: "Accès",
-                to: "/about/access",
+                title: 'Accès',
+                to: '/about/access',
                 icon: <InfoCircle />,
-                iconFill: <InfoCircleFill />
+                iconFill: <InfoCircleFill />,
+                summary: 'Accéder au site de la course, en voiture, vélo ou transports.',
             },
             {
-                title: "Règlement",
-                to: "/about/rules",
+                title: 'Règlement',
+                to: '/about/rules',
                 icon: <DocumentText />,
-                iconFill: <DocumentTextFill />
+                iconFill: <DocumentTextFill />,
+                summary: "Le règlement de la course, à lire avant de s'inscrire.",
             },
             {
-                title: "Bénévoles",
-                to: "/about/volunteer",
+                title: 'Bénévoles',
+                to: '/about/volunteer',
                 icon: <People />,
-                iconFill: <PeopleFill />
+                iconFill: <PeopleFill />,
+                summary: "Rejoignez l'équipe des bénévoles !",
             },
             {
-                title: "Partenaires",
-                to: "/about/partners",
+                title: 'Partenaires',
+                to: '/about/partners',
                 icon: <Handsparkles />,
-                iconFill: <HandsparklesFill />
+                iconFill: <HandsparklesFill />,
+                summary: 'Nos partenaires, sans qui la course ne serait pas possible.',
             },
             {
-                title: "FAQ",
-                to: "/about/questions",
+                title: 'FAQ',
+                to: '/about/questions',
                 icon: <QuestionMarkCircle />,
                 iconFill: <QuestionMarkCircleFill />,
-            }
-        ]
+                summary: 'Trouvez la réponse à votre question.',
+            },
+        ],
     },
     {
-        title: "Épreuves",
-        to: "/races",
+        title: 'Épreuves',
+        to: '/races',
         items: [
             {
-                title: "200 Km",
-                to: "/races/200km"
+                title: '200 Km',
+                to: '/races/200km',
+                summary: 'La course reine, 200 km. Oserez-vous relever le défi ?',
             },
             {
-                title: "90 Km",
-                to: "/races/90km"
+                title: '90 Km',
+                to: '/races/90km',
+                summary: 'Un parcours de 90 km, idéal pour les débutants.',
             },
             {
-                title: "Challenge entreprises",
-                to: "/races/challenge-entreprises"
+                title: 'Challenge entreprises',
+                to: '/races/challenge-entreprises',
+                summary: 'Un défi sportif et convivial pour les entreprises.',
             },
-        ]
+        ],
     },
     {
         title: "S'incrire",
-        to: "/register",
+        to: '/register',
         icon: <Ticket />,
-        iconFill: <TicketFill />
-    }
+        iconFill: <TicketFill />,
+    },
 ];

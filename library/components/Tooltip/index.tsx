@@ -1,22 +1,12 @@
-import { Theme, useTheme } from '@emotion/react';
-import { Box, Tooltip as TooltipMUI } from '@mui/material';
-import { ThumbUpFill } from 'gthibaud-icons-react';
+import { Tooltip as TooltipMUI } from '@mui/material';
 import { CSSProperties, FC } from 'react';
-import { isThemeColor } from '../../../src/theme/themeBase';
-import { Typography } from '../Typography';
-import { Button } from '../_Button';
 
 export interface TooltipProps {
-    title: string | JSX.Element | null;
+    title: string | JSX.Element | null | undefined;
     style?: CSSProperties;
     children: JSX.Element;
-    buttonLabel?: string;
-    buttonTo?: string;
     disabled?: boolean;
     arrow?: boolean;
-    background?: keyof Theme['colors']['surface'] | string;
-    isOpen?: boolean;
-    setIsOpen?: (isOpen: boolean) => void;
     placement?:
         | 'top'
         | 'right'
@@ -35,89 +25,24 @@ export interface TooltipProps {
 
 export const Tooltip: FC<TooltipProps> = ({
     title,
-    buttonLabel,
-    buttonTo,
     disabled = false,
     children,
     placement,
-    arrow = false,
+    arrow = true,
     style = {},
-    background = 'glass',
-    isOpen,
-    setIsOpen = () => {},
 }) => {
-    const theme = useTheme();
-
-    const backgroundColor = isThemeColor(background)
-        ? theme.colors.surface[background as keyof Theme['colors']['surface']]
-        : background;
-
-    const border = background === 'glass' ? theme.divider.glass : theme.divider.primary;
-
-    if (disabled) {
+    if (!title) {
         return children;
     }
 
-    if (buttonLabel && buttonTo) {
-        return (
-            <TooltipMUI
-                placement={placement}
-                arrow={arrow}
-                open={isOpen}
-                title={
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 1,
-                            pt: 0.5,
-                            pb: 1,
-                            px: 0.4,
-                            width: 200,
-                        }}
-                    >
-                        <Typography
-                            s={12}
-                            w={500}
-                        >
-                            {title}
-                        </Typography>
-                        <Button
-                            onClick={() => {
-                                window.open(buttonTo || '', '_blank');
-                            }}
-                            style={{
-                                cursor: 'pointer',
-                                fontSize: '12px',
-                                transition: 'all 0.2s ease-in-out',
-                                backgroundColor: 'background.paper',
-                                color: 'text.primary',
-                                '&:hover': {
-                                    transform: 'scale(1.04)',
-                                    backgroundColor: 'background.paper',
-                                },
-                            }}
-                            size="small"
-                            endIcon={ThumbUpFill}
-                        >
-                            {buttonLabel}
-                        </Button>
-                    </Box>
-                }
-            >
-                {/* {Box is mandatory to make Tooltip work if the children has a disabled state} */}
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>{children}</Box>
-            </TooltipMUI>
-        );
+    if (disabled) {
+        return children;
     }
 
     return (
         <TooltipMUI
             title={title}
             placement={placement}
-            open={isOpen}
-            onOpen={() => (setIsOpen ? setIsOpen(true) : null)}
-            onClose={() => (setIsOpen ? setIsOpen(false) : null)}
             arrow={arrow}
             PopperProps={{
                 modifiers: [
@@ -132,19 +57,38 @@ export const Tooltip: FC<TooltipProps> = ({
             componentsProps={{
                 tooltip: {
                     sx: {
-                        border,
-                        background: backgroundColor,
-                        backdropFilter: `blur(${theme.blur.glass}px)`,
-                        WebkitBackgroundFilter: `blur(${theme.blur.glass}px)`,
+                        padding: '8px 12px',
+                        border: `1px solid var(--colors-border)`,
+                        background: 'rgba(26,26,26,0.7)',
+                        backdropFilter: `blur(12px)`,
+                        WebkitBackgroundFilter: `blur(12px)`,
                         backgroundBlendMode: 'overlay',
                         '& .MuiTooltip-arrow': {
-                            background: backgroundColor,
-                            backdropFilter: `blur(${theme.blur.glass}px)`,
-                            WebkitBackgroundFilter: `blur(${theme.blur.glass}px)`,
+                            background: 'none',
+                            border: 'none',
+                            fill: 'rgba(26,26,26,0.7)',
+                            backdropFilter: `blur(12px)`,
+                            WebkitBackgroundFilter: `blur(12px)`,
                             backgroundBlendMode: 'overlay',
                         },
-                        borderRadius: '8px',
-                        fontSize: '12px',
+                        borderRadius: '12px',
+                        fontSize: '14px',
+                        lineHeight: '1.4',
+                        color: 'white',
+                        fontFamily: 'var(--fonts-body)',
+                        // border: `1px solid ${theme.divider.primary}`,
+                        // background: theme.colors.surface.glass,
+                        // backdropFilter: `blur(${theme.blur.glass}px)`,
+                        // WebkitBackgroundFilter: `blur(${theme.blur.glass}px)`,
+                        // backgroundBlendMode: 'overlay',
+                        // '& .MuiTooltip-arrow': {
+                        //     background: theme.colors.surface.glass,
+                        //     backdropFilter: `blur(${theme.blur.glass}px)`,
+                        //     WebkitBackgroundFilter: `blur(${theme.blur.glass}px)`,
+                        //     backgroundBlendMode: 'overlay',
+                        // },
+                        // borderRadius: '8px',
+                        // fontSize: '12px',
                     },
                 },
             }}

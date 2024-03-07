@@ -1,7 +1,7 @@
 import { QuestionMarkCircleFill } from 'gthibaud-icons-react';
 import { FC } from 'react';
 import { NotAvailableTooltip } from '../NotAvailable/tooltip';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../_Tooltip';
 
 interface HelpTooltipProps {
     message: string;

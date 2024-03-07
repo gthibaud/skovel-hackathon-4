@@ -1,3 +1,4 @@
+import { RaceQuickinks } from '@/components/RaceQuicklinks';
 import Image from 'next/image';
 import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
@@ -7,7 +8,7 @@ import './page.css';
 
 export default function Home() {
     return (
-        <main className='home'>
+        <main className="home">
             <Hero
                 imageSrc="banner.jpeg"
                 imageAlt="Banner image"
@@ -50,8 +51,7 @@ export default function Home() {
                     actionTitle="Toutes les épreuves"
                     actionTo="/races"
                 >
-                    <p>90Km</p>
-                    <p>200Km</p>
+                    <RaceQuickinks />
                 </Card>
                 <Card
                     style={{ flex: 2 }}

@@ -10,8 +10,8 @@ import { CSSProperties, ElementType, FC } from 'react';
 import { WidthProps, generateWidth } from '../../props/width';
 import { HorizontalContainer } from '../Container/Horizontal';
 import { TiltingContainer } from '../Container/Titling';
-import { Tooltip } from '../Tooltip';
 import { Typography } from '../Typography';
+import { Tooltip } from '../_Tooltip';
 
 export interface ButtonProps extends WidthProps {
     to?: string;

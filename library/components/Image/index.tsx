@@ -2,7 +2,7 @@
 import { Interpolation, useTheme } from '@emotion/react';
 import { CSSProperties, FC } from 'react';
 import { TiltingContainer } from '../Container/Titling';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../_Tooltip';
 import { ProgressiveImage } from './progressiveImage';
 
 interface ImageProps {

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { isThemeColor } from '../../../src/theme/themeBase';
 import { TiltingContainer } from '../Container/Titling';
 import { Skeleton } from '../Skeleton';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../_Tooltip';
 
 export interface IconButtonProps {
     icon: ElementType;

@@ -1,8 +1,8 @@
 import { CrossCircleFill } from 'gthibaud-icons-react';
 import React, { useState } from 'react';
 import { HorizontalContainer } from '../Container/Horizontal';
-import { Tooltip } from '../Tooltip';
 import { Typography } from '../Typography';
+import { Tooltip } from '../_Tooltip';
 
 interface CoachmarkProps {
     isOpen?: boolean; // Whether the Coachmark is visible

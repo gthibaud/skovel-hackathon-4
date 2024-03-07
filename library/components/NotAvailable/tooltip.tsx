@@ -1,6 +1,6 @@
 import { t } from 'i18next';
 import { FC } from 'react';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../_Tooltip';
 
 interface TooltipProps {
     message?: string | JSX.Element;

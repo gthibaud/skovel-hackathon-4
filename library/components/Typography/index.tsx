@@ -14,11 +14,11 @@ import {
 import { generateUserSelect } from '../../props/select';
 import { generateWeight } from '../../props/weight';
 import { share } from '../../utils/share';
-import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../_Tooltip';
 import {
-    componentMap,
     DEFAULT_FONT_SIZE,
     DEFAULT_FONT_WEIGHT,
+    componentMap,
     fontSizeMap,
     fontWeightMap,
 } from './defaultValues';

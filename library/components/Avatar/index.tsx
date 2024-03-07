@@ -1,9 +1,9 @@
 import { Interpolation, useTheme } from '@emotion/react';
 import type { CSSProperties, FC } from 'react';
-import { generateMarginTop, MarginProps } from '../../props/margin';
+import { MarginProps, generateMarginTop } from '../../props/margin';
 import { VerticalContainer } from '../Container/Vertical';
-import { Tooltip } from '../Tooltip';
 import { Typography } from '../Typography';
+import { Tooltip } from '../_Tooltip';
 
 interface AvatarProps extends MarginProps {
     alt: string; // The alt of the avatar

@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { isUnderBreakpoint } from '../../hooks/useParentWidth';
 import { HorizontalContainer } from '../Container/Horizontal';
 import { Surface } from '../Surface';
-import { Tooltip } from '../Tooltip';
 import { Typography } from '../Typography';
 import { EmojiButton } from '../_Button/Emoji';
+import { Tooltip } from '../_Tooltip';
 
 export type QuickReaction = {
     emoji: string;

@@ -3,9 +3,9 @@ import { ElementType, FC } from 'react';
 import { ContainerProps } from '../../Container';
 import { HorizontalContainer } from '../../Container/Horizontal';
 import { VerticalContainer } from '../../Container/Vertical';
-import { Tooltip } from '../../Tooltip';
 import { Typography } from '../../Typography';
 import { TypographyNumber } from '../../Typography/NumberWrapper';
+import { Tooltip } from '../../_Tooltip';
 
 interface WidgetKeyNumberProps extends ContainerProps {
     title?: string | null;
