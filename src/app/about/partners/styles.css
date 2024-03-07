@@ -18,3 +18,52 @@ h1 {
     border-radius: 12px;
     border: 1.4px solid var(--colors-border);
 }
+
+.partners-categories {
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 22px 0px 12px 0px;
+    }
+}
+
+.partners-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 12px 0px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 264px;
+        text-align: center;
+        transition: transform 200ms ease-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 12px 0px;
+        }
+
+        .summary {
+            color: var(--colors-text-light);
+        }
+
+        .logo {
+            width: 200px;
+            height: 100px;
+            object-fit: contain;
+        }
+    }
+}

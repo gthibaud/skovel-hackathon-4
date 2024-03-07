@@ -96,7 +96,7 @@ export default function Home() {
             <Card
                 title="Partenaires"
                 actionTitle="Tous nos partenaires"
-                actionTo="/partners"
+                actionTo="/about/partners"
             >
                 <p>Ils rendent la course possible :</p>
                 <PartnersCarousel />

@@ -9,16 +9,26 @@ interface ButtonProps {
     onClick?: (e: any) => void;
     size?: 'small' | 'medium' | 'large';
     isLoading?: boolean;
+    style?: any;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const { children, variant = '', to, onClick, size = 'medium', isLoading = false } = props;
+    const {
+        children,
+        variant = '',
+        to,
+        onClick,
+        size = 'medium',
+        isLoading = false,
+        style,
+    } = props;
 
     if (to) {
         return (
             <Link
                 href={to || '/'}
                 className={`button button-${variant} button-size-${size}`}
+                style={style}
             >
                 {isLoading ? '...' : children}
             </Link>
@@ -29,6 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <div
             className={`button button-${variant} button-size-${size}`}
             onClick={onClick}
+            style={style}
         >
             {isLoading ? '...' : children}
         </div>

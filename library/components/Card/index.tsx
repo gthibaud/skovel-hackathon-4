@@ -7,10 +7,11 @@ interface CardProps extends CardHeaderProps {
     children: string | JSX.Element | JSX.Element[];
     variant?: '' | 'grid' | 'centered';
     style?: CSSProperties;
+    className?: string;
 }
 
 export const Card: FC<CardProps> = (props) => {
-    const { children, variant = '', style } = props;
+    const { children, variant = '', style, className } = props;
 
     const renderChildren = () => {
         if (typeof children === 'string') {
@@ -21,10 +22,12 @@ export const Card: FC<CardProps> = (props) => {
 
     return (
         <div
-            className={`card-container card-container-${variant}`}
+            className={`card-container card-container-${variant} ${className}`}
             style={style}
         >
-            <CardHeader {...props} />
+            {props.title || props.actionTo || props.actionElement ? (
+                <CardHeader {...props} />
+            ) : null}
             <div className={`card-content-${variant}`}>{renderChildren()}</div>
         </div>
     );

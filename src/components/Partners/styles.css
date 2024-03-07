@@ -30,12 +30,27 @@
 }
 
 .embla__slide {
-    /* 4 items per slide */
-    flex: 0 0 calc(100% / 5);
+    /* 2 items per slide */
+    flex: 0 0 calc(100% / 2);
     /* 2rem each side */
-    margin: 0px 2rem;
+    margin: 0px 1rem;
     min-width: 0;
     height: 100%;
+}
+
+@media (min-width: 750px) {
+    .embla__slide {
+        /* 2 items per slide */
+        flex: 0 0 calc(100% / 3);
+    }
+}
+
+@media (min-width: 1200px) {
+    .embla__slide {
+        /* 4 items per slide */
+        flex: 0 0 calc(100% / 5);
+        margin: 0px 2rem;
+    }
 }
 
 .partner-container {

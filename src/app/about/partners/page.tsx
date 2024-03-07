@@ -1,38 +1,73 @@
 import './styles.css';
 
+import { partners, partnersCategories } from '@/data/partners';
 import Link from 'next/link';
+import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
 
 export default function Partners() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> Partenaires</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                Partenaires
+            </h1>
             <Card>
-                {`
-Ils rendent la CapyRace 2024 possible !
-
-La CapyRace 2024 est organisée par l'association Capyland. Pour que la course soit une réussite, l'association a besoin de partenaires :
-
-- des partenaires financiers
-
-- des partenaires logistiques
-
-- des partenaires techniques
-
-- des partenaires médias
-
-Nous remercions chaleureusement nos partenaires pour leur soutien et leur engagement.
-
-## Devenir partenaire
-
-Pour devenir partenaire de la CapyRace 2024, contactez l'association Capyland :
-
-- Téléphone : 01 23 45 67 89
-
-- Email :
-
-
-`}
+                L'organisation de la CapybaRun remercie chaleureusement l'ensemble de ses
+                partenaires qui permettent à chacun de profiter d'un évènement exceptionnel.
+            </Card>
+            {partnersCategories.map((category, index) => (
+                <div
+                    key={index}
+                    className="partners-categories"
+                >
+                    <h2>{category.name}</h2>
+                    <p>{category.summary}</p>
+                    <div className="partners-section">
+                        {partners
+                            .filter((partner) => partner.categoryId === category.id)
+                            .map((partner, index) => (
+                                <Card
+                                    className="container"
+                                    key={index}
+                                >
+                                    <a
+                                        href={partner.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="logo"
+                                            src={partner.logo}
+                                            alt={partner.name}
+                                        />
+                                    </a>
+                                    <p className="name">{partner.name}</p>
+                                    <p className="summary">{partner.summary}</p>
+                                </Card>
+                            ))}
+                    </div>
+                </div>
+            ))}
+            <Card>
+                <span>
+                    Vous souhaitez devenir partenaire de la CapybaRun ? Contactez-nous ici :
+                    <Button
+                        to="/contact"
+                        style={{
+                            width: 'fit-content',
+                            margin: 'auto',
+                            marginTop: '1rem',
+                        }}
+                    >
+                        Devenir partenaire
+                    </Button>
+                </span>
             </Card>
         </main>
     );
