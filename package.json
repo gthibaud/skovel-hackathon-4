@@ -53,6 +53,7 @@
         "nprogress": "^0.2.0",
         "path-browserify": "^1.0.1",
         "react": "^18",
+        "react-aria-components": "^1.1.1",
         "react-audio-voice-recorder": "^1.2.1",
         "react-auth-code-input": "^3.2.1",
         "react-cookie": "^4.1.1",

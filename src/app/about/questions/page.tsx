@@ -1,16 +1,29 @@
 import './styles.css';
 
 import Link from 'next/link';
+import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
+import { Input } from '../../../../library/components/Input';
 
 export default function Partners() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> FAQ</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                FAQ
+            </h1>
+            <Input
+                autoFocus
+                type="text"
+                placeholder="Rechercher une information"
+            />
             <Card>
                 {`
-Une question sur la CapyRace 2024 ? Retrouvez ici les réponses aux questions les plus fréquentes :
-
 ## Inscriptions
 
 ### Comment s'inscrire ?
@@ -60,6 +73,21 @@ Les résultats sont publiés dans les 24 heures suivant la fin de la course.
 Pour devenir bénévole, contactez l'association Capyland. Vous trouverez toutes les informations nécessaires sur notre site internet.
 
 `}
+            </Card>
+            <Card>
+                <span>
+                    Vous n'avez pas trouvé la réponse à votre question ? Contactez-nous !
+                    <Button
+                        to="/contact"
+                        style={{
+                            width: 'fit-content',
+                            margin: 'auto',
+                            marginTop: '1rem',
+                        }}
+                    >
+                        Contacter l'organisation
+                    </Button>
+                </span>
             </Card>
         </main>
     );
