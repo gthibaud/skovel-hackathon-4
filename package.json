@@ -66,6 +66,7 @@
         "react-intersection-observer": "^9.5.2",
         "react-map-gl": "^7.1.5",
         "react-markdown": "^8.0.6",
+        "react-medium-image-zoom": "^5.1.10",
         "react-player": "^2.13.0",
         "react-qr-code": "^2.0.12",
         "react-responsive": "^9.0.2",

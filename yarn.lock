@@ -9462,6 +9462,11 @@ react-markdown@^8.0.6:
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
+react-medium-image-zoom@^5.1.10:
+  version "5.1.10"
+  resolved "https://registry.npmjs.org/react-medium-image-zoom/-/react-medium-image-zoom-5.1.10.tgz#afe32abb5f86ccd0b484fce92d06a86aab63fc14"
+  integrity sha512-sgadFY5yH0sEz5lVs9NubiwbVrtUeKnH9YdzXYv+cblrP8WXj2TSyT6J3sPw0pM5dGKbpjXjePye+42yWV4OSg==
+
 react-player@^2.13.0:
   version "2.14.1"
   resolved "https://registry.npmjs.org/react-player/-/react-player-2.14.1.tgz#fc434c0e1e6161e76f5d5970721596c4acec52b1"

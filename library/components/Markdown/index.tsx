@@ -1,7 +1,7 @@
 import { Skeleton } from '@mui/material';
-import Image from 'next/image';
 import { FC } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import { MarkdownImage } from './components/MarkdownImage';
 import './styles.css';
 
 interface MarkdownProps {
@@ -26,22 +26,15 @@ const MarkdownComponents: object = {
             const caption = metastring?.match(/{caption: (.*?)}/)?.pop();
 
             return (
-                <div className="postImgWrapper">
-                    <Image
-                        src={image.properties.src}
-                        width={width}
-                        height={height}
-                        className="postImg"
-                        alt={alt}
-                        priority={isPriority}
-                    />
-                    <div
-                        className="caption"
-                        aria-label={alt}
-                    >
-                        <i>{alt}</i>
-                    </div>
-                </div>
+                <MarkdownImage
+                    image={image}
+                    alt={alt}
+                    width={width}
+                    height={height}
+                    isPriority={isPriority}
+                    hasCaption={hasCaption}
+                    caption={caption}
+                />
             );
         }
         return <p>{paragraph.children}</p>;
