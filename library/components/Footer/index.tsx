@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <footer>
             <div className="footer-content">
-                <div className="footer-left">© CapyRun – {new Date().getFullYear()}</div>
+                <div className="footer-left">© CapybaRun – {new Date().getFullYear()}</div>
                 <div className="footer-right">
                     <a
                         href="/website-map"

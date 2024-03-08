@@ -6,12 +6,20 @@ import { Card } from '../../../../library/components/Card';
 export default function Volunteer() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> Bénévoles</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                Bénévoles
+            </h1>
             <Card>
                 {`
-La CapyRace 2024 a besoin de vous !
+La CapybaRun 2024 a besoin de vous !
 
-La CapyRace 2024 est organisée par l'association Capyland. Pour que la course soit une réussite, l'association a besoin :
+La CapybaRun 2024 est organisée par l'association Capyland. Pour que la course soit une réussite, l'association a besoin :
 
 - de bénévoles pour l'organisation de la course
 
@@ -29,7 +37,7 @@ La CapyRace 2024 est organisée par l'association Capyland. Pour que la course s
 
 - de bénévoles pour la gestion des inscriptions
 
-Les bénévoles sont indispensables pour que la CapyRace 2024 soit une réussite.
+Les bénévoles sont indispensables pour que la CapybaRun 2024 soit une réussite.
 
 ## Inscriptions
 

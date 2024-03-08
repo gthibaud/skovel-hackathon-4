@@ -12,25 +12,25 @@ export const contact: Contact[] = [
     {
         id: 'email',
         type: 'email',
-        link: 'mailto:hello@capyrace.com',
+        link: 'mailto:hello@skovel.com',
         icon: <EmailFill />,
     },
     {
         id: 'instagram',
         type: 'instagram',
-        link: 'https://www.instagram.com/capybarace/',
+        link: 'https://www.instagram.com/skovel/',
         icon: <Instagram />,
     },
     {
         id: 'facebook',
         type: 'facebook',
-        link: 'https://www.facebook.com/capybarace/',
+        link: 'https://www.facebook.com/skovel/',
         icon: <Facebook />,
     },
     {
         id: 'twitter',
         type: 'twitter',
-        link: 'https://twitter.com/capybarace',
+        link: 'https://twitter.com/skovel',
         icon: <Twitter />,
     },
 ];

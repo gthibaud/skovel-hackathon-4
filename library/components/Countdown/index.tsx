@@ -25,10 +25,10 @@ export const Countdown: FC<CountdownProps> = (props) => {
             </div>
             <div className="title">
                 Départ le{' '}
-                {format(date, 'PPPpp', {
+                {format(date, 'PPP', {
                     locale: localeFr,
                 })}{' '}
-                au Markstein (68).
+                à 8h au Markstein (68).
             </div>
         </div>
     );

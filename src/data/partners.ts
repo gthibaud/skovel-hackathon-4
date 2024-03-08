@@ -17,7 +17,7 @@ export const partnersCategories: PartnersCategory[] = [
     {
         id: 'premium',
         name: 'Partenaires premiums',
-        summary: 'Ils rendent la Capyrun possible chaque année.',
+        summary: 'Ils rendent la CapybaRun possible chaque année.',
     },
     {
         id: 'official',

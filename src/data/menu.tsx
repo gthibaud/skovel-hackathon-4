@@ -41,7 +41,7 @@ export const menu: MenuItem[] = [
         iconFill: <HomeRoundedFill />,
         pictureProfile: '/images/capybarace-logo.png',
         position: 'left',
-        summary: "Page d'accueil de la Capyrun.",
+        summary: "Page d'accueil de la CapybaRun.",
     },
     {
         title: 'Actualités',
@@ -62,7 +62,7 @@ export const menu: MenuItem[] = [
                 to: '/about/the-race',
                 icon: <FlagCheckered />,
                 iconFill: <FlagCheckered />,
-                summary: 'La Capyrun, son histoire et ses particularités.',
+                summary: 'La CapybaRun, son histoire et ses particularités.',
             },
             {
                 title: 'Programme',

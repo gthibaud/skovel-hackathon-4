@@ -6,10 +6,18 @@ import { Card } from '../../../../library/components/Card';
 export default function Program() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> Programme</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                Programme
+            </h1>
             <Card>
                 {`
-Le programme de la CapyRace 2024 est le suivant :
+Le programme de la CapybaRun 2024 est le suivant :
 
 - 8h : ouverture du village de la course
 - 9h : début des inscriptions et retrait des dossards

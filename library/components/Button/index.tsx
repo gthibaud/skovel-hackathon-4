@@ -3,7 +3,7 @@ import { FC } from 'react';
 import './styles.css';
 
 interface ButtonProps {
-    children: string | JSX.Element | JSX.Element[];
+    children: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
     variant?: '' | 'inverted';
     to?: string;
     onClick?: (e: any) => void;

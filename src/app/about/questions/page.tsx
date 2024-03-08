@@ -1,7 +1,7 @@
 import './styles.css';
 
+import { ContactSection } from '@/components/ContactSection';
 import Link from 'next/link';
-import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
 import { SearchField } from '../../../../library/components/SearchField';
 
@@ -27,7 +27,7 @@ export default function Partners() {
 
 ### Comment s'inscrire ?
 
-Pour vous inscrire à la CapyRace 2024, rendez-vous sur notre site internet. Vous y trouverez toutes les informations nécessaires pour vous inscrire.
+Pour vous inscrire à la CapybaRun 2024, rendez-vous sur notre site internet. Vous y trouverez toutes les informations nécessaires pour vous inscrire.
 
 ### Quel est le tarif des inscriptions ?
 
@@ -73,21 +73,7 @@ Pour devenir bénévole, contactez l'association Capyland. Vous trouverez toutes
 
 `}
             </Card>
-            <Card>
-                <span>
-                    Vous n&apos;avez pas trouvé la réponse à votre question ? Contactez-nous !
-                    <Button
-                        to="/contact"
-                        style={{
-                            width: 'fit-content',
-                            margin: 'auto',
-                            marginTop: '1rem',
-                        }}
-                    >
-                        Contacter l&apos;organisation
-                    </Button>
-                </span>
-            </Card>
+            <ContactSection />
         </main>
     );
 }

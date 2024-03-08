@@ -1,3 +1,4 @@
+import { ContactSection } from '@/components/ContactSection';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuickinks } from '@/components/RaceQuicklinks';
 import Image from 'next/image';
@@ -28,9 +29,9 @@ export default function Home() {
                         <br />
                         <h1>CapybaRun 2024</h1>
                         <p className="presentation">
-                            200Km de trail sans assistance au cœur des Vosges...
+                            200Km de trail sans assistance au cœur des Vosges
                         </p>
-                        <p className="date">Départ le 24/08/2024 au Markstein (68)</p>
+                        <p className="date">du 24 au 25 août 2024</p>
                         <div className="actions">
                             <Button
                                 to="/about"
@@ -43,7 +44,7 @@ export default function Home() {
                                 variant="inverted"
                                 size="large"
                             >
-                                S&apos;inscrire
+                                M&apos;inscrire
                             </Button>
                         </div>
                     </>
@@ -69,14 +70,15 @@ export default function Home() {
                 <Card
                     title="La course la plus folle de l'année"
                     actionTitle="À propos"
-                    actionTo="/about"
+                    actionTo="/about/the-race"
                     style={{ flex: 2 }}
                 >
-                    La CapybaRun est un trail de 200Km sans assistance au cœur des Vosges. La course
-                    se déroule sur 3 jours et vous emmènera à travers les plus beaux paysages de la
-                    région. Prenez le départ d&apos;une aventure humaine et sportive qui vous
-                    permettra de repousser vos limites et de découvrir des paysages à couper le
-                    souffle.
+                    {`
+Évènement incontournable du trail, la CapybaRun vous attend cet année pour un trail exceptionnel de 200Km à travers les Vosges.
+L'aventure est notre ADN, oserez-vous relever le défi d'une course de plusieurs jours sans assistance ?
+
+Préparez-vous à découvrir les plus beaux paysages de la région au cours d'une aventure humaine et sportive sans limites...
+            `}
                 </Card>
                 <Card
                     title={'Aftermovie 2023'}
@@ -116,7 +118,7 @@ export default function Home() {
                         }}
                     >
                         <p>
-                            Les Vosges seront le décor de la Capybarace, avec un départ et une
+                            Les Vosges seront le décor de la CapybaRun, avec un départ et une
                             arrivée au Markstein (68).
                         </p>
                         <Map
@@ -131,7 +133,7 @@ export default function Home() {
                     actionTo="/events"
                     style={{ flex: 3 }}
                 >
-                    todo
+                    Section en cours de développement.
                 </Card>
             </div>
             <Card
@@ -139,24 +141,9 @@ export default function Home() {
                 actionTitle="Tous nos partenaires"
                 actionTo="/about/partners"
             >
-                <p>Ils rendent la course possible :</p>
                 <PartnersCarousel />
             </Card>
-            <Card>
-                <span>
-                    Vous n&apos;avez pas trouvé la réponse à votre question ? Contactez-nous !
-                    <Button
-                        to="/contact"
-                        style={{
-                            width: 'fit-content',
-                            margin: 'auto',
-                            marginTop: '1rem',
-                        }}
-                    >
-                        Contacter l&apos;organisation
-                    </Button>
-                </span>
-            </Card>
+            <ContactSection />
         </main>
     );
 }

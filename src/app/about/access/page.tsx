@@ -6,10 +6,18 @@ import { Card } from '../../../../library/components/Card';
 export default function Access() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> Accès</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                Accès
+            </h1>
             <Card>
                 {`
-Le village de la CapyRace 2024 est situé à l'adresse suivante :
+Le village de la CapybaRun 2024 est situé à l'adresse suivante :
 
 Capyland
 Route de la forêt

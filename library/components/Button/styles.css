@@ -6,6 +6,7 @@
     border-radius: 50px;
     background-color: var(--colors-secondary);
     color: var(--colors-primary);
+    fill: var(--colors-primary);
     font-weight: 590;
     font-size: 1rem;
     cursor: pointer;
@@ -16,6 +17,7 @@
 
     &:hover {
         color: var(--colors-secondary);
+        fill: var(--colors-secondary);
         background-color: var(--colors-primary);
         transform: scale(0.98);
     }
@@ -24,9 +26,11 @@
 .button-inverted {
     background-color: var(--colors-primary);
     color: var(--colors-secondary);
+    fill: var(--colors-secondary);
 
     &:hover {
         color: var(--colors-primary);
+        fill: var(--colors-primary);
         background-color: var(--colors-secondary);
     }
 }
