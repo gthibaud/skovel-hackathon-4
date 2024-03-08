@@ -144,7 +144,7 @@ export default function Home() {
             </Card>
             <Card>
                 <span>
-                    Vous n'avez pas trouvé la réponse à votre question ? Contactez-nous !
+                    Vous n&apos;avez pas trouvé la réponse à votre question ? Contactez-nous !
                     <Button
                         to="/contact"
                         style={{
@@ -153,7 +153,7 @@ export default function Home() {
                             marginTop: '1rem',
                         }}
                     >
-                        Contacter l'organisation
+                        Contacter l&apos;organisation
                     </Button>
                 </span>
             </Card>

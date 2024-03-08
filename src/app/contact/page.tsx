@@ -12,7 +12,7 @@ export default function Contact() {
         <main>
             <h1>Contact</h1>
             <p>
-                Vous n'avez pas trouvé la réponse à votre question sur la page{' '}
+                Vous n&apos;avez pas trouvé la réponse à votre question sur la page{' '}
                 <Link href="about/questions">FAQ</Link> ? Envoyez-nous un email ou contactez-nous
                 via les réseaux sociaux :
             </p>
@@ -22,6 +22,7 @@ export default function Contact() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        key={item.id}
                     >
                         <Card
                             className="container"
@@ -33,7 +34,7 @@ export default function Contact() {
                     </a>
                 ))}
             </div>
-            <p>Vous pouvez également nous écrire à l'adresse postale suivante :</p>
+            <p>Vous pouvez également nous écrire à l&apos;adresse postale suivante :</p>
             <p>
                 Association CapybaRun
                 <br />

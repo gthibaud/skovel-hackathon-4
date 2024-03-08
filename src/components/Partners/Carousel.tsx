@@ -3,6 +3,7 @@
 import { partners } from '@/data/partners';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import { FC } from 'react';
 import { Tooltip } from '../../../library/components/Tooltip';
 import './styles.css';
@@ -22,7 +23,10 @@ export const PartnersCarousel: FC = () => {
         >
             <div className="embla__container">
                 {partners.map((partner, index) => (
-                    <div className="embla__slide">
+                    <div
+                        className="embla__slide"
+                        key={index}
+                    >
                         <Tooltip title={partner.summary}>
                             <a
                                 key={index}
@@ -31,10 +35,12 @@ export const PartnersCarousel: FC = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img
+                                <Image
                                     src={partner.logo}
                                     alt={partner.name}
                                     className="logo-img"
+                                    width={100}
+                                    height={100}
                                 />
                             </a>
                         </Tooltip>

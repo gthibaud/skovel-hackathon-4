@@ -1,6 +1,7 @@
 import './styles.css';
 
 import { partners, partnersCategories } from '@/data/partners';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
@@ -18,8 +19,8 @@ export default function Partners() {
                 Partenaires
             </h1>
             <Card>
-                L'organisation de la CapybaRun remercie chaleureusement l'ensemble de ses
-                partenaires qui permettent à chacun de profiter d'un évènement exceptionnel.
+                L&apos;organisation de la CapybaRun remercie chaleureusement l&apos;ensemble de ses
+                partenaires qui permettent à chacun de profiter d&apos;un évènement exceptionnel.
             </Card>
             {partnersCategories.map((category, index) => (
                 <div
@@ -41,10 +42,12 @@ export default function Partners() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <img
+                                        <Image
                                             className="logo"
                                             src={partner.logo}
                                             alt={partner.name}
+                                            width={200}
+                                            height={100}
                                         />
                                     </a>
                                     <p className="name">{partner.name}</p>
