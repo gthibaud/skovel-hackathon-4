@@ -27,22 +27,23 @@ export const DropdownItem: FC<DropdownItemProps> = (props) => {
             <a
                 className={`dropdown-item dropdown-item-${isActive ? 'active' : ''}`}
                 onClick={() => {
-                    router.push(to)
-                    props.onClick()
+                    router.push(to);
+                    props.onClick();
                 }}
             >
                 {/* Using the slot pattern to render the icon (https://stackoverflow.com/questions/76614923/how-to-pass-a-component-as-a-prop-using-next-13) */}
-                {Icon &&
+                {Icon && (
                     <Icon.type
                         {...Icon.props}
                         style={{
                             display: 'flex',
                             margin: '0',
+                            marginRight: 8,
                         }}
-                        size={28}
+                        size={20}
                         className="icon"
                     />
-                }
+                )}
                 {title}
             </a>
         </li>

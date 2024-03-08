@@ -2,6 +2,7 @@ import './styles.css';
 
 import Link from 'next/link';
 import { Card } from '../../../../library/components/Card';
+import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Rules() {
     return (
@@ -85,6 +86,7 @@ Venez nombreux pour partager un moment sportif et festif !
 Le parcours de la CapybaRun est un parcours de 10 km, qui se déroule dans la forêt de Capyland. Le parcours est balisé et sécurisé, dans le respect des règles de sécurité.
 `}
             </Card>
+            <NavigationFooter />
         </main>
     );
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
+import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Partners() {
     return (
@@ -72,6 +73,7 @@ export default function Partners() {
                     </Button>
                 </span>
             </Card>
+            <NavigationFooter />
         </main>
     );
 }

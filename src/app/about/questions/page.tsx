@@ -3,6 +3,7 @@ import './styles.css';
 import { ContactSection } from '@/components/ContactSection';
 import Link from 'next/link';
 import { Card } from '../../../../library/components/Card';
+import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 import { SearchField } from '../../../../library/components/SearchField';
 
 export default function Partners() {
@@ -74,6 +75,7 @@ Pour devenir bénévole, contactez l'association Capyland. Vous trouverez toutes
 `}
             </Card>
             <ContactSection />
+            <NavigationFooter />
         </main>
     );
 }

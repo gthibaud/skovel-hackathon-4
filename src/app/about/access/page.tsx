@@ -2,6 +2,7 @@ import './styles.css';
 
 import Link from 'next/link';
 import { Card } from '../../../../library/components/Card';
+import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Access() {
     return (
@@ -41,6 +42,7 @@ Venez nombreux pour partager un moment sportif et festif !
 
 `}
             </Card>
+            <NavigationFooter />
         </main>
     );
 }

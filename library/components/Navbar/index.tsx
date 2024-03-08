@@ -1,5 +1,6 @@
 'use client';
 
+import { editions } from '@/data/editions';
 import { MenuItem, menu } from '@/data/menu';
 import { Backdrop } from '@mui/material';
 import { Cross } from 'gthibaud-icons-react';
@@ -89,11 +90,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
                                 </span>
                             }
                             to="/2024"
-                            dropdownItems={[
-                                { title: 'Édition 2023', to: '/2022' },
-                                { title: 'Édition 2022', to: '/2022' },
-                                { title: 'Édition 2019', to: '/2022' },
-                            ]}
+                            dropdownItems={editions
+                                .filter((e) => !e.current)
+                                .map((e) => ({ title: `Édition ${e.name}`, to: `/${e.to}` }))}
                             style="light"
                         />
                         <div className="pad-container" />

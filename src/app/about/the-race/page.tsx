@@ -3,6 +3,7 @@ import './styles.css';
 import { PastEditionsQuickinks } from '@/components/PastEditions';
 import Link from 'next/link';
 import { Card } from '../../../../library/components/Card';
+import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function TheRace() {
     return (
@@ -56,6 +57,7 @@ La CapybaRun est ouverte à tous les amateurs de course à pied, qu'ils soient s
                 <br />
                 <PastEditionsQuickinks />
             </Card>
+            <NavigationFooter />
         </main>
     );
 }
