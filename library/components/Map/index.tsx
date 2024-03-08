@@ -6,10 +6,11 @@ import MapGL, { MapRef, Marker } from 'react-map-gl/maplibre';
 interface MapProps {
     longitude: number;
     latitude: number;
+    zoom?: number;
 }
 
 export const Map: FC<MapProps> = (props) => {
-    const { longitude, latitude } = props;
+    const { longitude, latitude, zoom = 4 } = props;
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     const [map, setMap] = useState<MapRef | null>(null);
@@ -38,7 +39,7 @@ export const Map: FC<MapProps> = (props) => {
                 initialViewState={{
                     latitude,
                     longitude,
-                    zoom: 4,
+                    zoom,
                 }}
                 attributionControl={false}
                 mapStyle={getStyleUrl()}

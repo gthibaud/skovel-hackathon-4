@@ -14,8 +14,19 @@
     }
 
     li {
+        margin-left: 22px;
+
         &:not(:last-child) {
             margin-bottom: 1.4rem;
+        }
+    }
+
+    a {
+        font-weight: 600;
+        color: var(--colors-text-primary);
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 

@@ -1,0 +1,14 @@
+.contact-section {
+    text-align: center;
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 599;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: var(--colors-text-light);
+    }
+}

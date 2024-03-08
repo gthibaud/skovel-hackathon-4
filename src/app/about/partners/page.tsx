@@ -1,9 +1,9 @@
 import './styles.css';
 
+import { BecomePartner } from '@/components/BecomePartner';
 import { partners, partnersCategories } from '@/data/partners';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '../../../../library/components/Button';
 import { Card } from '../../../../library/components/Card';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
@@ -58,21 +58,7 @@ export default function Partners() {
                     </div>
                 </div>
             ))}
-            <Card>
-                <span>
-                    Vous souhaitez devenir partenaire de la CapybaRun ? Contactez-nous ici :
-                    <Button
-                        to="/contact"
-                        style={{
-                            width: 'fit-content',
-                            margin: 'auto',
-                            marginTop: '1rem',
-                        }}
-                    >
-                        Devenir partenaire
-                    </Button>
-                </span>
-            </Card>
+            <BecomePartner />
             <NavigationFooter />
         </main>
     );
