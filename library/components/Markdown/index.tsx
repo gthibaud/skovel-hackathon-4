@@ -7,6 +7,7 @@ import './styles.css';
 interface MarkdownProps {
     isLoading?: boolean;
     children?: string;
+    className?: string;
 }
 
 const MarkdownComponents: object = {
@@ -41,7 +42,7 @@ const MarkdownComponents: object = {
     },
 };
 
-export const Markdown: FC<MarkdownProps> = ({ isLoading, children = '' }) => {
+export const Markdown: FC<MarkdownProps> = ({ isLoading, children = '', className }) => {
     return isLoading ? (
         <Skeleton
             width="100%"
@@ -49,7 +50,7 @@ export const Markdown: FC<MarkdownProps> = ({ isLoading, children = '' }) => {
         />
     ) : (
         <ReactMarkdown
-            className="markdown"
+            className={`markdown ${className}`}
             components={MarkdownComponents}
         >
             {children}
