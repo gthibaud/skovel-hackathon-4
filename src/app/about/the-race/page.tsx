@@ -1,5 +1,6 @@
 import './styles.css';
 
+import { PastEditionsQuickinks } from '@/components/PastEditions';
 import Link from 'next/link';
 import { Card } from '../../../../library/components/Card';
 
@@ -15,42 +16,45 @@ export default function TheRace() {
                 </Link>{' '}
                 La course
             </h1>
-            <Card>
+            <Card
+                style={{
+                    padding: '42px 64px', // TODO
+                }}
+            >
                 {`
-La CapybaRun est une course de 10 km qui se déroule dans la forêt de Capyland. La course est ouverte à tous les membres de l'association, sans distinction d'âge ou de sexe. Les mineurs doivent être accompagnés d'un adulte.
 
-La course se déroule sur un parcours balisé, dans le respect des règles de sécurité. Les participants doivent être assurés en responsabilité civile pour participer à la course. L'association décline toute responsabilité en cas d'accident.
+## Une histoire de passion
 
-Les résultats sont publiés sur le site de l'association. Les trois premiers de chaque catégorie sont récompensés.
+La CapybaRun est née en 2022, à l'initiative de Michel Robert et Anna Montana. Tous deux passionnés de course à pied et de nature, ils avaient l'habitude d'inviter tous les ans quelques amis dans leur châlet au Markstein afin de courir sur les chemins montagneux du Grand Ballon. Après le COVID et sous l'impulsion de leur ami Jean-Pierre, ils ont décidé d'ouvrir leur événement à tous les amateurs de course à pied.
 
-Les participants autorisent l'association à utiliser leur image dans le cadre de la promotion de la course.
+![Anna et Michel, fondateurs de la CapybaRun](/medias/michel-anna.jpg)
 
-Le règlement de la course peut être modifié à tout moment par l'association. Les participants en seront informés par voie électronique.
+En quelques années, la CapybaRun est devenu un évènement incontournable du paysage du trail français. En 2023, ce sont plus de 1500 coureurs qui s'étaient donné rendez-vous pour participer à la course. 
 
-La CapybaRun est une course conviviale, qui se déroule dans un cadre exceptionnel. Venez nombreux pour partager un moment sportif et festif !
+## Nature et partage
 
-## Informations pratiques
+Les valeurs de nature et de partage sont au cœur de la CapybaRun. L'association est engagée dans une démarche de développement durable, et s'efforce de minimiser l'impact de la course sur l'environnement. Chaque édition se déroule dans le respect de la nature, et qui vise à sensibiliser les participants à la protection de l'environnement. Les participants doivent désormais apporter des gourdes pour s'hydrater (les ravitaillements ne fournissent pas de gobelets jetables), et les déchets sont triés et recyclés.
 
-- Date : 15 septembre 2024
+![Les Vosges, un décor inoubliable](/medias/nature.jpeg)
 
-- Lieu : forêt de Capyland
+## L'édition 2024
 
-- Départ : 10h
+L'édition 2024 sera marquée par un nouveau parcours toujours plus ambitieux et exigeant. Les participants pourront profiter de panoramas exceptionnels en reliant les grands ballons des Vosges et en sillonant les crêtes. Découvrez les [parcours](/races) de chaque épreuve.
 
-- Tarif : 10 €
+![Oserez-vous relever le défi ?](/medias/2024.jpeg)
 
-- Inscriptions : sur le site de l'association
+## Sportifs ou amateurs, venez nombreux !
 
-- Contact :
-    - Téléphone : 01 23 45 67 89
-    - Email : 
+La CapybaRun est ouverte à tous les amateurs de course à pied, qu'ils soient sportifs aguerris ou simples amateurs. Les 3 premiers arrivés de chaque catégorie d'âge / sexe se verront remettre un trophée. Chaque participant recevra un t-shirt et une médaille à l'arrivée, offerte par nos partenaires. Tous les résultats seront consultables en live ou après la course sur notre site internet.
 
-Venez nombreux pour partager un moment sportif et festif !
+![Le capybara, mascotte de la CapybaRun](/medias/capybara.jpg)
 
-## Parcours
-
-Le parcours de la CapybaRun est un parcours de 10 km, qui se déroule dans la forêt de Capyland. Le parcours est balisé et sécurisé, dans le respect des règles de sécurité.
 `}
+            </Card>
+            <Card title={'Éditions précédentes'}>
+                <p>Retrouvez les résultats et médias des dernières éditions de la CapybaRun :</p>
+                <br />
+                <PastEditionsQuickinks />
             </Card>
         </main>
     );

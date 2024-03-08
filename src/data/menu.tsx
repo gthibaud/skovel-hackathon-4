@@ -55,7 +55,7 @@ export const menu: MenuItem[] = [
         title: 'Informations',
         to: '/about',
         position: 'center',
-        summary: 'Toutes les informations sur la course.',
+        summary: 'Retrouvez ici toutes les informations sur la CapybaRun 2024.',
         items: [
             {
                 title: 'La course',

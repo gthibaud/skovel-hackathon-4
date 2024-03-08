@@ -1,10 +1,7 @@
 .markdown {
-
     p,
     ul,
     blockquote,
-    h1,
-    h2,
     h3,
     h4,
     h5,
@@ -23,6 +20,22 @@
     }
 
     h2 {
-        margin-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .postImg {
+        margin: 24px auto 12px auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    .caption {
+        font-size: 0.9rem;
+        text-align: center;
+        color: var(--colors-text-light);
+        margin-bottom: 24px;
     }
 }

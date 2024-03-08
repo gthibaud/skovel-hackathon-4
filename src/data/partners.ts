@@ -25,6 +25,11 @@ export const partnersCategories: PartnersCategory[] = [
         summary: 'Leurs contributions rendent chaque course inoubliable.',
     },
     {
+        id: 'institutional',
+        name: 'Partenaires institutionnels',
+        summary: 'La CapybaRun est soutenue par des institutions locales et nationales.',
+    },
+    {
         id: 'technical',
         name: 'Partenaires techniques',
         summary: 'Ils vous accompagnent sur le terrain le jour de la course.',
@@ -51,7 +56,7 @@ export const partners: Partner[] = [
     {
         id: 'decathlon',
         name: 'Decathlon',
-        summary: 'Le sport pour tous',
+        summary: 'À fond la forme !',
         logo: '/partners/decathlon.png',
         url: 'https://www.decathlon.com',
         categoryId: 'official',
@@ -59,7 +64,7 @@ export const partners: Partner[] = [
     {
         id: 'eurosport',
         name: 'Eurosport',
-        summary: 'La chaine de sport',
+        summary: 'Tous les sports en direct et en replay',
         logo: '/partners/eurosport.png',
         url: 'https://www.eurosport.com',
         categoryId: 'official',
@@ -103,5 +108,38 @@ export const partners: Partner[] = [
         logo: '/partners/hoka.png',
         url: 'https://www.hoka.com',
         categoryId: 'premium',
+    },
+    {
+        id: 'haut-rhin',
+        name: 'Conseil départemental du Haut-Rhin',
+        summary: 'Le partenaire institutionnel de la CapybaRun',
+        logo: '/partners/haut-rhin.png',
+        url: 'https://www.haut-rhin.fr',
+        categoryId: 'institutional',
+    },
+    {
+        id: 'grand-est',
+        name: 'Conseil régional du Grand Est',
+
+        summary: 'Le partenaire institutionnel de la CapybaRun',
+        logo: '/partners/grand-est.png',
+        url: 'https://www.grandest.fr',
+        categoryId: 'institutional',
+    },
+    {
+        id: 'france-tv',
+        name: 'France Télévisions',
+        summary: 'Le partenaire média de la CapybaRun',
+        logo: '/partners/france-tv.png',
+        url: 'https://www.francetvinfo.fr',
+        categoryId: 'official',
+    },
+    {
+        id: 'vosges',
+        name: 'Les Vosges',
+        summary: 'Le partenaire institutionnel de la CapybaRun',
+        logo: '/partners/vosges.png',
+        url: 'https://www.vosges.fr',
+        categoryId: 'institutional',
     },
 ];

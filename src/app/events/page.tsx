@@ -3,8 +3,8 @@ import './styles.css';
 export default function Events() {
     return (
         <main>
-            <h1>Events</h1>
-            <p>Work in progress</p>
+            <h1>Actualités</h1>
+            <p>Section en cours de développement.</p>
         </main>
     );
 }

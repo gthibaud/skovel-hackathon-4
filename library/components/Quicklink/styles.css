@@ -4,6 +4,7 @@
     gap: 16px;
 
     .quicklink {
+        grid-auto-rows: 1fr;
         background-color: var(--colors-background-card);
         backdrop-filter: blur(24px);
         border-radius: 16px;

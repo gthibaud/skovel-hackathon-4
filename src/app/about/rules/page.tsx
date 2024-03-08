@@ -6,7 +6,15 @@ import { Card } from '../../../../library/components/Card';
 export default function Rules() {
     return (
         <main>
-            <h1><Link href={"/about"} style={{ opacity: 0.5 }}>Informations /</Link> Règlement</h1>
+            <h1>
+                <Link
+                    href={'/about'}
+                    style={{ opacity: 0.5 }}
+                >
+                    Informations /
+                </Link>{' '}
+                Règlement
+            </h1>
             <Card>
                 {`
 ## 1. Introduction
@@ -44,6 +52,37 @@ Les participants autorisent l'association à utiliser leur image dans le cadre d
 ## 9. Modification du règlement
 
 Le règlement peut être modifié à tout moment par l'association. Les participants en seront informés par voie électronique.
+
+
+Les résultats sont publiés sur le site de l'association. Les trois premiers de chaque catégorie sont récompensés.
+
+Les participants autorisent l'association à utiliser leur image dans le cadre de la promotion de la course.
+
+Le règlement de la course peut être modifié à tout moment par l'association. Les participants en seront informés par voie électronique.
+
+La CapybaRun est une course conviviale, qui se déroule dans un cadre exceptionnel. Venez nombreux pour partager un moment sportif et festif !
+
+## Informations pratiques
+
+- Date : 15 septembre 2024
+
+- Lieu : forêt de Capyland
+
+- Départ : 10h
+
+- Tarif : 10 €
+
+- Inscriptions : sur le site de l'association
+
+- Contact :
+    - Téléphone : 01 23 45 67 89
+    - Email : 
+
+Venez nombreux pour partager un moment sportif et festif !
+
+## Parcours
+
+Le parcours de la CapybaRun est un parcours de 10 km, qui se déroule dans la forêt de Capyland. Le parcours est balisé et sécurisé, dans le respect des règles de sécurité.
 `}
             </Card>
         </main>

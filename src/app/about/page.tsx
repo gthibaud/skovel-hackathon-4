@@ -3,12 +3,13 @@ import { QuicklinksContainer } from '../../../library/components/Quicklink/Conta
 import './page.css';
 
 export default function Courses() {
-    const menuItems = menu.filter((item) => item.to === '/about')[0]?.items;
+    const currentItem = menu.filter((item) => item.to === '/about')[0];
+    const menuItems = currentItem.items;
 
     return (
         <main>
-            <h1>Informations</h1>
-            <p>Retrouvez ici toutes les informations sur la CapybaRun 2024 :</p>
+            <h1>{currentItem.title}</h1>
+            <p>{currentItem.summary}</p>
             {menuItems ? (
                 <QuicklinksContainer quicklinks={menuItems} />
             ) : (
