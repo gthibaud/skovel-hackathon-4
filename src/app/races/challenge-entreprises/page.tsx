@@ -18,7 +18,7 @@ export default function Page() {
             </h1>
             <Card>
                 {`
-hello
+Plus d'informations à venir bientôt.
 `}
             </Card>
             <NavigationFooter />

@@ -1,16 +1,18 @@
 'use client';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { FC, useEffect, useState } from 'react';
-import MapGL, { MapRef, Marker } from 'react-map-gl/maplibre';
+import MapGL, { Layer, MapRef, Marker, Source } from 'react-map-gl/maplibre';
 
 interface MapProps {
     longitude: number;
     latitude: number;
     zoom?: number;
+    height?: number;
+    traceGpx?: any[];
 }
 
 export const Map: FC<MapProps> = (props) => {
-    const { longitude, latitude, zoom = 4 } = props;
+    const { longitude, latitude, zoom = 4, height = 300, traceGpx } = props;
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     const [map, setMap] = useState<MapRef | null>(null);
@@ -34,7 +36,7 @@ export const Map: FC<MapProps> = (props) => {
     };
 
     return (
-        <div style={{ width: '100%', height: 300 }}>
+        <div style={{ width: '100%', height }}>
             <MapGL
                 initialViewState={{
                     latitude,
@@ -43,7 +45,7 @@ export const Map: FC<MapProps> = (props) => {
                 }}
                 attributionControl={false}
                 mapStyle={getStyleUrl()}
-                style={{ width: '100%', height: 300 }}
+                style={{ width: '100%', height }}
                 ref={setMap}
             >
                 <Marker
@@ -51,6 +53,78 @@ export const Map: FC<MapProps> = (props) => {
                     longitude={longitude}
                     color="var(--colors-primary-light)"
                 />
+                {traceGpx && (
+                    <Source
+                        id="polylineLayer"
+                        type="geojson"
+                        data={{
+                            type: 'Feature',
+                            properties: {},
+                            geometry: {
+                                type: 'LineString',
+                                coordinates: traceGpx?.map((point) => [point.lon, point.lat]) || [],
+                            },
+                        }}
+                    >
+                        <Layer
+                            id="traceLayerHover"
+                            type="line"
+                            source="my-data2"
+                            layout={{
+                                'line-join': 'round',
+                                'line-cap': 'round',
+                            }}
+                            paint={{
+                                'line-color': 'transparent',
+                                'line-width': 20,
+                            }}
+                        />
+                        <Layer
+                            id="directionArrowsLayer"
+                            type="symbol"
+                            source="polylineLayer"
+                            paint={{
+                                'icon-color': '#2A55EC',
+                            }}
+                            layout={{
+                                'symbol-placement': 'line',
+                                'icon-image': 'pin',
+                                'icon-rotate': 245,
+                                'icon-size': 0.2,
+                                'icon-rotation-alignment': 'map',
+                                'icon-allow-overlap': true,
+                                'icon-ignore-placement': true,
+                                'icon-offset': [10, 0],
+                            }}
+                        />
+                        <Layer
+                            id="lineLayer"
+                            type="line"
+                            source="my-data"
+                            layout={{
+                                'line-join': 'round',
+                                'line-cap': 'round',
+                            }}
+                            paint={{
+                                'line-color': '#2A55EC',
+                                'line-width': 4,
+                            }}
+                        />
+                        <Layer
+                            id="lineLayer2"
+                            type="line"
+                            source="my-data2"
+                            layout={{
+                                'line-join': 'round',
+                                'line-cap': 'round',
+                            }}
+                            paint={{
+                                'line-color': '#B5CBFB',
+                                'line-width': 2,
+                            }}
+                        />
+                    </Source>
+                )}
             </MapGL>
         </div>
     );
