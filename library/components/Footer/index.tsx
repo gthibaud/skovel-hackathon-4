@@ -8,16 +8,16 @@ export const Footer = () => {
                 <div className="footer-left">© CapyRun – {new Date().getFullYear()}</div>
                 <div className="footer-right">
                     <a
-                        href="mailto:hello@skovel.com"
+                        href="/website-map"
                         className="hover:underline"
                     >
-                        Contact
+                        Plan du site
                     </a>
                     <Link
-                        href="/"
+                        href="/legals"
                         className="hover:underline"
                     >
-                        Terms of Service
+                        Mentions légales
                     </Link>
                     <a
                         href="https://skovel.com"

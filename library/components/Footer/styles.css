@@ -28,7 +28,7 @@ footer {
     .footer-right {
         display: flex;
         flex-direction: row;
-        gap: 12px;
+        gap: 16px;
     }
 
     a {

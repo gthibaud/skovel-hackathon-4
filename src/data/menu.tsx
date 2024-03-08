@@ -41,6 +41,7 @@ export const menu: MenuItem[] = [
         iconFill: <HomeRoundedFill />,
         pictureProfile: '/images/capybarace-logo.png',
         position: 'left',
+        summary: "Page d'accueil de la Capyrun.",
     },
     {
         title: 'Actualités',
@@ -48,11 +49,13 @@ export const menu: MenuItem[] = [
         icon: <Events />,
         iconFill: <EventsFill />,
         position: 'center',
+        summary: 'Retrouvez toute les actualités de la course.',
     },
     {
         title: 'Informations',
         to: '/about',
         position: 'center',
+        summary: 'Toutes les informations sur la course.',
         items: [
             {
                 title: 'La course',
@@ -116,6 +119,7 @@ export const menu: MenuItem[] = [
         title: 'Épreuves',
         to: '/races',
         position: 'center',
+        summary: 'Découvrez les différentes épreuves de la course.',
         items: [
             {
                 title: '200 Km',
@@ -140,5 +144,6 @@ export const menu: MenuItem[] = [
         icon: <Ticket />,
         iconFill: <TicketFill />,
         position: 'right',
+        summary: 'Inscrivez-vous dès maintenant à la course.',
     },
 ];
