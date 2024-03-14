@@ -57,7 +57,7 @@ Pour vous inscrire en tant que bénévole, contactez l'association CapybaRun 202
                         marginTop: '1rem',
                     }}
                 >
-                    Rejoingez l'équipe <ArrowRight />
+                    Rejoingez l&apos;équipe <ArrowRight />
                 </Button>
 
                 <Markdown>
