@@ -1,0 +1,13 @@
+.text-card {
+    padding: 42px 84px;
+
+    .markdown {
+        p {
+            line-height: 1.6rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 42px 24px;
+    }
+}

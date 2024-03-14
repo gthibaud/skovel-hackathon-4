@@ -1,5 +1,5 @@
 .card-container {
-    background-color: var(--color-background-card);
+    background-color: var(--colors-background-card);
     backdrop-filter: blur(24px);
     border-radius: 12px;
     box-shadow: 0 0 24px 0 var(--colors-shadow-light);

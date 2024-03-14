@@ -3,7 +3,7 @@ import './styles.css';
 import { ContactSection } from '@/components/ContactSection';
 import { questions } from '@/data/questions';
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 import { SearchField } from '../../../../library/components/SearchField';
 import { Question } from './components/Question';
@@ -24,14 +24,14 @@ export default function Partners() {
                 autoFocus
                 placeholder="Rechercher une information"
             />
-            <Card>
+            <CardText>
                 {questions.map((question, index) => (
                     <Question
                         key={index}
                         question={question}
                     />
                 ))}
-            </Card>
+            </CardText>
             <ContactSection />
             <NavigationFooter />
         </main>

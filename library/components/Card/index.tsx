@@ -3,7 +3,7 @@ import { Markdown } from '../Markdown';
 import { CardHeader, CardHeaderProps } from './CardHeader';
 import './styles.css';
 
-interface CardProps extends CardHeaderProps {
+export interface CardProps extends CardHeaderProps {
     children: string | JSX.Element | JSX.Element[];
     variant?: '' | 'grid' | 'centered';
     style?: CSSProperties;

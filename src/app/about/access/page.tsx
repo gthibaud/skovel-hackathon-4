@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { Map } from '../../../../library/components/Map';
 import { Markdown } from '../../../../library/components/Markdown';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
@@ -18,7 +18,7 @@ export default function Access() {
                 </Link>{' '}
                 Accès
             </h1>
-            <Card>
+            <CardText>
                 <Markdown>{`
 Le village de la CapybaRun 2024 est situé à l'adresse suivante : 33 rue du Markstein, Route de la forêt, 68 830 Oderen.
 `}</Markdown>
@@ -49,7 +49,7 @@ Le village est accessible à pied ou à vélo. Attention toutefois, la montée p
 La CapybaRun encourage les mobilités douces et notamment le covoiturage ! N'hésitez pas à visiter la plateforme [CapyCovoit](https://www.capy-covoit.fr) pour trouver ou proposer un trajet.
 
 `}</Markdown>
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );

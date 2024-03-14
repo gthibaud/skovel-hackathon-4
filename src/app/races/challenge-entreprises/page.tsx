@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Page() {
@@ -16,11 +16,11 @@ export default function Page() {
                 </Link>{' '}
                 Challenge entreprises
             </h1>
-            <Card>
+            <CardText>
                 {`
 Plus d'informations à venir bientôt.
 `}
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );

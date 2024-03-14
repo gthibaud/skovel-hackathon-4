@@ -2,7 +2,7 @@ import './styles.css';
 
 import { PastEditionsQuickinks } from '@/components/PastEditions';
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function TheRace() {
@@ -17,11 +17,7 @@ export default function TheRace() {
                 </Link>{' '}
                 La course
             </h1>
-            <Card
-                style={{
-                    padding: '42px 64px', // TODO
-                }}
-            >
+            <CardText>
                 {`
 
 ## Une histoire de passion
@@ -51,12 +47,12 @@ La CapybaRun est ouverte à tous les amateurs de course à pied, qu'ils soient s
 ![Le capybara, mascotte de la CapybaRun](/medias/capybara.jpg)
 
 `}
-            </Card>
-            <Card title={'Éditions précédentes'}>
+            </CardText>
+            <CardText title={'Éditions précédentes'}>
                 <p>Retrouvez les résultats et médias des dernières éditions de la CapybaRun :</p>
                 <br />
                 <PastEditionsQuickinks />
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );

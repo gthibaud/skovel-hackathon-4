@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Rules() {
@@ -16,7 +16,7 @@ export default function Rules() {
                 </Link>{' '}
                 Règlement
             </h1>
-            <Card>
+            <CardText>
                 {`
 **Votre inscription à la course implique votre acceptation du règlement, y compris les nouvelles versions et modifications.**
 
@@ -263,7 +263,7 @@ Les organisateurs ne sont pas responsables
 
 Des incidents, vols, dégâts pouvant intervenir aux équipements, matériels, voitures et objets personnels appartenant aux concurrents avant, pendant et après les épreuves.
 `}
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );

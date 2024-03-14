@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Link from 'next/link';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Program() {
@@ -16,7 +16,7 @@ export default function Program() {
                 </Link>{' '}
                 Programme
             </h1>
-            <Card>
+            <CardText>
                 {`
 La CapybaRun c'est 3 courses, mais aussi un week-end exceptionnel pour les participants tout comme leurs accompagnateurs. Venez nombreux en famille ou entre amis pour partager un moment sportif et festif !
 
@@ -54,7 +54,7 @@ Les sanitaires et douches sont accessibles à tous les participants et à leurs 
 Venez nombreux pour partager un moment sportif et festif !
 
 `}
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );

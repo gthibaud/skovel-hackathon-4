@@ -3,7 +3,7 @@ import './styles.css';
 import { ArrowRight } from 'gthibaud-icons-react';
 import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
-import { Card } from '../../../../library/components/Card';
+import { CardText } from '../../../../library/components/CardText';
 import { Markdown } from '../../../../library/components/Markdown';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
@@ -19,7 +19,7 @@ export default function Volunteer() {
                 </Link>{' '}
                 Bénévoles
             </h1>
-            <Card>
+            <CardText>
                 <Markdown>
                     {`
 ## La CapybaRun 2024 a besoin de vous !
@@ -81,7 +81,7 @@ En tant que bénévole, vous bénéficiez de nombreux avantages :
 Venez passer un week-end inoubliable avec l'équipe de la CapybaRun 2024 !
 `}
                 </Markdown>
-            </Card>
+            </CardText>
             <NavigationFooter />
         </main>
     );
