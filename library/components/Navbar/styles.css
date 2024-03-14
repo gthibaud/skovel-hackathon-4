@@ -9,6 +9,12 @@
     z-index: 10;
 }
 
+@media (max-width: 600px) {
+    .menu-container {
+        padding: 24px 12px;
+    }
+}
+
 .menu-card {
     max-width: 952px;
     width: auto;

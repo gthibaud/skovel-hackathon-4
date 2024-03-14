@@ -37,7 +37,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
         left: -1,
     });
 
-    useEffect(() => {
+    const updateMenuContainerDimensions = () => {
         if (menuContainerRef.current) {
             const rect = menuContainerRef.current.getBoundingClientRect();
             setMenuContainerDimensions({
@@ -47,6 +47,17 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 left: rect.left,
             });
         }
+    };
+
+    useEffect(() => {
+        if (menuContainerRef.current) {
+            // Attach a listener to the window to update the dimensions of the menu container
+            window.addEventListener('resize', updateMenuContainerDimensions);
+        }
+        return () => {
+            // Remove the listener when the component is unmounted
+            window.removeEventListener('resize', updateMenuContainerDimensions);
+        };
     }, [menuContainerRef]);
 
     const handleClick = () => {
