@@ -10,7 +10,7 @@
     .logo-img {
         width: 100px;
         height: 100px;
-        object-fit: contain;
+        object-fit: scale-down;
         filter: grayscale(100%);
         transition: filter 0.3s;
     }
@@ -67,6 +67,7 @@
         object-fit: contain;
         width: 100%;
         height: auto;
+        max-height: 100px;
     }
 
     &:hover {
