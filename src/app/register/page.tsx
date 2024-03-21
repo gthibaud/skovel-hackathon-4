@@ -58,6 +58,12 @@ export default function Register() {
 
     return (
         <main>
+            <p>Section en cours de développement.</p>
+        </main>
+    );
+
+    return (
+        <main>
             <header>
                 <h1>{user ? 'My registration' : 'Register'}</h1>
             </header>
@@ -78,7 +84,7 @@ export default function Register() {
                             <p>
                                 Name: <b>{userName}</b>
                             </p>
-                            <QRCode value={user.uid} />
+                            <QRCode value={user?.uid || ''} />
                         </div>
                     </div>
                 </>

@@ -57,7 +57,7 @@
     justify-content: space-between;
 }
 
-/* The filters are not defined in the menu-card to avoid the following issue: https: //stackoverflow.com/questions/52937708/why-does-applying-a-css-filter-on-the-parent-break-the-child-positioning */
+/* The filters are not defined in the menu-card to avoid the following issue: https://stackoverflow.com/questions/52937708/why-does-applying-a-css-filter-on-the-parent-break-the-child-positioning */
 .menu-container-backdrop {
     position: 'absolute';
     z-index: -1;

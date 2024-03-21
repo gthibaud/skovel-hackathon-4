@@ -38,8 +38,10 @@ export const Navbar: FC<NavbarProps> = (props) => {
     });
 
     const updateMenuContainerDimensions = () => {
+        console.log('updateMenuContainerDimensionsright ?');
         if (menuContainerRef.current) {
             const rect = menuContainerRef.current.getBoundingClientRect();
+            console.log(rect);
             setMenuContainerDimensions({
                 height: rect.height,
                 width: rect.width,
