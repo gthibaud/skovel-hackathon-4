@@ -75,10 +75,6 @@ export const Navbar: FC<NavbarProps> = (props) => {
                     onMouseOver={() => setIsFocused(true)}
                     onMouseOut={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
-                    // data-tilt
-                    // data-tilt-max="1.5"
-                    // data-tilt-speed="400"
-                    // data-tilt-perspective="500"
                 >
                     <div className="menu-container-horizontal">
                         <NavbarItem
