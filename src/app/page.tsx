@@ -16,12 +16,12 @@ export default function Home() {
     return (
         <main className="home">
             <Hero
-                imageSrc="banner.jpeg"
+                imageSrc="medias/banner.jpeg"
                 imageAlt="Banner image"
                 foregroundElement={
                     <>
                         <Image
-                            src="/capybarace-logo.png"
+                            src="/medias/capybarace-logo.png"
                             alt="CapybaRun 2024"
                             width={140}
                             height={140}

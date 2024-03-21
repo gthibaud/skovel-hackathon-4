@@ -82,7 +82,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             title={
                                 <span>
                                     <img
-                                        src="/capybarace-logo.png"
+                                        src="/medias/capybarace-logo.png"
                                         alt="Logo"
                                     />
                                     CapybaRun
