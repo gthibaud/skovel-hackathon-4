@@ -19,13 +19,27 @@ export const DropdownContainer: FC<DropdownContainerProps> = (props) => {
     const [containerPositionLeft, setContainerPositionLeft] = useState<number>(0);
     const [containerPositionTop, setContainerPositionTop] = useState<number>(0);
 
-    useEffect(() => {
+    const updateMenuContainerDimensions = (parentRef: MutableRefObject<HTMLDivElement | null>) => {
         if (parentRef.current) {
             const rect = parentRef.current.getBoundingClientRect();
             setContainerPositionLeft(rect.left);
             setContainerPositionTop(rect.height + rect.top);
         }
-    }, [parentRef]);
+    };
+
+    // On mount, update the dimensions of the menu container
+    useEffect(() => {
+        updateMenuContainerDimensions(parentRef);
+
+        if (parentRef.current) {
+            // Attach a listener to the window to update the dimensions of the menu container
+            window.addEventListener('resize', () => updateMenuContainerDimensions(parentRef));
+        }
+        return () => {
+            // Remove the listener when the component is unmounted
+            window.removeEventListener('resize', () => updateMenuContainerDimensions(parentRef));
+        };
+    }, [parentRef.current]);
 
     return (
         <div

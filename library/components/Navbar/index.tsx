@@ -38,10 +38,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
     });
 
     const updateMenuContainerDimensions = () => {
-        console.log('updateMenuContainerDimensionsright ?');
         if (menuContainerRef.current) {
             const rect = menuContainerRef.current.getBoundingClientRect();
-            console.log(rect);
             setMenuContainerDimensions({
                 height: rect.height,
                 width: rect.width,
@@ -52,6 +50,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
     };
 
     useEffect(() => {
+        updateMenuContainerDimensions();
+
         if (menuContainerRef.current) {
             // Attach a listener to the window to update the dimensions of the menu container
             window.addEventListener('resize', updateMenuContainerDimensions);
