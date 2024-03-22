@@ -73,7 +73,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 <div
                     className={`menu-card ${isFocused ? 'focused' : ''}`}
                     onMouseEnter={() => setIsFocused(true)}
-                    onTouchStart={() => console.log('touch')}
+                    onTouchStart={() => setIsFocused(true)}
                     onMouseLeave={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
                 >
@@ -165,8 +165,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
                     <div
                         className="vertical-menu"
                         style={{
-                            height: isMobileMenuOpen ? '100%' : '0',
-                            overflow: 'hidden',
+                            height: isMobileMenuOpen ? 'calc(100vh - 100px)' : '0',
+                            overflowY: isMobileMenuOpen ? 'auto' : 'hidden',
                             transition: 'height 0.3s ease-in-out',
                         }}
                     >

@@ -12,6 +12,7 @@
 @media (max-width: 600px) {
     .menu-container {
         padding: 24px 12px;
+        /* height: 100%; */
     }
 }
 
@@ -124,5 +125,9 @@
 }
 
 .vertical-menu {
-    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

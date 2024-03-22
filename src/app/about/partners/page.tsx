@@ -39,11 +39,9 @@ export default function Partners() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="container"
+                                    key={index}
                                 >
-                                    <Card
-                                        key={index}
-                                        className="card"
-                                    >
+                                    <Card className="card">
                                         <Image
                                             className="logo"
                                             src={partner.logo}
