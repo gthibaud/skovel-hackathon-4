@@ -10,6 +10,7 @@ interface ButtonProps {
     size?: 'small' | 'medium' | 'large';
     isLoading?: boolean;
     style?: any;
+    touchDetection?: boolean; // Detects if the user is using a touch device
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -21,6 +22,7 @@ export const Button: FC<ButtonProps> = (props) => {
         size = 'medium',
         isLoading = false,
         style,
+        touchDetection = false,
     } = props;
 
     if (to) {
@@ -39,7 +41,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <button
             className={`button button-${variant} button-size-${size}`}
             onClick={onClick}
-            onTouchEnd={onClick}
+            onTouchEnd={touchDetection ? onClick : undefined}
             style={style}
         >
             {isLoading ? '...' : children}

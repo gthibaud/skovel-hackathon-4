@@ -44,8 +44,12 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
                 className={`navbar-item-top ${className}`}
                 ref={buttonRef}
                 onClick={() => {
-                    router.push(to)
-                    onClick()
+                    router.push(to);
+                    onClick();
+                }}
+                onTouchEnd={() => {
+                    router.push(to);
+                    onClick();
                 }}
                 onMouseOver={() => setIsButtonFocused(true)}
                 onMouseOut={() => setIsButtonFocused(false)}

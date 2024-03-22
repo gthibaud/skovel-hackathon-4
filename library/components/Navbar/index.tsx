@@ -151,6 +151,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                         </div>
                         <div className="menu-open-button">
                             <Button
+                                touchDetection
                                 onClick={() => {
                                     console.log('click', isMobileMenuOpen);
                                     const open = isMobileMenuOpen;
