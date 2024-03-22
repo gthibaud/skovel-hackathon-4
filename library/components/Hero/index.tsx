@@ -18,6 +18,7 @@ export const Hero: FC<HeroProps> = (props) => {
                 alt={props.imageAlt}
                 width={1000}
                 height={600}
+                priority
                 className="banner-picture-image"
             />
             <div className="banner-picture-foreground">{foregroundElement}</div>

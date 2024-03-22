@@ -88,6 +88,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                                         alt="CapybaRun 2024"
                                         width={40}
                                         height={40}
+                                        priority
                                     />
                                     CapybaRun
                                 </span>
