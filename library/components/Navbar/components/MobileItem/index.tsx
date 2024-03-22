@@ -46,25 +46,31 @@ export const MobileItem: FC<NavbarItemProps> = (props) => {
         if (dropdownItems) {
             return (
                 <a
-                    className={`navbar-item navbar-item-${isActive ? 'active' : ''} navbar-item-${isFocused ? 'focused' : ''} navbar-item-${style}`} onClick={() => setIsDropdownOpened(!isDropdownOpened)}
+                    className={`navbar-item navbar-item-${isActive ? 'active' : ''} navbar-item-${isFocused ? 'focused' : ''} navbar-item-${style}`}
+                    onClick={() => setIsDropdownOpened(!isDropdownOpened)}
                 >
-                    {title} {isDropdownOpened ? <ChevronDown /> : <ChevronRightBold />}
+                    {title}{' '}
+                    {isDropdownOpened ? (
+                        <ChevronDown className="chevron-down" />
+                    ) : (
+                        <ChevronRightBold className="chevron-right" />
+                    )}
                 </a>
-            )
+            );
         }
 
         return (
             <a
                 className={`navbar-item navbar-item-${isActive ? 'active' : ''} navbar-item-${isFocused ? 'focused' : ''} navbar-item-${style}`}
                 onClick={() => {
-                    router.push(to)
-                    onClick()
+                    router.push(to);
+                    onClick();
                 }}
             >
                 {title}
             </a>
-        )
-    }
+        );
+    };
 
     return (
         <>
@@ -77,13 +83,15 @@ export const MobileItem: FC<NavbarItemProps> = (props) => {
                 {renderStyle()}
             </div>
             {dropdownItems && (
-                <div className={`navbar-item-childrens navbar-item-childrens-${isDropdownOpened ? 'open' : ""}`}>
+                <div
+                    className={`navbar-item-childrens navbar-item-childrens-${isDropdownOpened ? 'open' : ''}`}
+                >
                     {dropdownItems.map((item, index) => (
                         <MobileItem
                             key={index}
                             title={item.title}
                             to={item.to}
-                            style='light'
+                            style="light"
                             onClick={onClick}
                         />
                     ))}

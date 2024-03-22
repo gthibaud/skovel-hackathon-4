@@ -7,6 +7,18 @@
         height: auto;
     }
 
+    .chevron-down {
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
+    }
+
+    .chevron-right {
+        width: 12px;
+        height: 20px;
+        margin-left: 2px;
+    }
+
     .navbar-item {
         padding: 18px 12px;
         text-align: center;
@@ -41,6 +53,10 @@
     .navbar-item-active {
         color: var(--colors-primary-light);
         transform: scale(1.02);
+
+        svg {
+            fill: var(--colors-primary-light);
+        }
     }
 
     .navbar-item-button {
@@ -66,16 +82,17 @@
     }
 
     .navbar-item-childrens {
-        display: flex;
         flex-direction: column;
         gap: 8px;
         margin-left: 24px;
         height: 0;
         opacity: 0;
+        display: none;
     }
 
     .navbar-item-childrens-open {
         height: fit-content;
         opacity: 1;
+        display: flex;
     }
 }

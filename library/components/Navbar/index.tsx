@@ -72,11 +72,15 @@ export const Navbar: FC<NavbarProps> = (props) => {
             <menu className="menu-container">
                 <div
                     className={`menu-card ${isFocused ? 'focused' : ''}`}
-                    onMouseEnter={() => {
+                    onMouseEnter={(e) => {
                         console.log('enter');
                         setIsFocused(true);
+                        e.preventDefault();
                     }}
-                    onMouseLeave={() => setIsFocused(isMobileMenuOpen)}
+                    onMouseLeave={(e) => {
+                        setIsFocused(isMobileMenuOpen);
+                        e.preventDefault();
+                    }}
                     ref={menuContainerRef}
                 >
                     <div className="menu-container-horizontal">
