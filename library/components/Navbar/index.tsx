@@ -4,6 +4,7 @@ import { editions } from '@/data/editions';
 import { MenuItem, menu } from '@/data/menu';
 import { Backdrop } from '@mui/material';
 import { Cross } from 'gthibaud-icons-react';
+import Image from 'next/image';
 import { FC, useEffect, useRef, useState } from 'react';
 import { ChevronDown } from '../../icons/chevron-down';
 import { Menu } from '../../icons/menu';
@@ -82,9 +83,11 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             onClick={handleClick}
                             title={
                                 <span>
-                                    <img
+                                    <Image
                                         src="/medias/capybarace-logo.png"
-                                        alt="Logo"
+                                        alt="CapybaRun 2024"
+                                        width={40}
+                                        height={40}
                                     />
                                     CapybaRun
                                 </span>

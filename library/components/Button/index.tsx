@@ -40,7 +40,7 @@ export const Button: FC<ButtonProps> = (props) => {
     return (
         <button
             className={`button button-${variant} button-size-${size}`}
-            onClick={onClick}
+            onClick={touchDetection ? undefined : onClick}
             onTouchEnd={touchDetection ? onClick : undefined}
             style={style}
         >

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FC } from 'react';
 import './styles.css';
 
@@ -12,9 +13,11 @@ export const Hero: FC<HeroProps> = (props) => {
 
     return (
         <div className="banner-picture-container">
-            <img
+            <Image
                 src={imageSrc}
                 alt={props.imageAlt}
+                width={1000}
+                height={600}
                 className="banner-picture-image"
             />
             <div className="banner-picture-foreground">{foregroundElement}</div>

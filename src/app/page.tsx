@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <main className="home">
             <Hero
-                imageSrc="medias/banner.jpeg"
+                imageSrc="/medias/banner.jpeg"
                 imageAlt="Banner image"
                 foregroundElement={
                     <>
