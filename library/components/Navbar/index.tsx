@@ -72,8 +72,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
             <menu className="menu-container">
                 <div
                     className={`menu-card ${isFocused ? 'focused' : ''}`}
-                    onMouseOver={() => setIsFocused(true)}
-                    onMouseOut={() => setIsFocused(isMobileMenuOpen)}
+                    // onMouseOver={() => setIsFocused(true)}
+                    // onMouseOut={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
                 >
                     <div className="menu-container-horizontal">
