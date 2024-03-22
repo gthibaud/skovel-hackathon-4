@@ -75,11 +75,11 @@ export const Navbar: FC<NavbarProps> = (props) => {
                     onMouseEnter={(e) => {
                         console.log('enter');
                         setIsFocused(true);
-                        e.preventDefault();
+                        // e.preventDefault();
                     }}
                     onMouseLeave={(e) => {
                         setIsFocused(isMobileMenuOpen);
-                        e.preventDefault();
+                        // e.preventDefault();
                     }}
                     ref={menuContainerRef}
                 >
@@ -147,6 +147,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                         <div className="menu-open-button">
                             <Button
                                 onClick={() => {
+                                    console.log('click', isMobileMenuOpen);
                                     const open = isMobileMenuOpen;
                                     setIsMobileMenuOpen(!open);
                                     setIsFocused(!open);

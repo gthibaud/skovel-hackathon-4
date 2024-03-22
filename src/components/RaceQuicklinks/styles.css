@@ -3,8 +3,8 @@
     flex-direction: row;
     gap: 8px;
     width: 100%;
-    margin: -12px;
-    padding: 12px;
+    padding: 2px;
+    margin-left: -2px;
     overflow-x: auto;
 
     .quicklink-container {

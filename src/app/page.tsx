@@ -53,7 +53,7 @@ export default function Home() {
             <div className="bento">
                 <Card
                     title="Les épreuves"
-                    style={{ maxWidth: '62%' }}
+                    className="races-card"
                     actionTitle="Toutes les épreuves"
                     actionTo="/races"
                 >
