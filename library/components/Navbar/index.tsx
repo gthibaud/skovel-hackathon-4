@@ -77,6 +77,11 @@ export const Navbar: FC<NavbarProps> = (props) => {
                         setIsFocused(true);
                         // e.preventDefault();
                     }}
+                    onTouchStart={(e) => {
+                        console.log('touch');
+                        setIsFocused(true);
+                        // e.preventDefault();
+                    }}
                     onMouseLeave={(e) => {
                         setIsFocused(isMobileMenuOpen);
                         // e.preventDefault();
