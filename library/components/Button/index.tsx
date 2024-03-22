@@ -39,6 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
         <button
             className={`button button-${variant} button-size-${size}`}
             onClick={onClick}
+            onTouchEnd={onClick}
             style={style}
         >
             {isLoading ? '...' : children}
