@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { RaceQuicklink } from './RaceQuicklink';
 import './styles.css';
 
-export const RaceQuickinks: FC = () => {
+export const RaceQuicklinks: FC = () => {
     const menuItems = menu.filter((item) => item.to === '/races')[0]?.items;
 
     return (

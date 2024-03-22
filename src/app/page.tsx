@@ -1,6 +1,6 @@
 import { ContactSection } from '@/components/ContactSection';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
-import { RaceQuickinks } from '@/components/RaceQuicklinks';
+import { RaceQuicklinks } from '@/components/RaceQuicklinks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../library/components/Button';
@@ -53,15 +53,16 @@ export default function Home() {
             <div className="bento">
                 <Card
                     title="Les épreuves"
-                    style={{ flex: 3 }}
+                    style={{ maxWidth: '62%' }}
                     actionTitle="Toutes les épreuves"
                     actionTo="/races"
                 >
-                    <RaceQuickinks />
+                    <RaceQuicklinks />
                 </Card>
                 <Card
-                    style={{ flex: 2 }}
+                    style={{ flex: 1 }}
                     variant="centered"
+                    title="Départ dans :"
                 >
                     <Countdown startDate={1724493600} />
                 </Card>
