@@ -1,3 +1,4 @@
+'use client';
 import { useTheme } from '@emotion/react';
 import { Skeleton as SkeletonMui } from '@mui/material';
 import { FC } from 'react';

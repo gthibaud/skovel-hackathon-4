@@ -1,6 +1,8 @@
 import { ContactSection } from '@/components/ContactSection';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuicklinks } from '@/components/RaceQuicklinks';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../library/components/Button';
@@ -9,12 +11,35 @@ import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
 import { Map } from '../../library/components/Map';
 import { SearchField } from '../../library/components/SearchField';
-import { VideoPlayer } from '../../library/components/VideoPlayer';
+import { Skeleton } from '../../library/components/Skeleton';
 import './page.css';
+
+const VideoPlayer = dynamic(
+    () =>
+        import('../../library/components/VideoPlayer').then((module) => ({
+            default: module.VideoPlayer,
+        })),
+    {
+        loading: () => (
+            <Skeleton
+                width={'100%'}
+                height={'100%'}
+            />
+        ),
+    },
+);
 
 export default function Home() {
     return (
         <main className="home">
+            <Head>
+                <title>CapybaRun 2024 - 200Km de trail sans assistance au cœur des Vosges</title>
+                <meta
+                    name="description"
+                    content="Découvrez la CapybaRun 2024, un trail de 200Km sans assistance au cœur des Vosges. Départ le 24 août 2024."
+                    key="desc"
+                />
+            </Head>
             <Hero
                 imageSrc="/medias/banner.jpeg"
                 imageAlt="Banner image"

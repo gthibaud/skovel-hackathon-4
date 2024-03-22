@@ -11,6 +11,7 @@ interface ButtonProps {
     isLoading?: boolean;
     style?: any;
     touchDetection?: boolean; // Detects if the user is using a touch device
+    title?: string; // Title attribute for the button
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -23,6 +24,7 @@ export const Button: FC<ButtonProps> = (props) => {
         isLoading = false,
         style,
         touchDetection = false,
+        title = 'button',
     } = props;
 
     if (to) {
@@ -43,6 +45,7 @@ export const Button: FC<ButtonProps> = (props) => {
             onClick={touchDetection ? undefined : onClick}
             onTouchEnd={touchDetection ? onClick : undefined}
             style={style}
+            title={typeof children === 'string' ? children : title}
         >
             {isLoading ? '...' : children}
         </button>
