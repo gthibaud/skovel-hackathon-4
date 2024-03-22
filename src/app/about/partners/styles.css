@@ -47,6 +47,10 @@ h1 {
         transition: transform 200ms ease-out;
         cursor: pointer;
 
+        .card {
+            height: 100%;
+        }
+
         &:hover {
             transform: scale(1.02);
         }

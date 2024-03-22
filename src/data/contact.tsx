@@ -18,19 +18,19 @@ export const contact: Contact[] = [
     {
         id: 'instagram',
         type: 'instagram',
-        link: 'https://www.instagram.com/skovel/',
+        link: 'https://www.instagram.com/g.thibo/',
         icon: <Instagram />,
     },
     {
         id: 'facebook',
         type: 'facebook',
-        link: 'https://www.facebook.com/skovel/',
+        link: 'https://www.facebook.com/',
         icon: <Facebook />,
     },
     {
         id: 'twitter',
         type: 'twitter',
-        link: 'https://twitter.com/skovel',
+        link: 'https://twitter.com',
         icon: <Twitter />,
     },
 ];

@@ -72,20 +72,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
             <menu className="menu-container">
                 <div
                     className={`menu-card ${isFocused ? 'focused' : ''}`}
-                    onMouseEnter={(e) => {
-                        console.log('enter');
-                        setIsFocused(true);
-                        // e.preventDefault();
-                    }}
-                    onTouchStart={(e) => {
-                        console.log('touch');
-                        setIsFocused(true);
-                        // e.preventDefault();
-                    }}
-                    onMouseLeave={(e) => {
-                        setIsFocused(isMobileMenuOpen);
-                        // e.preventDefault();
-                    }}
+                    onMouseEnter={() => setIsFocused(true)}
+                    onTouchStart={() => console.log('touch')}
+                    onMouseLeave={() => setIsFocused(isMobileMenuOpen)}
                     ref={menuContainerRef}
                 >
                     <div className="menu-container-horizontal">
@@ -110,7 +99,6 @@ export const Navbar: FC<NavbarProps> = (props) => {
                                     2024 <ChevronDown style={{ fontSize: '1em' }} />
                                 </span>
                             }
-                            to="/2024"
                             dropdownItems={editions
                                 .filter((e) => !e.current)
                                 .map((e) => ({ title: `Édition ${e.name}`, to: `/${e.to}` }))}
@@ -153,11 +141,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             <Button
                                 touchDetection
                                 onClick={() => {
-                                    console.log('click', isMobileMenuOpen);
                                     const open = isMobileMenuOpen;
-                                    setIsMobileMenuOpen(true);
-                                    // setIsMobileMenuOpen(!open);
-                                    // setIsFocused(!open);
+                                    setIsMobileMenuOpen(!open);
+                                    setIsFocused(!open);
                                 }}
                             >
                                 {isMobileMenuOpen ? <Cross /> : <Menu />}

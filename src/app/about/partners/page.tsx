@@ -34,14 +34,15 @@ export default function Partners() {
                         {partners
                             .filter((partner) => partner.categoryId === category.id)
                             .map((partner, index) => (
-                                <Card
+                                <a
+                                    href={partner.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="container"
-                                    key={index}
                                 >
-                                    <a
-                                        href={partner.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <Card
+                                        key={index}
+                                        className="card"
                                     >
                                         <Image
                                             className="logo"
@@ -50,10 +51,10 @@ export default function Partners() {
                                             width={200}
                                             height={100}
                                         />
-                                    </a>
-                                    <p className="name">{partner.name}</p>
-                                    <p className="summary">{partner.summary}</p>
-                                </Card>
+                                        <p className="name">{partner.name}</p>
+                                        <p className="summary">{partner.summary}</p>
+                                    </Card>
+                                </a>
                             ))}
                     </div>
                 </div>

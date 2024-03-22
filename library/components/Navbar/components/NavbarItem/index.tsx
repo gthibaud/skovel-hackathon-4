@@ -9,7 +9,7 @@ import './styles.css';
 
 interface NavbarItemProps {
     title: string | JSX.Element | JSX.Element[];
-    to: string;
+    to?: string;
     dropdownItems?: MenuItem[];
     style?: 'default' | 'button' | 'title' | 'light';
     onClick: () => void;
@@ -36,7 +36,8 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
         }
     }, [isButtonFocused, isDropdownFocused]);
 
-    const isActive = (pathname === '/' && to === '/') || (to !== '/' && pathname.startsWith(to));
+    const isActive =
+        (pathname === '/' && to === '/') || (to && to !== '/' && pathname.startsWith(to));
 
     return (
         <>
@@ -44,11 +45,11 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
                 className={`navbar-item-top ${className}`}
                 ref={buttonRef}
                 onClick={() => {
-                    router.push(to);
+                    to && router.push(to);
                     onClick();
                 }}
                 onTouchEnd={() => {
-                    router.push(to);
+                    to && router.push(to);
                     onClick();
                 }}
                 onMouseOver={() => setIsButtonFocused(true)}
