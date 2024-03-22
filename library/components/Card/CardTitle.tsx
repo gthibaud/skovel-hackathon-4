@@ -15,7 +15,7 @@ export const CardTitle: FC<CardTitleProps> = (props) => {
     if (typeof title === 'string') {
         return (
             <div className="card-title">
-                <h3 className="card-title">{title}</h3>
+                <h2 className="card-title">{title}</h2>
             </div>
         );
     }

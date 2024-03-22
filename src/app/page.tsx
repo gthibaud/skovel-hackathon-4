@@ -87,11 +87,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                     actionTitle="Édition 2023"
                     style={{ flex: 3 }}
                 >
-                    <VideoPlayer
-                        src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-"
-                        height={300}
-                        width={'auto'}
-                    />
+                    <VideoPlayer src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-" />
                 </Card>
             </div>
             <Card

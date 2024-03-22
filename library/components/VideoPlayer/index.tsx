@@ -2,7 +2,7 @@
 
 import { FC, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import ReactPlayer, { ReactPlayerProps } from 'react-player';
+import ReactPlayer, { ReactPlayerProps } from 'react-player/lazy';
 import './styles.css';
 
 interface VideoProps extends ReactPlayerProps {
@@ -11,13 +11,15 @@ interface VideoProps extends ReactPlayerProps {
     // Pause the video when it is outside the view
     pauseVideoOutsideView?: boolean;
     height?: number | string;
+    width?: number | string;
 }
 
 export const VideoPlayer: FC<VideoProps> = (props) => {
     const {
         src,
         thumbnailSrc,
-        height = 'auto',
+        height = '100%',
+        width = '100%',
         pauseVideoOutsideView: stopVideoOutsideView = true,
         borderRadius = 'primary',
     } = props;
@@ -43,6 +45,24 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
     } else if (!inView && isVisible) {
         setIsVisible(false);
     }
+
+    return (
+        <div className="player-wrapper">
+            <ReactPlayer
+                controls
+                url={src}
+                playing={stopVideoOutsideView ? isVisible : true}
+                loop
+                playsinline
+                muted
+                width={width}
+                height={height}
+                onReady={() => setIsLoaded(true)}
+                className="react-player"
+                {...props}
+            />
+        </div>
+    );
 
     return (
         <div
@@ -86,25 +106,29 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
                 /> */}
             </div>
             {isVisibleForFirstTime ? (
-                <ReactPlayer
-                    controls
-                    url={src}
-                    playing={stopVideoOutsideView ? isVisible : true}
-                    loop
-                    playsinline
-                    muted
-                    width={'100%'}
-                    height={height}
-                    onReady={() => setIsLoaded(true)}
-                    style={{
-                        position: 'relative',
-                        zIndex: isLoaded ? 1 : 0,
-                        opacity: isLoaded ? 1 : 0,
-                        transition: 'all 0.9s ease-in-out',
-                    }}
-                    className="react-player"
-                    {...props}
-                />
+                <div className="player-wrapper">
+                    <ReactPlayer
+                        controls
+                        url={src}
+                        playing={stopVideoOutsideView ? isVisible : true}
+                        loop
+                        playsinline
+                        muted
+                        width={'100%'}
+                        height={height}
+                        onReady={() => setIsLoaded(true)}
+                        style={
+                            {
+                                // position: 'relative',
+                                // zIndex: isLoaded ? 1 : 0,
+                                // opacity: isLoaded ? 1 : 0,
+                                // transition: 'all 0.9s ease-in-out',
+                            }
+                        }
+                        className="react-player"
+                        {...props}
+                    />
+                </div>
             ) : null}
         </div>
     );
