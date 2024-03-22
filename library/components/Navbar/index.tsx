@@ -154,8 +154,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
                                 onClick={() => {
                                     console.log('click', isMobileMenuOpen);
                                     const open = isMobileMenuOpen;
-                                    setIsMobileMenuOpen(!open);
-                                    setIsFocused(!open);
+                                    setIsMobileMenuOpen(true);
+                                    // setIsMobileMenuOpen(!open);
+                                    // setIsFocused(!open);
                                 }}
                             >
                                 {isMobileMenuOpen ? <Cross /> : <Menu />}
