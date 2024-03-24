@@ -16,18 +16,14 @@ interface VideoProps extends ReactPlayerProps {
     width?: number | string;
 }
 
-const ReactPlayer = dynamic(
-    () =>
-        import('react-player/lazy'),
-    {
-        loading: () => (
-            <Skeleton
-                width={'100%'}
-                height={'100%'}
-            />
-        ),
-    },
-);
+const ReactPlayer = dynamic(() => import('react-player/youtube'), {
+    loading: () => (
+        <Skeleton
+            width={'100%'}
+            height={'100%'}
+        />
+    ),
+});
 
 export const VideoPlayer: FC<VideoProps> = (props) => {
     const {
@@ -75,77 +71,77 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
                 height={height}
                 onReady={() => setIsLoaded(true)}
                 className="react-player"
-                {...props}
+                // {...props}
             />
         </div>
     );
 
-    return (
-        <div
-            ref={ref}
-            style={{
-                display: 'block',
-                position: 'relative',
-                overflow: 'hidden',
-                borderRadius: 'var(--border-radius)',
-                transition: 'all 200ms ease-out',
-                height,
-                width: '100%',
-            }}
-        >
-            <div
-                style={{
-                    filter: 'blur(20px)',
-                    width: '100%',
-                    height,
-                    overflow: 'hidden',
-                    transform: 'scale(1.1)',
-                    zIndex: isLoaded ? 0 : 1,
-                    position: 'absolute',
-                    top: 0,
-                }}
-            >
-                {/* <Image
-                    src={thumbnailSrc}
-                    innerRef={thumbnailRef}
-                    alt="thumbnail"
-                    titling={false}
-                    roundedCorners={false}
-                    loaderHeight={600}
-                    style={{
-                        opacity: isLoaded ? 0 : 1,
-                        transition: 'all 0.9s ease-in-out',
-                        width: '100%',
-                        height,
-                        zoom: 1.1,
-                    }}
-                /> */}
-            </div>
-            {isVisibleForFirstTime ? (
-                <div className="player-wrapper">
-                    <ReactPlayer
-                        controls
-                        url={src}
-                        playing={stopVideoOutsideView ? isVisible : true}
-                        loop
-                        playsinline
-                        muted
-                        width={'100%'}
-                        height={height}
-                        onReady={() => setIsLoaded(true)}
-                        style={
-                            {
-                                // position: 'relative',
-                                // zIndex: isLoaded ? 1 : 0,
-                                // opacity: isLoaded ? 1 : 0,
-                                // transition: 'all 0.9s ease-in-out',
-                            }
-                        }
-                        className="react-player"
-                        {...props}
-                    />
-                </div>
-            ) : null}
-        </div>
-    );
+    // return (
+    //     <div
+    //         ref={ref}
+    //         style={{
+    //             display: 'block',
+    //             position: 'relative',
+    //             overflow: 'hidden',
+    //             borderRadius: 'var(--border-radius)',
+    //             transition: 'all 200ms ease-out',
+    //             height,
+    //             width: '100%',
+    //         }}
+    //     >
+    //         <div
+    //             style={{
+    //                 filter: 'blur(20px)',
+    //                 width: '100%',
+    //                 height,
+    //                 overflow: 'hidden',
+    //                 transform: 'scale(1.1)',
+    //                 zIndex: isLoaded ? 0 : 1,
+    //                 position: 'absolute',
+    //                 top: 0,
+    //             }}
+    //         >
+    //             {/* <Image
+    //                 src={thumbnailSrc}
+    //                 innerRef={thumbnailRef}
+    //                 alt="thumbnail"
+    //                 titling={false}
+    //                 roundedCorners={false}
+    //                 loaderHeight={600}
+    //                 style={{
+    //                     opacity: isLoaded ? 0 : 1,
+    //                     transition: 'all 0.9s ease-in-out',
+    //                     width: '100%',
+    //                     height,
+    //                     zoom: 1.1,
+    //                 }}
+    //             /> */}
+    //         </div>
+    //         {isVisibleForFirstTime ? (
+    //             <div className="player-wrapper">
+    //                 <ReactPlayer
+    //                     controls
+    //                     url={src}
+    //                     playing={stopVideoOutsideView ? isVisible : true}
+    //                     loop
+    //                     playsinline
+    //                     muted
+    //                     width={'100%'}
+    //                     height={height}
+    //                     onReady={() => setIsLoaded(true)}
+    //                     style={
+    //                         {
+    //                             // position: 'relative',
+    //                             // zIndex: isLoaded ? 1 : 0,
+    //                             // opacity: isLoaded ? 1 : 0,
+    //                             // transition: 'all 0.9s ease-in-out',
+    //                         }
+    //                     }
+    //                     className="react-player"
+    //                     {...props}
+    //                 />
+    //             </div>
+    //         ) : null}
+    //     </div>
+    // );
 };
