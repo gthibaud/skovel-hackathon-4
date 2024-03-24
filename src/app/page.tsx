@@ -10,22 +10,8 @@ import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
 import { Map } from '../../library/components/Map';
 import { SearchField } from '../../library/components/SearchField';
+import { VideoPlayer } from '../../library/components/VideoPlayer';
 import './page.css';
-
-// const VideoPlayer = dynamic(
-//     () =>
-//         import('../../library/components/VideoPlayer').then((module) => ({
-//             default: module.VideoPlayer,
-//         })),
-//     {
-//         loading: () => (
-//             <Skeleton
-//                 width={'100%'}
-//                 height={'100%'}
-//             />
-//         ),
-//     },
-// );
 
 export default function Home() {
     return (
@@ -110,8 +96,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                     actionTitle="Édition 2023"
                     style={{ flex: 3 }}
                 >
-                    hello
-                    {/* <VideoPlayer src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-" /> */}
+                    <VideoPlayer src="https://youtu.be/f--yONEDwC0?si=E2cdf1JvO6INsWN-" />
                 </Card>
             </div>
             <Card
