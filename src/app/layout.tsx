@@ -37,14 +37,17 @@ export default function RootLayout({
         <html
             lang="fr"
             className={`${interVariable.className} antialiased`}
-        // className={`${inter.className} ${interVariable.className} antialiased`}
+            // className={`${inter.className} ${interVariable.className} antialiased`}
         >
             <body>
                 <div className="background-color-mask">
                     <Navbar menuItems={menu} />
                     {children}
                     <Footer />
-                    <Script src="vanilla-tilt.js" />
+                    <Script
+                        src="vanilla-tilt.js"
+                        strategy="lazyOnload"
+                    />
                 </div>
             </body>
         </html>
