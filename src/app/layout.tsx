@@ -47,12 +47,12 @@ export default function RootLayout({
                     <Navbar menuItems={menu} />
                     {children}
                     <Footer />
-                    <script
+                    {/* <script
                         type="text/javascript"
                         src="vanilla-tilt.js"
                         async
                         defer
-                    ></script>
+                    ></script> */}
                 </div>
             </body>
             {/* </ThemeProvider> */}
