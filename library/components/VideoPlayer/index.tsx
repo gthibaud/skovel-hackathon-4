@@ -1,8 +1,10 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { FC, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import ReactPlayer, { ReactPlayerProps } from 'react-player/lazy';
+import { ReactPlayerProps } from 'react-player/lazy';
+import { Skeleton } from '../Skeleton';
 import './styles.css';
 
 interface VideoProps extends ReactPlayerProps {
@@ -13,6 +15,19 @@ interface VideoProps extends ReactPlayerProps {
     height?: number | string;
     width?: number | string;
 }
+
+const ReactPlayer = dynamic(
+    () =>
+        import('react-player/lazy'),
+    {
+        loading: () => (
+            <Skeleton
+                width={'100%'}
+                height={'100%'}
+            />
+        ),
+    },
+);
 
 export const VideoPlayer: FC<VideoProps> = (props) => {
     const {
@@ -51,7 +66,8 @@ export const VideoPlayer: FC<VideoProps> = (props) => {
             <ReactPlayer
                 controls
                 url={src}
-                playing={stopVideoOutsideView ? isVisible : true}
+                playing={true}
+                // playing={stopVideoOutsideView ? isVisible : true}
                 loop
                 playsinline
                 muted

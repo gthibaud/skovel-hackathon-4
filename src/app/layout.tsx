@@ -1,11 +1,12 @@
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import { Footer } from '../../library/components/Footer';
 import { Navbar } from '../../library/components/Navbar';
 import { menu } from '../data/menu';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 // TODO check that Inter is loaded on browser that doesn't support variable fonts
 const interVariable = localFont({
@@ -35,31 +36,17 @@ export default function RootLayout({
     return (
         <html
             lang="fr"
-            className={`${inter.className} ${interVariable.className} antialiased`}
+            className={`${interVariable.className} antialiased`}
+        // className={`${inter.className} ${interVariable.className} antialiased`}
         >
-            {/* <QueryClientProvider client={queryClient}> */}
-            {/* <SettingsProvider> */}
-            {/* <Providers> */}
-            {/* <ThemeProviderMUI theme={muiTheme}> */}
-            {/* <ThemeProvider theme={mergeObjects(themeBase, currentTheme)}> */}
             <body>
                 <div className="background-color-mask">
                     <Navbar menuItems={menu} />
                     {children}
                     <Footer />
-                    {/* <script
-                        type="text/javascript"
-                        src="vanilla-tilt.js"
-                        async
-                        defer
-                    ></script> */}
+                    <Script src="vanilla-tilt.js" />
                 </div>
             </body>
-            {/* </ThemeProvider> */}
-            {/* </ThemeProviderMUI> */}
-            {/* </Providers> */}
-            {/* </SettingsProvider> */}
-            {/* </QueryClientProvider> */}
         </html>
     );
 }

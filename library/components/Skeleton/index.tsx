@@ -1,8 +1,7 @@
 'use client';
-import { useTheme } from '@emotion/react';
 import { Skeleton as SkeletonMui } from '@mui/material';
 import { FC } from 'react';
-import { generateWidth, WidthProps } from '../../props/width';
+import { WidthProps } from '../../props/width';
 
 export interface SkeletonProps extends WidthProps {
     variant?: 'rectangular' | 'text' | 'rounded' | 'circular';
@@ -19,15 +18,14 @@ export const Skeleton: FC<SkeletonProps> = (props) => {
         backgroundColor = 'rgba(255, 255, 255, 0.2)',
     } = props;
 
-    const theme = useTheme();
-
     return (
         <SkeletonMui
             variant={variant}
-            width={generateWidth(props, '100%')}
+            width={'100%'}
+            // width={generateWidth(props, '100%')}
             height={height}
             style={{
-                borderRadius: variant === 'circular' ? '100%' : theme.radius.small,
+                borderRadius: variant === 'circular' ? '100%' : 12,
             }}
             animation={animation}
             sx={{
