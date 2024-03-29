@@ -1,4 +1,4 @@
-import { QuestionMarkCircleFill } from 'gthibaud-icons-react';
+import { QuestionMarkCircleFill } from 'gthibaud-icons-react/lib/components/QuestionMarkCircleFill';
 import { FC } from 'react';
 import { NotAvailableTooltip } from '../NotAvailable/tooltip';
 import { Tooltip } from '../_Tooltip';

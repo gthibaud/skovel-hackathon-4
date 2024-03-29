@@ -1,5 +1,8 @@
-import Link from 'next/link';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import { FC } from 'react';
+import { Button as ButtonAria, Link } from 'react-aria-components';
 import './styles.css';
 
 interface ButtonProps {
@@ -27,10 +30,12 @@ export const Button: FC<ButtonProps> = (props) => {
         title = 'button',
     } = props;
 
+    const router = useRouter();
+
     if (to) {
         return (
             <Link
-                href={to || '/'}
+                onPress={() => router.push(to || '/')}
                 className={`button button-${variant} button-size-${size}`}
                 style={style}
             >
@@ -40,14 +45,14 @@ export const Button: FC<ButtonProps> = (props) => {
     }
 
     return (
-        <button
+        <ButtonAria
             className={`button button-${variant} button-size-${size}`}
-            onClick={touchDetection ? undefined : onClick}
-            onTouchEnd={touchDetection ? onClick : undefined}
+            onPressStart={touchDetection ? undefined : onClick}
+            onPressEnd={touchDetection ? onClick : undefined}
             style={style}
-            title={typeof children === 'string' ? children : title}
+            aria-label={typeof children === 'string' ? children : title}
         >
             {isLoading ? '...' : children}
-        </button>
+        </ButtonAria>
     );
 };

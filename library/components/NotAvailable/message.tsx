@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { ThumbUpFill } from 'gthibaud-icons-react';
+import { ThumbUpFill } from 'gthibaud-icons-react/lib/components/ThumbUpFill';
 import { t } from 'i18next';
 import { FC } from 'react';
 import { Typography } from '../Typography';

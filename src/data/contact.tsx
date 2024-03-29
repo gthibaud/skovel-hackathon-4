@@ -1,4 +1,7 @@
-import { EmailFill, Facebook, Instagram, Twitter } from 'gthibaud-icons-react';
+import { EmailFill } from 'gthibaud-icons-react/lib/components/EmailFill';
+import { Facebook } from 'gthibaud-icons-react/lib/components/Facebook';
+import { Instagram } from 'gthibaud-icons-react/lib/components/Instagram';
+import { Twitter } from 'gthibaud-icons-react/lib/components/Twitter';
 import { ReactElement } from 'react';
 
 export type Contact = {

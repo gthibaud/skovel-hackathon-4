@@ -4,7 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useRef, useState } from 'react';
 
 import { MenuItem } from '@/data/menu';
-import { ChevronRightBold } from 'gthibaud-icons-react';
+import { ChevronRightBold } from 'gthibaud-icons-react/lib/components/ChevronRightBold';
 import { ChevronDown } from '../../../../icons/chevron-down';
 import './styles.css';
 

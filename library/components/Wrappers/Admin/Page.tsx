@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import { ArrowOut } from 'gthibaud-icons-react';
+import { ArrowOut } from 'gthibaud-icons-react/lib/components/ArrowOut';
 import { FC } from 'react';
 import { auth } from '../../../../src/api/firebase';
 import { generateGravatarUrl } from '../../../api/gravatar';

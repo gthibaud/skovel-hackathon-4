@@ -1,6 +1,6 @@
 import { contact } from '@/data/contact';
-import Link from 'next/link';
 import { Card } from '../../../library/components/Card';
+import { Link } from '../../../library/components/Link';
 import './styles.css';
 
 export default function Contact() {
@@ -13,13 +13,13 @@ export default function Contact() {
             <h1>Contact</h1>
             <p>
                 Vous n&apos;avez pas trouvé la réponse à votre question sur la page{' '}
-                <Link href="about/questions">FAQ</Link> ? Envoyez-nous un email ou contactez-nous
-                via les réseaux sociaux :
+                <Link to="about/questions">FAQ</Link> ? Envoyez-nous un email ou contactez-nous via
+                les réseaux sociaux :
             </p>
             <div className="contact-links">
                 {contact.map((item) => (
-                    <a
-                        href={item.link}
+                    <Link
+                        to={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         key={item.id}
@@ -31,7 +31,7 @@ export default function Contact() {
                             {item.icon}
                             <p className="name">{formatType(item.type)}</p>
                         </Card>
-                    </a>
+                    </Link>
                 ))}
             </div>
             <p>Vous pouvez également nous écrire à l&apos;adresse postale suivante :</p>

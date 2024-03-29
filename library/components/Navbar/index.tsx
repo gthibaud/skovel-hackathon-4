@@ -3,7 +3,7 @@
 import { editions } from '@/data/editions';
 import { MenuItem, menu } from '@/data/menu';
 import { Backdrop } from '@mui/material';
-import { Cross } from 'gthibaud-icons-react';
+import { Cross } from 'gthibaud-icons-react/lib/components/Cross';
 import Image from 'next/image';
 import { FC, useEffect, useRef, useState } from 'react';
 import { ChevronDown } from '../../icons/chevron-down';

@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import { ChevronLeft } from 'gthibaud-icons-react';
+import { ChevronLeft } from 'gthibaud-icons-react/lib/components/ChevronLeft';
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
 import { Button } from '../../_Button';

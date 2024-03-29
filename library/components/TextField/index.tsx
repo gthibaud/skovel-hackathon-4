@@ -3,7 +3,7 @@ import type { FilledTextFieldProps } from '@mui/material';
 import { TextField as TextFieldMUI } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import type { SxProps } from '@mui/system';
-import { ArrowUpCircleFill } from 'gthibaud-icons-react';
+import { ArrowUpCircleFill } from 'gthibaud-icons-react/lib/components/ArrowUpCircleFill';
 import type { ElementType, FC } from 'react';
 import toast from 'react-hot-toast';
 import { IconButton } from '../_Button/Icon';

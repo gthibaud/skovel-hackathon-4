@@ -1,6 +1,7 @@
 'use client';
 
-import { CrossCircleFill, Search } from 'gthibaud-icons-react';
+import { CrossCircleFill } from 'gthibaud-icons-react/lib/components/CrossCircleFill';
+import { Search } from 'gthibaud-icons-react/lib/components/Search';
 import { FC } from 'react';
 import {
     Input as AriaInput,

@@ -1,6 +1,6 @@
 import { Box, IconButton, ListItem, ListItemProps, ListItemText, Skeleton } from '@mui/material';
 import { TypographyTypeMap } from '@mui/material/Typography';
-import { Copy } from 'gthibaud-icons-react';
+import { Copy } from 'gthibaud-icons-react/lib/components/Copy';
 import type { ElementType, FC, ReactNode } from 'react';
 import { share } from '../../utils/share';
 import { CodeBlock } from '../CodeBlock';

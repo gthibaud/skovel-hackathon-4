@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardHeader, Collapse, Typography } from '@mui/material';
-import { ExclamationCircleFill } from 'gthibaud-icons-react';
+import { ExclamationCircleFill } from 'gthibaud-icons-react/lib/components/ExclamationCircleFill';
 import type { FC } from 'react';
 
 interface WarningCardProps {

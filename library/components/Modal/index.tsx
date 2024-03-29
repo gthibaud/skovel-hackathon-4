@@ -1,5 +1,5 @@
 import { Modal as ModalMUI } from '@mui/material';
-import { CloseColor } from 'gthibaud-icons-react';
+import { CloseColor } from 'gthibaud-icons-react/lib/components/CloseColor';
 import { FC, ReactElement } from 'react';
 import { HeightProps, generateHeight } from '../../props/height';
 import { HorizontalContainer } from '../Container/Horizontal';

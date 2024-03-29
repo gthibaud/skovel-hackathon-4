@@ -1,6 +1,7 @@
 import { Skeleton } from '@mui/material';
 import { UseQueryResult } from '@tanstack/react-query';
-import { ChevronRight, HomeFill } from 'gthibaud-icons-react';
+import { ChevronRight } from 'gthibaud-icons-react/lib/components/ChevronRight';
+import { HomeFill } from 'gthibaud-icons-react/lib/components/HomeFill';
 import type { FC } from 'react';
 import React from 'react';
 import toast from 'react-hot-toast';

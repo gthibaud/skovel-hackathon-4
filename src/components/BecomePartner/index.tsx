@@ -1,4 +1,4 @@
-import { ArrowRight } from 'gthibaud-icons-react';
+import { ArrowRight } from 'gthibaud-icons-react/lib/components/ArrowRight';
 import { FC } from 'react';
 import { Button } from '../../../library/components/Button';
 import { Card } from '../../../library/components/Card';

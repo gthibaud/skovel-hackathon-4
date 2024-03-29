@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react';
-import { SearchNotFound } from 'gthibaud-icons-react';
+import { SearchNotFound } from 'gthibaud-icons-react/lib/components/SearchNotFound';
 import { FC } from 'react';
 import { VerticalContainer } from '../Container/Vertical';
 import { Typography } from '../Typography';

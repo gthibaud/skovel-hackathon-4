@@ -1,4 +1,4 @@
-import { Share } from 'gthibaud-icons-react';
+import { Share } from 'gthibaud-icons-react/lib/components/Share';
 import { FC } from 'react';
 import { share } from '../../../utils/share';
 import { Button } from '../../_Button';

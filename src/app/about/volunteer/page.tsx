@@ -1,6 +1,6 @@
 import './styles.css';
 
-import { ArrowRight } from 'gthibaud-icons-react';
+import { ArrowRight } from 'gthibaud-icons-react/lib/components/ArrowRight';
 import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
 import { CardText } from '../../../../library/components/CardText';

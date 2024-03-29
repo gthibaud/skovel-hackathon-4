@@ -1,4 +1,4 @@
-import { ArrowRight } from 'gthibaud-icons-react';
+import { ArrowRight } from 'gthibaud-icons-react/lib/components/ArrowRight';
 import Link from 'next/link';
 import { FC } from 'react';
 import './styles.css';
