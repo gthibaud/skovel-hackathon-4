@@ -4,8 +4,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useRef, useState } from 'react';
 
 import { MenuItem } from '@/data/menu';
+import { ChevronBottom } from 'gthibaud-icons-react';
 import { ChevronRightBold } from 'gthibaud-icons-react/lib/components/ChevronRightBold';
-import { ChevronDown } from '../../../../icons/chevron-down';
 import './styles.css';
 
 interface NavbarItemProps {
@@ -51,7 +51,7 @@ export const MobileItem: FC<NavbarItemProps> = (props) => {
                 >
                     {title}{' '}
                     {isDropdownOpened ? (
-                        <ChevronDown className="chevron-down" />
+                        <ChevronBottom className="chevron-down" />
                     ) : (
                         <ChevronRightBold className="chevron-right" />
                     )}

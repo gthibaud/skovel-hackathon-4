@@ -21,6 +21,10 @@
         background-color: var(--colors-primary);
         transform: scale(0.98);
     }
+
+    &:focus {
+        outline: 2px solid var(--colors-text-primary);
+    }
 }
 
 .button-inverted {

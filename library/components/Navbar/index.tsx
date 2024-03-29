@@ -2,11 +2,10 @@
 
 import { editions } from '@/data/editions';
 import { MenuItem, menu } from '@/data/menu';
+import { ChevronBottom, List } from 'gthibaud-icons-react';
 import { Cross } from 'gthibaud-icons-react/lib/components/Cross';
 import Image from 'next/image';
 import { FC, useEffect, useRef, useState } from 'react';
-import { ChevronDown } from '../../icons/chevron-down';
-import { Menu } from '../../icons/menu';
 import { Backdrop } from '../Backdrop';
 import { Button } from '../Button';
 import { MobileItem } from './components/MobileItem';
@@ -100,7 +99,8 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             onClick={handleClick}
                             title={
                                 <span style={{ display: 'flex', alignItems: 'center' }}>
-                                    2024 <ChevronDown style={{ fontSize: '1em' }} />
+                                    2024{' '}
+                                    <ChevronBottom style={{ fontSize: '10px', marginLeft: 4 }} />
                                 </span>
                             }
                             dropdownItems={editions
@@ -150,8 +150,15 @@ export const Navbar: FC<NavbarProps> = (props) => {
                                     setIsMobileMenuOpen(!open);
                                     setIsFocused(!open);
                                 }}
+                                style={{
+                                    height: 42,
+                                }}
                             >
-                                {isMobileMenuOpen ? <Cross /> : <Menu />}
+                                {isMobileMenuOpen ? (
+                                    <Cross />
+                                ) : (
+                                    <List style={{ fontSize: 20, margin: 2 }} />
+                                )}
                             </Button>
                         </div>
                         <div
