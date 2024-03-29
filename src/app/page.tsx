@@ -8,7 +8,6 @@ import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
-import { Map } from '../../library/components/Map';
 import { SearchField } from '../../library/components/SearchField';
 import { VideoPlayer } from '../../library/components/VideoPlayer';
 import './page.css';
@@ -110,9 +109,9 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
             </Card>
             <div className="bento">
                 <Card
-                    title="Localisation"
-                    actionTitle="Accès"
-                    actionTo="/about/access"
+                    title="Résultats"
+                    actionTitle="Toutes les éditions"
+                    actionTo="/editions"
                     style={{ flex: 2 }}
                 >
                     <span
@@ -122,14 +121,10 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                             gap: '1rem',
                         }}
                     >
-                        <p>
-                            Les Vosges seront le décor de la CapybaRun, avec un départ et une
-                            arrivée au Markstein (68).
-                        </p>
-                        <Map
-                            longitude={7.028784}
-                            latitude={47.926232}
-                        />
+                        <p>Retrouvez les résultats et photos des années passées :</p>
+                        <Button to="/2023">Édition 2023</Button>
+                        <Button to="/2022">Édition 2022</Button>
+                        <Button to="/2021">Édition 2021</Button>
                     </span>
                 </Card>
                 <Card
