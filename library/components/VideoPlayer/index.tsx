@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import { FC, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ReactPlayerProps } from 'react-player/lazy';
-import { Skeleton } from '../Skeleton';
 import './styles.css';
 
 interface VideoProps extends ReactPlayerProps {
@@ -17,12 +16,7 @@ interface VideoProps extends ReactPlayerProps {
 }
 
 const ReactPlayer = dynamic(() => import('react-player/youtube'), {
-    loading: () => (
-        <Skeleton
-            width={'100%'}
-            height={'100%'}
-        />
-    ),
+    loading: () => <div></div>,
 });
 
 export const VideoPlayer: FC<VideoProps> = (props) => {

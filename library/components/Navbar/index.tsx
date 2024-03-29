@@ -2,12 +2,12 @@
 
 import { editions } from '@/data/editions';
 import { MenuItem, menu } from '@/data/menu';
-import { Backdrop } from '@mui/material';
 import { Cross } from 'gthibaud-icons-react/lib/components/Cross';
 import Image from 'next/image';
 import { FC, useEffect, useRef, useState } from 'react';
 import { ChevronDown } from '../../icons/chevron-down';
 import { Menu } from '../../icons/menu';
+import { Backdrop } from '../Backdrop';
 import { Button } from '../Button';
 import { MobileItem } from './components/MobileItem';
 import { NavbarItem } from './components/NavbarItem/index';
@@ -188,18 +188,10 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 </div>
             </menu>
             <Backdrop
-                sx={{
-                    color: '#aaa',
-                    zIndex: 1,
-                    backgroundColor: 'rgba(50, 50, 50, 0.3)',
-                    transition: 'all 3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    backdropFilter: 'blur(2px)',
-                }}
                 open={isFocused}
-                transitionDuration={500}
-                onClick={() => {
-                    setIsFocused(false);
+                onClose={() => {
                     setIsMobileMenuOpen(false);
+                    setIsFocused(false);
                 }}
             />
         </>
