@@ -27,6 +27,7 @@ export type MenuItem = {
     to: string;
     icon?: ReactElement;
     iconFill?: ReactElement;
+    logoSrc?: string;
     items?: MenuItem[];
     summary?: string;
     pictureProfile?: string;
@@ -125,16 +126,19 @@ export const menu: MenuItem[] = [
                 title: '200 Km',
                 to: '/races/200km',
                 summary: 'La course reine, 200 km. Oserez-vous relever le défi ?',
+                logoSrc: '/medias/200k-logo.png',
             },
             {
                 title: '90 Km',
                 to: '/races/90km',
                 summary: 'Un parcours de 90 km, idéal pour les débutants.',
+                logoSrc: '/medias/90k-logo.png',
             },
             {
                 title: 'Challenge entreprises',
                 to: '/races/challenge-entreprises',
                 summary: 'Un défi sportif et convivial pour les entreprises.',
+                logoSrc: '/medias/ce-logo.png',
             },
         ],
     },

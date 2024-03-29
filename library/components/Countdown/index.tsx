@@ -2,9 +2,11 @@
 
 import localeFr from 'date-fns/locale/fr';
 import { FC, useState } from 'react';
+import { Map } from '../Map';
 import { useCountdown } from './utils';
 
 import { format } from 'date-fns';
+import Link from 'next/link';
 import './styles.css';
 
 interface CountdownProps {
@@ -16,6 +18,30 @@ export const Countdown: FC<CountdownProps> = (props) => {
 
     const [date, _] = useState<Date>(new Date(startDate * 1000));
     const [days, hours, minutes, seconds] = useCountdown(startDate * 1000);
+
+    return (
+        <Link
+            className="countdown-container"
+            href={'/about/access'}
+        >
+            <div className="countdown">
+                {days} jours, {hours}:{minutes}:{seconds}
+            </div>
+            <p>
+                <div className="title">
+                    {format(date, 'PPP', {
+                        locale: localeFr,
+                    })}{' '}
+                    à 8h au Markstein (68).
+                </div>
+            </p>
+            <Map
+                longitude={7.028784}
+                latitude={47.926232}
+                height={280}
+            />
+        </Link>
+    );
 
     return (
         <div className="countdown-container">

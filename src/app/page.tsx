@@ -71,7 +71,6 @@ export default function Home() {
                 <Card
                     style={{ flex: 1 }}
                     variant="centered"
-                    title="Départ dans :"
                 >
                     <Countdown startDate={1724493600} />
                 </Card>
