@@ -1,5 +1,6 @@
 // import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import Script from 'next/script';
 import { Footer } from '../../library/components/Footer';
 import { Navbar } from '../../library/components/Navbar';
@@ -39,6 +40,57 @@ export default function RootLayout({
             className={`${interVariable.className} antialiased`}
             // className={`${inter.className} ${interVariable.className} antialiased`}
         >
+            <Head>
+                <title>CapybaRun 2024 - 200Km de trail sans assistance au cœur des Vosges</title>
+                <meta
+                    name="description"
+                    content="Découvrez la CapybaRun 2024, un trail de 200Km sans assistance au cœur des Vosges. Départ le 24 août 2024."
+                    key="desc"
+                />
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                    sizes="any"
+                />
+                <link
+                    rel="icon"
+                    href="/icon?<generated>"
+                    type="image/<generated>"
+                    sizes="<generated>"
+                />
+                <meta
+                    property="og:image"
+                    content="<generated>"
+                />
+                <meta
+                    property="og:image:type"
+                    content="<generated>"
+                />
+                <meta
+                    property="og:image:width"
+                    content="<generated>"
+                />
+                <meta
+                    property="og:image:height"
+                    content="<generated>"
+                />
+                <meta
+                    name="twitter:image"
+                    content="<generated>"
+                />
+                <meta
+                    name="twitter:image:type"
+                    content="<generated>"
+                />
+                <meta
+                    name="twitter:image:width"
+                    content="<generated>"
+                />
+                <meta
+                    name="twitter:image:height"
+                    content="<generated>"
+                />
+            </Head>
             <body>
                 <div className="background-color-mask">
                     <Navbar menuItems={menu} />
