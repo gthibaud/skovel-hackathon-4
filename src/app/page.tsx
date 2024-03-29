@@ -1,6 +1,7 @@
 import { ContactSection } from '@/components/ContactSection';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuicklinks } from '@/components/RaceQuicklinks';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../library/components/Button';
@@ -14,6 +15,9 @@ import './page.css';
 export default function Home() {
     return (
         <main className="home">
+            <Head>
+                <title>CapybaRun 2024 – Accueil</title>
+            </Head>
             <Hero
                 imageSrc="/medias/banner.jpeg"
                 imageAlt="Banner image"
