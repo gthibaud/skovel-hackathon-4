@@ -9,6 +9,7 @@
     max-width: 150px;
     /* fixes FF gap */
     transform: translate3d(0, 0, 0);
+    position: relative;
 
     &[data-placement='top'] {
         margin-bottom: 8px;

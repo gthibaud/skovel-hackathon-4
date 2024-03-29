@@ -1,12 +1,7 @@
 'use client';
 
 import { CSSProperties, FC } from 'react';
-import {
-    Button,
-    OverlayArrow,
-    Tooltip as TooltipLabel,
-    TooltipTrigger,
-} from 'react-aria-components';
+import { OverlayArrow, Tooltip as TooltipLabel, TooltipTrigger } from 'react-aria-components';
 
 import './styles.css';
 
@@ -49,8 +44,19 @@ export const Tooltip: FC<TooltipProps> = ({
     // }
 
     return (
+        <TooltipTrigger delay={0}>
+            {children}
+            <TooltipLabel>
+                {arrow && <OverlayArrow />}
+                {title}
+            </TooltipLabel>
+        </TooltipTrigger>
+    );
+
+    return (
         <TooltipTrigger
-            isOpen
+            delay={0}
+
             // delay={0}
             // PopperProps={{
             //     modifiers: [
@@ -89,8 +95,7 @@ export const Tooltip: FC<TooltipProps> = ({
             //     },
             // }}
         >
-            <Button>test</Button>
-            {/* <span style={style}>{children}</span> */}
+            <span style={style}>{children}</span>
             <TooltipLabel
                 placement="top"
                 // style={{
