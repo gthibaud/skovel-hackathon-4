@@ -1,7 +1,9 @@
 .link {
     color: var(--colors-text-primary);
     cursor: pointer;
+}
 
+.link-text {
     &:hover {
         text-decoration: underline;
     }

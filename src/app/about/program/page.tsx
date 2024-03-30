@@ -1,21 +1,22 @@
 import './styles.css';
 
-import Link from 'next/link';
 import { CardText } from '../../../../library/components/CardText';
+import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Program() {
     return (
-        <main>
-            <h1>
-                <Link
-                    href={'/about'}
-                    style={{ opacity: 0.5 }}
-                >
-                    Informations /
-                </Link>{' '}
-                Programme
-            </h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Informations',
+                    to: '/about',
+                },
+                {
+                    label: 'Programme',
+                },
+            ]}
+        >
             <CardText>
                 {`
 La CapybaRun c'est 3 courses, mais aussi un week-end exceptionnel pour les participants tout comme leurs accompagnateurs. Venez nombreux en famille ou entre amis pour partager un moment sportif et festif !
@@ -56,6 +57,6 @@ Venez nombreux pour partager un moment sportif et festif !
 `}
             </CardText>
             <NavigationFooter />
-        </main>
+        </PageLayout>
     );
 }

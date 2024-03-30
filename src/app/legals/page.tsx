@@ -1,9 +1,15 @@
 import { CardText } from '../../../library/components/CardText';
+import { PageLayout } from '../../../library/components/Layout/PageLayout';
 
 export default function Legals() {
     return (
-        <main>
-            <h1>Mentions légales</h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Mentions légales',
+                },
+            ]}
+        >
             <CardText>{`
 ## Informations légales
 
@@ -41,6 +47,6 @@ En vertu de la loi Informatique et Libertés, en date du 6 janvier 1978, l'Utili
  
 Toute utilisation, reproduction, diffusion, commercialisation, modification de toute ou partie du Site, sans autorisation de l’Editeur est prohibée et pourra entraînée des actions et poursuites judiciaires telles que notamment prévues par le Code de la propriété intellectuelle et le Code civil.
             `}</CardText>
-        </main>
+        </PageLayout>
     );
 }

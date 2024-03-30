@@ -1,24 +1,25 @@
 import './styles.css';
 
 import trace from '@/data/trace.json';
-import Link from 'next/link';
 import { CardText } from '../../../../library/components/CardText';
+import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { Map } from '../../../../library/components/Map';
 import { Markdown } from '../../../../library/components/Markdown';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Page() {
     return (
-        <main>
-            <h1>
-                <Link
-                    href={'/races'}
-                    style={{ opacity: 0.5 }}
-                >
-                    Épreuves /
-                </Link>{' '}
-                90 Km
-            </h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Épreuves',
+                    to: '/races',
+                },
+                {
+                    label: '90 Km',
+                },
+            ]}
+        >
             <CardText>
                 <Markdown>{`
 L'épreuve reine de la CapybaRun, le 90 Km est une course d'endurance extrême. Réputée pour être l'une des courses les plus difficiles du calendrier ultra-trail mondial, la CapybaRun 90 Km est un défi pour les coureurs les plus aguerris.
@@ -60,6 +61,6 @@ Alors, ferez-vous partie des moins de 40% de finisher de cette course légendair
 `}</Markdown>
             </CardText>
             <NavigationFooter />
-        </main>
+        </PageLayout>
     );
 }

@@ -20,7 +20,7 @@ export const Link: FC<LinkProps> = (props) => {
     return (
         <LinkAria
             onPress={() => router.push(to || '/')}
-            className={`link ${className}`}
+            className={`link ${className} ${typeof children === 'string' ? 'link-text' : ''}`}
             style={style}
         >
             {children}

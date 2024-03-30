@@ -2,22 +2,23 @@
 import './styles.css';
 
 import { PastEditionsQuickinks } from '@/components/PastEditions';
-import Link from 'next/link';
 import { CardText } from '../../../../library/components/CardText';
+import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function TheRace() {
     return (
-        <main>
-            <h1>
-                <Link
-                    href={'/about'}
-                    style={{ opacity: 0.5 }}
-                >
-                    Informations /
-                </Link>{' '}
-                La course
-            </h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Informations',
+                    to: '/about',
+                },
+                {
+                    label: 'La course',
+                },
+            ]}
+        >
             <CardText>
                 {`
 
@@ -55,6 +56,6 @@ La CapybaRun est ouverte à tous les amateurs de course à pied, qu'ils soient s
                 <PastEditionsQuickinks />
             </CardText>
             <NavigationFooter />
-        </main>
+        </PageLayout>
     );
 }

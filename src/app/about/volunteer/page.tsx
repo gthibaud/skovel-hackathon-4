@@ -1,24 +1,25 @@
 import './styles.css';
 
 import { ArrowRight } from 'gthibaud-icons-react/lib/components/ArrowRight';
-import Link from 'next/link';
 import { Button } from '../../../../library/components/Button';
 import { CardText } from '../../../../library/components/CardText';
+import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { Markdown } from '../../../../library/components/Markdown';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Volunteer() {
     return (
-        <main>
-            <h1>
-                <Link
-                    href={'/about'}
-                    style={{ opacity: 0.5 }}
-                >
-                    Informations /
-                </Link>{' '}
-                Bénévoles
-            </h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Informations',
+                    to: '/about',
+                },
+                {
+                    label: 'Bénévoles',
+                },
+            ]}
+        >
             <CardText>
                 <Markdown>
                     {`
@@ -84,6 +85,6 @@ Venez passer un week-end inoubliable avec l'équipe de la CapybaRun 2024 !
                 </Markdown>
             </CardText>
             <NavigationFooter />
-        </main>
+        </PageLayout>
     );
 }

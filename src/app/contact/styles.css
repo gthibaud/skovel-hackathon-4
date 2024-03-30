@@ -9,10 +9,21 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        color: var(--colors-text);
+        transition: all 0.2s;
 
         svg {
             font-size: 24px;
             fill: var(--colors-text);
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            color: var(--colors-text-primary);
+
+            svg {
+                fill: var(--colors-text-primary);
+            }
         }
     }
 }

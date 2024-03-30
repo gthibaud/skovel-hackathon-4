@@ -1,10 +1,16 @@
+import { PageLayout } from '../../../library/components/Layout/PageLayout';
 import './styles.css';
 
 export default function Events() {
     return (
-        <main>
-            <h1>Actualités</h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Actualités',
+                },
+            ]}
+        >
             <p>Section en cours de développement.</p>
-        </main>
+        </PageLayout>
     );
 }

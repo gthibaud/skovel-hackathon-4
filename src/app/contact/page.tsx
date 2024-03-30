@@ -1,5 +1,6 @@
 import { contact } from '@/data/contact';
 import { Card } from '../../../library/components/Card';
+import { PageLayout } from '../../../library/components/Layout/PageLayout';
 import { Link } from '../../../library/components/Link';
 import './styles.css';
 
@@ -9,8 +10,13 @@ export default function Contact() {
     };
 
     return (
-        <main>
-            <h1>Contact</h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Contact',
+                },
+            ]}
+        >
             <p>
                 Vous n&apos;avez pas trouvé la réponse à votre question sur la page{' '}
                 <Link to="about/questions">FAQ</Link> ? Envoyez-nous un email ou contactez-nous via
@@ -42,6 +48,6 @@ export default function Contact() {
                 <br />
                 75000 Paris
             </p>
-        </main>
+        </PageLayout>
     );
 }

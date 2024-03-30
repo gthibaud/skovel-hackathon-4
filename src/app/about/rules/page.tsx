@@ -1,21 +1,22 @@
 import './styles.css';
 
-import Link from 'next/link';
 import { CardText } from '../../../../library/components/CardText';
+import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { NavigationFooter } from '../../../../library/components/NavigationFooter';
 
 export default function Rules() {
     return (
-        <main>
-            <h1>
-                <Link
-                    href={'/about'}
-                    style={{ opacity: 0.5 }}
-                >
-                    Informations /
-                </Link>{' '}
-                Règlement
-            </h1>
+        <PageLayout
+            breadcrumbs={[
+                {
+                    label: 'Informations',
+                    to: '/about',
+                },
+                {
+                    label: 'Règlement',
+                },
+            ]}
+        >
             <CardText>
                 {`
 **Votre inscription à la course implique votre acceptation du règlement, y compris les nouvelles versions et modifications.**
@@ -265,6 +266,6 @@ Des incidents, vols, dégâts pouvant intervenir aux équipements, matériels, v
 `}
             </CardText>
             <NavigationFooter />
-        </main>
+        </PageLayout>
     );
 }
