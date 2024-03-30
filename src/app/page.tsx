@@ -3,11 +3,11 @@ import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { RaceQuicklinks } from '@/components/RaceQuicklinks';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
+import { Link } from '../../library/components/Link';
 import { SearchField } from '../../library/components/SearchField';
 import { VideoPlayer } from '../../library/components/VideoPlayer';
 import './page.css';
@@ -65,11 +65,12 @@ export default function Home() {
                 <Card
                     style={{ flex: 1 }}
                     variant="centered"
+                    to={'/about/access'}
                 >
                     <Countdown startDate={1724493600} />
                 </Card>
             </div>
-            <div className="bento">
+            <div className="bento-lg">
                 <Card
                     title="La course la plus folle de l'année"
                     actionTitle="À propos"
@@ -98,7 +99,10 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                 actionTitle="FAQ"
                 style={{ flex: 3 }}
             >
-                <Link href="/about/questions">
+                <Link
+                    to="/about/questions"
+                    outline="none"
+                >
                     <SearchField placeholder="Rechercher une information" />
                 </Link>
             </Card>

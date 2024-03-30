@@ -1,6 +1,6 @@
 import { Edition } from '@/data/editions';
-import Link from 'next/link';
 import { FC } from 'react';
+import { Link } from '../../../library/components/Link';
 import { Tooltip } from '../../../library/components/Tooltip';
 
 interface EditionQuickinkProps {
@@ -14,7 +14,7 @@ export const EditionQuicklink: FC<EditionQuickinkProps> = (props) => {
         <Tooltip title={`Édition ${name}`}>
             <Link
                 className="quicklink-container"
-                href={to}
+                to={to}
             >
                 <p className="quicklink-title">{name}</p>
             </Link>

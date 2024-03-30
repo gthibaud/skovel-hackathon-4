@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useRef, useState } from 'react';
 
 import { MenuItem } from '@/data/menu';
+import { Link } from '../../../Link';
 import { DropdownContainer } from '../DropdownContainer';
 import './styles.css';
 
@@ -58,11 +59,14 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
                 {style === 'button' ? (
                     title
                 ) : (
-                    <a
+                    <Link
                         className={`navbar-item navbar-item-${isActive ? 'active' : ''} navbar-item-${isFocused ? 'focused' : ''} navbar-item-${style}`}
+                        to={to}
+                        style={{ color: 'var(--colors-text-subtle)' }}
+                        outline="text"
                     >
                         {title}
-                    </a>
+                    </Link>
                 )}
             </div>
             {dropdownItems && (

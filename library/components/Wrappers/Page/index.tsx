@@ -4,7 +4,7 @@ import { CSSProperties, FC, useEffect, useRef, useState } from 'react';
 import { isThemeColor } from '../../../../src/theme/themeBase';
 import { isUnderBreakpoint } from '../../../hooks/useParentWidth';
 import { VerticalContainer } from '../../Container/Vertical';
-import { usePageContext } from '../../Header/context';
+import { usePageContext } from '../../_Header/context';
 import './style.css';
 
 export const DEFAULT_PAGE_GAP = 14;

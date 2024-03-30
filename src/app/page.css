@@ -25,7 +25,8 @@
     gap: 12px;
 }
 
-.bento {
+.bento,
+.bento-lg {
     display: flex;
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     flex-direction: row;
@@ -40,6 +41,14 @@
 @media (max-width: 700px) {
     .races-card {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .bento-lg {
+        .card-container {
+            min-width: 100%;
+        }
     }
 }
 

@@ -6,7 +6,6 @@ import { Map } from '../Map';
 import { useCountdown } from './utils';
 
 import { format } from 'date-fns';
-import Link from 'next/link';
 import './styles.css';
 
 interface CountdownProps {
@@ -20,10 +19,7 @@ export const Countdown: FC<CountdownProps> = (props) => {
     const [days, hours, minutes, seconds] = useCountdown(startDate * 1000);
 
     return (
-        <Link
-            className="countdown-container"
-            href={'/about/access'}
-        >
+        <div className="countdown-container">
             <div className="countdown">
                 {days} jours, {hours}:{minutes}:{seconds}
             </div>
@@ -40,7 +36,7 @@ export const Countdown: FC<CountdownProps> = (props) => {
                 latitude={47.926232}
                 height={280}
             />
-        </Link>
+        </div>
     );
 
     return (

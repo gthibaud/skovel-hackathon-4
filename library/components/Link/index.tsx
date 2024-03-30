@@ -10,17 +10,21 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     children: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
     className?: string;
     style?: React.CSSProperties;
+    outline?: 'box' | 'text' | 'none';
 }
 
 export const Link: FC<LinkProps> = (props) => {
-    const { to, children, className = '', style } = props;
+    const { to, children, className = '', style, outline } = props;
 
     const router = useRouter();
+
+    const isTextLink = typeof children === 'string';
+    const outlineFormatted = outline || isTextLink ? 'text' : 'box';
 
     return (
         <LinkAria
             onPress={() => router.push(to || '/')}
-            className={`link ${className} ${typeof children === 'string' ? 'link-text' : ''}`}
+            className={`link ${className} ${isTextLink ? 'link-text' : ''} outline-${outlineFormatted}`}
             style={style}
         >
             {children}

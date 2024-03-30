@@ -1,7 +1,7 @@
 import { MenuItem } from '@/data/menu';
-import Link from 'next/link';
 import { FC } from 'react';
 import { Quicklink } from '.';
+import { Link } from '../Link';
 import './styles.css';
 
 interface QuicklinksContainerProps {
@@ -14,8 +14,9 @@ export const QuicklinksContainerRecursive: FC<QuicklinksContainerProps> = (props
     return (
         <div className="quicklinks-container-section">
             <Link
-                href={item.to}
+                to={item.to}
                 className="category"
+                outline="text"
             >
                 <h2>{item.title}</h2>
                 <p>{item.summary}</p>

@@ -4,9 +4,9 @@ import { auth, db } from '@/api/firebase';
 import { TextField } from '@mui/material';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
-import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '../../library/components/Button';
+import { Link } from '../../library/components/Link';
 
 export const Signin = () => {
     const [name, setName] = useState('');
@@ -90,7 +90,7 @@ export const Signin = () => {
                 >
                     Create account
                 </Button>
-                <Link href={'/account'}>I already have an account</Link>
+                <Link to={'/account'}>I already have an account</Link>
             </div>
         </form>
     );

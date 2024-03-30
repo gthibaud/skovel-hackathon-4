@@ -1,7 +1,7 @@
 import { MenuItem } from '@/data/menu';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
+import { Link } from '../../../library/components/Link';
 
 interface RaceQuickinkProps {
     item: MenuItem;
@@ -13,7 +13,7 @@ export const RaceQuicklink: FC<RaceQuickinkProps> = (props) => {
     return (
         <Link
             className="quicklink-container"
-            href={to}
+            to={to}
         >
             <Image
                 src={logoSrc || ''}

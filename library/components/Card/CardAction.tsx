@@ -1,6 +1,6 @@
 import { ArrowRight } from 'gthibaud-icons-react/lib/components/ArrowRight';
-import Link from 'next/link';
 import { FC } from 'react';
+import { Link } from '../Link';
 import './styles.css';
 
 export interface CardActionProps {
@@ -22,9 +22,14 @@ export const CardAction: FC<CardActionProps> = (props) => {
 
     return (
         <div className="card-header-action">
-            <Link href={actionTo || ''}>
-                {actionTitle}{' '}
-                <ArrowRight style={{ fontSize: '0.8 em', marginTop: 2, fill: 'inherit' }} />
+            <Link
+                to={actionTo || ''}
+                outline="text"
+            >
+                <>
+                    {actionTitle}{' '}
+                    <ArrowRight style={{ fontSize: '0.8 em', marginTop: 2, fill: 'inherit' }} />
+                </>
             </Link>
         </div>
     );

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '../Link';
 import './styles.css';
 
 export const Footer = () => {
@@ -7,25 +7,31 @@ export const Footer = () => {
             <div className="footer-content">
                 <div className="footer-left">© CapybaRun – {new Date().getFullYear()}</div>
                 <div className="footer-right">
-                    <a
-                        href="/website-map"
-                        className="hover:underline"
+                    <Link
+                        to="/website-map"
+                        style={{
+                            color: 'white',
+                        }}
                     >
                         Plan du site
-                    </a>
+                    </Link>
                     <Link
-                        href="/legals"
-                        className="hover:underline"
+                        to="/legals"
+                        style={{
+                            color: 'white',
+                        }}
                     >
                         Mentions légales
                     </Link>
-                    <a
-                        href="https://skovel.com"
+                    <Link
+                        to="https://skovel.com"
                         target="_blank"
-                        className="hover:underline"
+                        style={{
+                            color: 'white',
+                        }}
                     >
                         Skovel
-                    </a>
+                    </Link>
                 </div>
             </div>
         </footer>
