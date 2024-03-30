@@ -30,24 +30,31 @@ export const Card: FC<CardProps> = (props) => {
                     outline="box"
                     style={{
                         color: 'inherit',
+                        ...style,
                     }}
+                    className={`card-container card-container-${variant} ${className}`}
                 >
                     {children}
                 </Link>
             );
+        } else {
+            return (
+                <div
+                    className={`card-container card-container-${variant} ${className}`}
+                    style={style}
+                >
+                    {children}
+                </div>
+            );
         }
-        return children;
     };
 
     return addLink(
-        <div
-            className={`card-container card-container-${variant} ${className}`}
-            style={style}
-        >
+        <>
             {props.title || props.actionTo || props.actionElement ? (
                 <CardHeader {...props} />
             ) : null}
             <div className={`card-content-${variant}`}>{renderChildren()}</div>
-        </div>,
+        </>,
     );
 };
