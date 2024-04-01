@@ -42,6 +42,18 @@
     }
 }
 
+.search-field-button {
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+span[data-focused='true'] {
+    input {
+        outline: 2px solid var(--colors-primary-light);
+    }
+}
+
 .react-aria-SearchField {
     &[data-empty] button {
         opacity: 0;

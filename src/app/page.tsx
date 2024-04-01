@@ -8,7 +8,6 @@ import { Button } from '../../library/components/Button';
 import { Card } from '../../library/components/Card';
 import { Countdown } from '../../library/components/Countdown';
 import { Hero } from '../../library/components/Hero';
-import { Link } from '../../library/components/Link';
 import { SearchField } from '../../library/components/SearchField';
 import { VideoPlayer } from '../../library/components/VideoPlayer';
 import './page.css';
@@ -100,12 +99,11 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                 actionTitle="FAQ"
                 style={{ flex: 3 }}
             >
-                <Link
+                <SearchField
+                    placeholder="Rechercher une information"
+                    mode="button"
                     to="/about/questions"
-                    outline="none"
-                >
-                    <SearchField placeholder="Rechercher une information" />
-                </Link>
+                />
             </Card>
             <div className="bento">
                 <Card

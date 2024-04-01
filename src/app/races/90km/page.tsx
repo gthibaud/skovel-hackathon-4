@@ -1,6 +1,7 @@
 import './styles.css';
 
 import trace from '@/data/trace.json';
+import { ButtonSocial } from '../../../../library/components/Button/Social';
 import { CardText } from '../../../../library/components/CardText';
 import { PageLayout } from '../../../../library/components/Layout/PageLayout';
 import { Map } from '../../../../library/components/Map';
@@ -49,6 +50,28 @@ Découvrez et téléchargez le parcours GPX :
                     zoom={8}
                     traceGpx={trace}
                 />
+                <span
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        marginTop: 20,
+                        marginBottom: 20,
+                        gap: 12,
+                    }}
+                >
+                    <p>Ouvrir la trace :</p>
+                    <ButtonSocial
+                        social="komoot"
+                        label="Ouvrir dans Komoot"
+                        to="https://www.komoot.com/fr-fr"
+                    />
+                    <ButtonSocial
+                        social="openrunner"
+                        label="Ouvrir dans OpenRunner"
+                        to="https://www.openrunner.com"
+                    />
+                </span>
                 <br />
                 <Markdown>{`
 ## Un défi pour les plus aguerris
