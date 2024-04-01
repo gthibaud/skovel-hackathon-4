@@ -5,7 +5,7 @@ import './styles.css';
 
 export const PastEditionsQuickinks: FC = () => {
     return (
-        <div className="races-quicklinks-container">
+        <div className="editions-quicklinks-container">
             {editions?.map(
                 (item) =>
                     !item.current && (

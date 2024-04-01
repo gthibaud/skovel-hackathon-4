@@ -1,5 +1,6 @@
 import { ContactSection } from '@/components/ContactSection';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
+import { PastEditionsQuickinks } from '@/components/PastEditions';
 import { RaceQuicklinks } from '@/components/RaceQuicklinks';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -121,9 +122,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                         }}
                     >
                         <p>Retrouvez les résultats et photos des années passées :</p>
-                        <Button to="/2023">Édition 2023</Button>
-                        <Button to="/2022">Édition 2022</Button>
-                        <Button to="/2021">Édition 2021</Button>
+                        <PastEditionsQuickinks />
                     </span>
                 </Card>
                 <Card

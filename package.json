@@ -17,6 +17,7 @@
         "@mui/x-date-pickers": "^6.9.1",
         "@nextui-org/react": "^2.2.9",
         "@owlgrid-dev/types": "^0.0.45",
+        "@primer/octicons-react": "^19.9.0",
         "@react-spring/web": "^9.7.3",
         "@stripe/react-stripe-js": "^2.4.0",
         "@stripe/stripe-js": "^2.4.0",

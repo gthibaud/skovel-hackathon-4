@@ -1,7 +1,8 @@
-.races-quicklinks-container {
+.editions-quicklinks-container {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    flex-wrap: wrap;
 
     .quicklink-container {
         display: flex;
