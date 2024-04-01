@@ -15,10 +15,11 @@ interface NavbarItemProps {
     style?: 'default' | 'button' | 'title' | 'light';
     onClick: () => void;
     className?: string;
+    tabIndex?: number;
 }
 
 export const NavbarItem: FC<NavbarItemProps> = (props) => {
-    const { title, to, dropdownItems, style = 'default', onClick, className } = props;
+    const { title, to, dropdownItems, style = 'default', onClick, className, tabIndex } = props;
 
     const buttonRef = useRef<HTMLDivElement | null>(null);
 
@@ -64,6 +65,7 @@ export const NavbarItem: FC<NavbarItemProps> = (props) => {
                         to={to}
                         style={{ color: 'var(--colors-text-subtle)' }}
                         outline="text"
+                        tabIndex={tabIndex}
                     >
                         {title}
                     </Link>

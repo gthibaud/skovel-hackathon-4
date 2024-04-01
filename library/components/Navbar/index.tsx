@@ -94,6 +94,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             }
                             to="/"
                             style="title"
+                            tabIndex={0} // Make this element the first focusable element of the page
                         />
                         <NavbarItem
                             onClick={handleClick}
