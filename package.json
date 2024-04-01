@@ -41,7 +41,7 @@
         "framer-motion": "^11.0.24",
         "fs-extra": "^11.1.1",
         "geolib": "^3.3.4",
-        "gthibaud-icons-react": "^0.0.86",
+        "gthibaud-icons-react": "^0.0.87",
         "gthibaud-uid": "^0.0.2",
         "i18n": "^0.15.1",
         "i18next": "^22.4.15",
@@ -98,7 +98,7 @@
     },
     "devDependencies": {
         "@owlgrid-dev/prettier-config": "^0.0.6",
-        "@types/autosuggest-highlight": "^3.2.0",
+        "@types/autosuggest-highlight": "^3.2.3",
         "@types/d3": "^7.4.1",
         "@types/dagre": "^0.7.48",
         "@types/fs-extra": "^11.0.4",

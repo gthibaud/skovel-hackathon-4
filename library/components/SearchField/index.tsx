@@ -2,17 +2,18 @@
 
 import { CrossCircleFill } from 'gthibaud-icons-react/lib/components/CrossCircleFill';
 import { Search } from 'gthibaud-icons-react/lib/components/Search';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import {
     Input as AriaInput,
     Button,
     SearchField as SearchFieldAria,
+    SearchFieldProps as SearchFieldAriaProps,
     Text,
 } from 'react-aria-components';
 import { Link } from '../Link';
 import './styles.css';
 
-interface SearchFieldProps {
+interface SearchFieldProps extends SearchFieldAriaProps {
     placeholder?: string;
     autoFocus?: boolean;
     onFocus?: () => void;
@@ -22,6 +23,23 @@ interface SearchFieldProps {
 
 export const SearchField: FC<SearchFieldProps> = (props) => {
     const { placeholder, autoFocus, onFocus, mode = 'search', to } = props;
+
+    // Capture control k to focus on search field
+    useEffect(() => {
+        if (typeof window === 'undefined') {
+            return;
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                const searchField = document.querySelector(
+                    '.search-field-search',
+                ) as HTMLInputElement;
+                searchField.focus();
+            }
+        });
+    }, []);
 
     const wrapLink = (children: any) => {
         return to ? (
@@ -39,7 +57,7 @@ export const SearchField: FC<SearchFieldProps> = (props) => {
     return wrapLink(
         <div className="search-container">
             <Search className="search-icon" />
-            <SearchFieldAria>
+            <SearchFieldAria {...props}>
                 <AriaInput
                     placeholder={placeholder}
                     autoFocus={autoFocus}

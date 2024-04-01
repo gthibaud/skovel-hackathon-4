@@ -49,11 +49,8 @@ export const Markdown: FC<MarkdownProps> = ({ isLoading, children = '', classNam
             height="100%"
         />
     ) : (
-        <ReactMarkdown
-            className={`markdown ${className}`}
-            components={MarkdownComponents}
-        >
-            {children}
-        </ReactMarkdown>
+        <article className={`markdown ${className}`}>
+            <ReactMarkdown components={MarkdownComponents}>{children}</ReactMarkdown>
+        </article>
     );
 };

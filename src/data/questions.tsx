@@ -1,6 +1,21 @@
+import {
+    Basket,
+    Ellipsis,
+    File,
+    ForkKnifeFill,
+    Map,
+    Megaphone,
+    PeopleSlashFill,
+    Profile,
+    Ticket,
+    Trophy,
+} from 'gthibaud-icons-react';
+import { ReactElement } from 'react';
+
 export type Category = {
     id: string;
     name: string;
+    icon: ReactElement;
 };
 
 export type Question = {
@@ -15,42 +30,52 @@ export const questionsCategories: Category[] = [
     {
         id: '1',
         name: 'Accès',
+        icon: <Map />,
     },
     {
         id: '2',
         name: 'Programme',
+        icon: <File />,
     },
     {
         id: '3',
         name: 'Communication',
+        icon: <Megaphone />,
     },
     {
         id: '4',
         name: 'Inscription',
+        icon: <Ticket />,
     },
     {
         id: '5',
         name: 'Tarifs',
+        icon: <Basket />,
     },
     {
         id: '6',
         name: 'Désinscription',
+        icon: <PeopleSlashFill />,
     },
     {
         id: '7',
         name: 'Parcours',
+        icon: <Profile />,
     },
     {
         id: '8',
         name: 'Ravitaillements',
+        icon: <ForkKnifeFill />,
     },
     {
         id: '9',
         name: 'Résultats',
+        icon: <Trophy />,
     },
     {
         id: '10',
-        name: 'Autre',
+        name: 'Autres',
+        icon: <Ellipsis />,
     },
 ];
 

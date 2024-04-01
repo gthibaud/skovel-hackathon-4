@@ -5051,7 +5051,7 @@
     "@turf/invariant" "^6.5.0"
     d3-voronoi "1.1.2"
 
-"@types/autosuggest-highlight@^3.2.0":
+"@types/autosuggest-highlight@^3.2.3":
   version "3.2.3"
   resolved "https://registry.npmjs.org/@types/autosuggest-highlight/-/autosuggest-highlight-3.2.3.tgz#966b4f6b2b8fc9df2838481600500db6b3795aaa"
   integrity sha512-8Mb21KWtpn6PvRQXjsKhrXIcxbSloGqNH50RntwGeJsGPW4xvNhfml+3kKulaKpO/7pgZfOmzsJz7VbepArlGQ==
@@ -7490,10 +7490,10 @@ graphlib@^2.1.8:
   dependencies:
     lodash "^4.17.15"
 
-gthibaud-icons-react@^0.0.86:
-  version "0.0.86"
-  resolved "https://registry.npmjs.org/gthibaud-icons-react/-/gthibaud-icons-react-0.0.86.tgz#c1ed6e18efd0720728b9dbc540b1ce14991f10cf"
-  integrity sha512-1pqNEcpK5gcl5YONGBc325lLoOaMq8yN0ZqxVLmzKKcTqlKySbTR/JB/6+vKfM7pKpwZGiBQovwrsDvQrM0a6Q==
+gthibaud-icons-react@^0.0.87:
+  version "0.0.87"
+  resolved "https://registry.npmjs.org/gthibaud-icons-react/-/gthibaud-icons-react-0.0.87.tgz#6784210c309f1e1eb935a050c8aebd28a22bccc3"
+  integrity sha512-6xXvFoNl5hVgrLqrE7vV3Z3m889QZfOfygu8bW4iaRxV41xMYEnfnMXOYF+XQNw4iOJ48ImqMQUqK+yo+iF0Sg==
 
 gthibaud-uid@^0.0.2:
   version "0.0.2"

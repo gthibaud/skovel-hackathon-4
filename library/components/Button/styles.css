@@ -24,6 +24,10 @@
     }
 
     &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
         outline: 2px solid var(--colors-text-primary);
     }
 }
@@ -37,6 +41,18 @@
         color: var(--colors-primary);
         fill: var(--colors-primary);
         background-color: var(--colors-secondary);
+    }
+}
+
+.button-text {
+    background: none;
+    color: var(--colors-text-light);
+    fill: var(--colors-text-light);
+
+    &:hover {
+        color: var(--colors-primary);
+        fill: var(--colors-primary);
+        background: none;
     }
 }
 

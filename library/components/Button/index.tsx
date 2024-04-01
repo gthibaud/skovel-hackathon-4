@@ -7,7 +7,7 @@ import './styles.css';
 
 export interface ButtonProps {
     children: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
-    variant?: '' | 'inverted';
+    variant?: '' | 'inverted' | 'text';
     to?: string;
     onClick?: (e: any) => void;
     size?: 'small' | 'medium' | 'large';
