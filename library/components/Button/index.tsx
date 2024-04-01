@@ -1,20 +1,25 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import { Button as ButtonAria, Link } from 'react-aria-components';
 import './styles.css';
 
-interface ButtonProps {
+export interface ButtonProps {
     children: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
     variant?: '' | 'inverted';
     to?: string;
     onClick?: (e: any) => void;
     size?: 'small' | 'medium' | 'large';
     isLoading?: boolean;
+    disabled?: boolean;
     style?: any;
     touchDetection?: boolean; // Detects if the user is using a touch device
     title?: string; // Title attribute for the button
+    startIcon?: ReactElement;
+    endIcon?: ReactElement;
+    iconSize?: number;
+    iconStyle?: any;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -23,14 +28,53 @@ export const Button: FC<ButtonProps> = (props) => {
         variant = '',
         to,
         onClick,
+        disabled = false,
         size = 'medium',
         isLoading = false,
         style,
         touchDetection = false,
         title = 'button',
+        startIcon: StartIcon,
+        endIcon: EndIcon,
+        iconSize = 16,
+        iconStyle,
     } = props;
 
     const router = useRouter();
+
+    const renderIcon = (children: any) => {
+        return (
+            <>
+                {StartIcon ? (
+                    <StartIcon.type
+                        // color={textColor}
+                        {...StartIcon.props}
+                        size={iconSize}
+                        style={{
+                            display: 'flex',
+                            margin: '0',
+                            height: '100%',
+                            ...iconStyle,
+                        }}
+                    />
+                ) : null}
+                {children}
+                {EndIcon ? (
+                    <EndIcon.type
+                        // color={textColor}
+                        {...EndIcon.props}
+                        size={iconSize}
+                        style={{
+                            display: 'flex',
+                            margin: '0',
+                            height: '100%',
+                            ...iconStyle,
+                        }}
+                    />
+                ) : null}
+            </>
+        );
+    };
 
     if (to) {
         return (
@@ -39,7 +83,7 @@ export const Button: FC<ButtonProps> = (props) => {
                 className={`button button-${variant} button-size-${size}`}
                 style={style}
             >
-                {isLoading ? '...' : children}
+                {isLoading ? '...' : renderIcon(children)}
             </Link>
         );
     }
@@ -52,7 +96,7 @@ export const Button: FC<ButtonProps> = (props) => {
             style={style}
             aria-label={typeof children === 'string' ? children : title}
         >
-            {isLoading ? '...' : children}
+            {isLoading ? '...' : renderIcon(children)}
         </ButtonAria>
     );
 };

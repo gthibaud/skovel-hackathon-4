@@ -29,6 +29,7 @@ export interface ButtonProps extends WidthProps {
     startIcon?: ElementType;
     endIcon?: ElementType;
     iconSize?: number;
+    iconStyle?: Interpolation<CSSProperties>;
     notAvailable?: boolean;
     titleNotAvailable?: string;
     notAvailableButtonLabel?: string;
@@ -36,7 +37,6 @@ export interface ButtonProps extends WidthProps {
     component?: any;
     style?: Interpolation<CSSProperties>;
     textStyle?: Interpolation<CSSProperties>;
-    iconStyle?: Interpolation<CSSProperties>;
     type?: 'button' | 'submit' | 'reset';
     fwdRef?: any;
     alignContent?: 'center' | 'start' | 'end';

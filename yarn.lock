@@ -7490,10 +7490,10 @@ graphlib@^2.1.8:
   dependencies:
     lodash "^4.17.15"
 
-gthibaud-icons-react@^0.0.85:
-  version "0.0.85"
-  resolved "https://registry.npmjs.org/gthibaud-icons-react/-/gthibaud-icons-react-0.0.85.tgz#fa299f85f4c2a5ddf3581dc78b83855030f96c3a"
-  integrity sha512-2elCJDkRqNzb0z6subkw5SBvo1VoB6SnkUjw8gOg1NSnBGPvtang61cjDcBFhllN/il4WHBqI/yP3Nou0ORFHw==
+gthibaud-icons-react@^0.0.86:
+  version "0.0.86"
+  resolved "https://registry.npmjs.org/gthibaud-icons-react/-/gthibaud-icons-react-0.0.86.tgz#c1ed6e18efd0720728b9dbc540b1ce14991f10cf"
+  integrity sha512-1pqNEcpK5gcl5YONGBc325lLoOaMq8yN0ZqxVLmzKKcTqlKySbTR/JB/6+vKfM7pKpwZGiBQovwrsDvQrM0a6Q==
 
 gthibaud-uid@^0.0.2:
   version "0.0.2"
