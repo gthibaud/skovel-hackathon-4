@@ -1,9 +1,9 @@
 import { useTheme } from '@emotion/react';
 import { FC, useEffect, useState } from 'react';
 import { useScroll } from '../../../hooks/useScroll';
-import { HorizontalContainer } from '../../Container/Horizontal';
-import { VerticalContainer } from '../../Container/Vertical';
 import { Surface } from '../../Surface';
+import { HorizontalContainer } from '../../_Container/Horizontal';
+import { VerticalContainer } from '../../_Container/Vertical';
 import { usePageContext } from '../context';
 import { HeaderActionButton } from './ActionButton';
 import { HeaderBackButton } from './BackButton';

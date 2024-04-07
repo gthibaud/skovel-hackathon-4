@@ -2,8 +2,8 @@ import { useTheme } from '@emotion/react';
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
 import { Button } from '.';
-import { VerticalContainer } from '../Container/Vertical';
 import { Typography } from '../Typography';
+import { VerticalContainer } from '../_Container/Vertical';
 
 export const QUICKLINK_HEIGHT = 80;
 

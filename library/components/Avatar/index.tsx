@@ -1,8 +1,8 @@
 import { Interpolation, useTheme } from '@emotion/react';
 import type { CSSProperties, FC } from 'react';
 import { MarginProps, generateMarginTop } from '../../props/margin';
-import { VerticalContainer } from '../Container/Vertical';
 import { Typography } from '../Typography';
+import { VerticalContainer } from '../_Container/Vertical';
 import { Tooltip } from '../_Tooltip';
 
 interface AvatarProps extends MarginProps {

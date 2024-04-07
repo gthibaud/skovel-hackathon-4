@@ -7,12 +7,12 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import { generateUri } from '../../../src/routes/uriMapping';
 import { Refresh } from '../../icons/refresh';
-import { HorizontalContainer } from '../Container/Horizontal';
-import { VerticalContainer } from '../Container/Vertical';
-import { Divider } from '../Divider';
 import { Typography } from '../Typography';
 import { Button } from '../_Button';
 import { IconButton } from '../_Button/Icon';
+import { HorizontalContainer } from '../_Container/Horizontal';
+import { VerticalContainer } from '../_Container/Vertical';
+import { Divider } from '../_Divider';
 
 export interface CardHeaderProps {
     title?: string | React.ReactNode;

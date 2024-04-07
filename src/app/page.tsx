@@ -108,7 +108,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
             <div className="bento">
                 <Card
                     title="Résultats"
-                    actionTitle="Toutes les éditions"
+                    actionTitle="Éditions précédentes"
                     actionTo="/editions"
                     style={{ flex: 2 }}
                 >

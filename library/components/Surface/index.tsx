@@ -2,10 +2,9 @@
 
 'use client';
 
-import { Interpolation, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import type { CSSProperties, FC } from 'react';
 import React from 'react';
-import { generateHeight, generateMaxHeight } from '../../props/height';
 import {
     generateMarginBottom,
     generateMarginLeft,
@@ -18,7 +17,6 @@ import {
     generatePaddingRight,
     generatePaddingTop,
 } from '../../props/padding';
-import { generateMaxWidth, generateWidth } from '../../props/width';
 import { ContainerProps } from '../Container';
 
 type SurfaceVariant = 'default' | 'glass' | 'transparent' | 'ice';
@@ -26,7 +24,7 @@ type SurfaceVariant = 'default' | 'glass' | 'transparent' | 'ice';
 export interface SurfaceProps extends ContainerProps {
     children?: React.ReactNode;
     variant?: SurfaceVariant;
-    style?: Interpolation<CSSProperties>;
+    // style?: Interpolation<CSSProperties>;
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
@@ -105,10 +103,10 @@ export const Surface: FC<SurfaceProps> = (props) => {
             css={{
                 display: 'flex',
                 borderRadius: disableCorners ? 0 : theme.radius.primary,
-                width: generateWidth(props, '100%'),
-                maxWidth: generateMaxWidth(props),
-                height: generateHeight(props, 'auto'),
-                maxHeight: generateMaxHeight(props),
+                // width: generateWidth(props, '100%'),
+                // maxWidth: generateMaxWidth(props),
+                // height: generateHeight(props, 'auto'),
+                // maxHeight: generateMaxHeight(props),
                 marginTop: generateMarginTop(props, 0),
                 marginBottom: generateMarginBottom(props, 0),
                 marginRight: generateMarginRight(props, 'auto'),

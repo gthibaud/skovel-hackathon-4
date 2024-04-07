@@ -1,0 +1,21 @@
+.hr-text::before,
+.hr-text::after {
+    content: '';
+    flex: 1;
+    border-top: 1.6px solid var(--colors-border);
+}
+
+.hr-text:not(:empty)::before {
+    margin-right: 0.5em;
+}
+
+.hr-text:not(:empty)::after {
+    margin-left: 0.5em;
+}
+
+.hr-text-content {
+    color: var(--colors-text-light);
+    font-weight: 500;
+    font-size: 12px;
+    user-select: none;
+}

@@ -3,7 +3,7 @@ import { ContainerProps } from '@mui/material';
 import { CSSProperties, FC, useEffect, useRef, useState } from 'react';
 import { isThemeColor } from '../../../../src/theme/themeBase';
 import { isUnderBreakpoint } from '../../../hooks/useParentWidth';
-import { VerticalContainer } from '../../Container/Vertical';
+import { VerticalContainer } from '../../_Container/Vertical';
 import { usePageContext } from '../../_Header/context';
 import './style.css';
 

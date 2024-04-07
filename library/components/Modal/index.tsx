@@ -1,11 +1,11 @@
 import { Modal as ModalMUI } from '@mui/material';
 import { CloseColor } from 'gthibaud-icons-react/lib/components/CloseColor';
 import { FC, ReactElement } from 'react';
-import { HeightProps, generateHeight } from '../../props/height';
-import { HorizontalContainer } from '../Container/Horizontal';
+import { HeightProps } from '../../props/height';
 import { Surface } from '../Surface';
 import { Typography } from '../Typography';
 import { IconButtonRaw } from '../_Button/IconRaw';
+import { HorizontalContainer } from '../_Container/Horizontal';
 
 interface ModalProps extends HeightProps {
     open: boolean;
@@ -41,8 +41,8 @@ export const Modal: FC<ModalProps> = (props): JSX.Element => {
                         px={22}
                         pt={18}
                         pb={22}
-                        maxWidth={500}
-                        height={generateHeight(props, 'auto')}
+                        // maxWidth={500}
+                        // height={generateHeight(props, 'auto')}
                         margin={16}
                         style={{
                             flexDirection: closeButton ? 'column' : 'row',

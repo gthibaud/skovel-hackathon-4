@@ -61,3 +61,25 @@
     padding: 12px 24px;
     height: auto;
 }
+
+.button-icon {
+    transition: transform 0.2s ease-in-out;
+    background: none;
+    border: none;
+}
+
+.button-icon:hover {
+    transform: scale(1.1);
+}
+
+.button-icon:active {
+    transform: scale(0.9);
+}
+
+.button-icon:focus {
+    outline: none;
+}
+
+.button-icon:focus-visible {
+    outline: 2px solid var(--colors-text-primary);
+}

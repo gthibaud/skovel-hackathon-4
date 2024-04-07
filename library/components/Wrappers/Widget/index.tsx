@@ -1,8 +1,8 @@
 import { useTheme } from '@emotion/react';
 import { Box } from '@mui/material';
 import { FC } from 'react';
-import { VerticalContainer } from '../../Container/Vertical';
 import { Card } from '../../_Card/Card';
+import { VerticalContainer } from '../../_Container/Vertical';
 import { WidgetWrapperProps } from './props';
 
 export const WidgetWrapper: FC<WidgetWrapperProps> = (props) => {
@@ -40,15 +40,15 @@ export const WidgetWrapper: FC<WidgetWrapperProps> = (props) => {
             title={title}
             seeMoreKey={seeMoreKey}
             innerRef={props.innerRef}
-            style={{
-                borderRadius: disableCorners ? 0 : theme.radius.large,
-            }}
-            {...props}
+            // style={{
+            //     borderRadius: disableCorners ? 0 : theme.radius.large,
+            // }}
+            // {...props}
         >
             <VerticalContainer
                 px={20}
                 pb={16}
-                style={style}
+                // style={style}
             >
                 {children}
             </VerticalContainer>

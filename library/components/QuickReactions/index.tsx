@@ -1,10 +1,10 @@
 import { useTheme } from '@emotion/react';
 import { FC } from 'react';
 import { isUnderBreakpoint } from '../../hooks/useParentWidth';
-import { HorizontalContainer } from '../Container/Horizontal';
 import { Surface } from '../Surface';
 import { Typography } from '../Typography';
 import { EmojiButton } from '../_Button/Emoji';
+import { HorizontalContainer } from '../_Container/Horizontal';
 import { Tooltip } from '../_Tooltip';
 
 export type QuickReaction = {
@@ -64,7 +64,7 @@ export const QuickReactions: FC<QuickReactionsProps> = (props) => {
             paddingX={16}
             paddingY={8}
             gap={16}
-            width={'min-content'}
+            // width={'min-content'}
             style={{
                 marginRight: displayQuickReactionsText && !smallLayout ? 0 : 'auto',
                 marginLeft: displayQuickReactionsText && !smallLayout ? 0 : 'auto',

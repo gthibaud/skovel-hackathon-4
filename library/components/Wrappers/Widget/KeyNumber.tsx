@@ -1,10 +1,10 @@
 import { useTheme } from '@emotion/react';
 import { ElementType, FC } from 'react';
-import { ContainerProps } from '../../Container';
-import { HorizontalContainer } from '../../Container/Horizontal';
-import { VerticalContainer } from '../../Container/Vertical';
 import { Typography } from '../../Typography';
 import { TypographyNumber } from '../../Typography/NumberWrapper';
+import { ContainerProps } from '../../_Container';
+import { HorizontalContainer } from '../../_Container/Horizontal';
+import { VerticalContainer } from '../../_Container/Vertical';
 import { Tooltip } from '../../_Tooltip';
 
 interface WidgetKeyNumberProps extends ContainerProps {

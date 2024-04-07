@@ -1,4 +1,3 @@
-import { Interpolation } from '@emotion/react';
 import { CSSProperties } from 'react';
 import { HeightProps } from '../../../props/height';
 import { CardProps } from '../../_Card/Card';
@@ -6,7 +5,7 @@ import { CardProps } from '../../_Card/Card';
 export type WidgetSize = 'small' | 'medium' | 'large';
 export interface WidgetWrapperProps extends CardProps, HeightProps {
     size?: WidgetSize;
-    style?: Interpolation<CSSProperties>;
+    style?: CSSProperties;
     type?: 'map' | 'default';
 }
 

@@ -1,8 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { Theme, useTheme } from '@emotion/react';
-import { Skeleton } from '@mui/material';
 import { useState, type FC, type ReactNode } from 'react';
-import { isThemeColor } from '../../../src/theme/themeBase';
 import { generatAlignment } from '../../props/alignment';
 import { generateFontSize } from '../../props/fontSize';
 import {
@@ -45,8 +41,6 @@ export const Typography: FC<TypographyProps> = (props) => {
         ...other
     } = props;
 
-    const theme = useTheme();
-
     // If a limit is set, check if the text is longer than the limit
     const isTrimmed = lengthLimit && typeof children === 'string' && children.length > lengthLimit;
     // If the text is trimmed, create a context to toggle the full text
@@ -75,14 +69,15 @@ export const Typography: FC<TypographyProps> = (props) => {
     const renderText = (
         <Component
             className={className}
-            css={{
+            style={{
                 minWidth: 'fit-content',
                 whiteSpace: 'pre-line', // allow line breaks
-                color: isError
-                    ? theme.colors.text.negative
-                    : isThemeColor(color)
-                      ? theme.colors.text[color as keyof Theme['colors']['text']]
-                      : color,
+                color: 'var(--colors-text)',
+                // color: isError
+                //     ? theme.colors.text.negative
+                //     : isThemeColor(color)
+                //       ? theme.colors.text[color as keyof Theme['colors']['text']]
+                //       : color,
                 fontWeight: generateWeight(props, fontWeightMap[variant] || DEFAULT_FONT_WEIGHT),
                 fontSize: generateFontSize(props, fontSizeMap[variant] || DEFAULT_FONT_SIZE),
                 marginTop: generateMarginTop(props, 0),
@@ -96,7 +91,7 @@ export const Typography: FC<TypographyProps> = (props) => {
                     cursor: copyToClipboard ? 'pointer' : 'inherit',
                 },
                 a: {
-                    color: theme.colors.text.primary,
+                    // color: theme.colors.text.primary,
                 },
                 ...style,
             }}
@@ -106,14 +101,14 @@ export const Typography: FC<TypographyProps> = (props) => {
                 {isOpen ? children : trimChildren()}
                 {isTrimmed && (
                     <span
-                        css={{
-                            color: theme.colors.text.primary,
+                        style={{
+                            // color: theme.colors.text.primary,
                             fontWeight: '500',
                             textDecoration: 'none',
-                            '&:hover': {
-                                cursor: 'pointer',
-                                textDecoration: 'underline',
-                            },
+                            // '&:hover': {
+                            //     cursor: 'pointer',
+                            //     textDecoration: 'underline',
+                            // },
                         }}
                         onClick={(e: any) => {
                             e.stopPropagation();
@@ -138,10 +133,11 @@ export const Typography: FC<TypographyProps> = (props) => {
         };
 
         return (
-            <Skeleton
-                height={renderLoaderHeight()}
-                width={loaderLength}
-            />
+            <p>loading</p>
+            // <Skeleton
+            //     height={renderLoaderHeight()}
+            //     width={loaderLength}
+            // />
         );
     }
 

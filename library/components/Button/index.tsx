@@ -6,8 +6,8 @@ import { Button as ButtonAria, Link } from 'react-aria-components';
 import './styles.css';
 
 export interface ButtonProps {
-    children: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
-    variant?: '' | 'inverted' | 'text';
+    children?: string | JSX.Element | JSX.Element[] | (string | JSX.Element)[];
+    variant?: '' | 'inverted' | 'text' | 'raw';
     to?: string;
     onClick?: (e: any) => void;
     size?: 'small' | 'medium' | 'large';

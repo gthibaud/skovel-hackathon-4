@@ -25,6 +25,7 @@
     --colors-text-primary: var(--colors-primary-light);
     --colors-text-subtle: #3f3f41;
     --colors-text-light: #66666e;
+    --colors-text-lighter: #8c8c95;
     --colors-shadow: rgba(0, 0, 0, 0.16);
     --colors-shadow-light: rgba(0, 0, 0, 0.06);
 

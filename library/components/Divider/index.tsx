@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { Theme, useTheme } from '@emotion/react';
 import { FC } from 'react';
 import {
     generateMarginBottom,
@@ -8,30 +6,26 @@ import {
     generateMarginTop,
     MarginProps,
 } from '../../props/margin';
-import { generateSize, SizeProps } from '../../props/size';
-import { Typography } from '../Typography';
+import './styles.css';
 
-interface DividerProps extends SizeProps, MarginProps {
-    color?: keyof Theme['colors']['divider'];
+interface DividerProps extends MarginProps {
+    children: JSX.Element | string | undefined; // Text to display in the middle of the divider. Only available for horizontal orientation
+    color?: string;
     orientation?: 'horizontal' | 'vertical';
     weight?: number;
-    text?: string; // Text to display in the middle of the divider. Only available for horizontal orientation
 }
 
 export const Divider: FC<DividerProps> = (props) => {
-    const { color = 'primary', orientation = 'vertical', text, weight = 2 } = props;
-
-    // Import theme
-    const theme = useTheme();
+    const { color = 'primary', orientation = 'vertical', children, weight = 2 } = props;
 
     // Generate size
-    const size = generateSize(props, '100%');
+    const size = '100%';
 
     // Generate CSS properties that depends on vertical or horizontal orientation
     const generateOrientationDependantStyle = () => {
         if (orientation === 'horizontal') {
             return {
-                borderTop: text ? 'none' : `${weight}px solid ${theme.colors.divider[color]}`,
+                borderTop: children ? 'none' : `${weight}px solid var(--colors-border)`,
                 borderRight: 'none',
                 width: size,
                 height: 0,
@@ -39,7 +33,7 @@ export const Divider: FC<DividerProps> = (props) => {
         } else {
             return {
                 borderTop: 'none',
-                borderRight: theme.divider[color],
+                borderRight: 'var(--colors-border)',
                 width: 0,
                 height: size,
             };
@@ -47,10 +41,11 @@ export const Divider: FC<DividerProps> = (props) => {
     };
 
     // If text is provided, render a horizontal divider with text in the middle
-    if (text) {
+    if (children) {
         return (
             <div
-                css={{
+                className="hr-text"
+                style={{
                     borderLeft: 'none',
                     borderBottom: 'none',
                     marginTop: generateMarginTop(props, 0),
@@ -61,27 +56,9 @@ export const Divider: FC<DividerProps> = (props) => {
                     display: 'flex',
                     alignItems: 'center',
                     alignContent: 'center',
-                    '&::before, &::after': {
-                        content: '""',
-                        flex: 1,
-                        borderTop: `1.6px solid ${theme.colors.divider[color]}`,
-                    },
-                    '&:not(:empty)::before': {
-                        marginRight: '0.5em',
-                    },
-                    '&:not(:empty)::after': {
-                        marginLeft: '0.5em',
-                    },
                 }}
             >
-                <Typography
-                    color="link"
-                    weight={500}
-                    size={12}
-                    disableSelect
-                >
-                    {text}
-                </Typography>
+                <p className="hr-text-content">{children}</p>
             </div>
         );
     }
@@ -89,7 +66,7 @@ export const Divider: FC<DividerProps> = (props) => {
     // Otherwise, render a normal divider
     return (
         <hr
-            css={{
+            style={{
                 borderLeft: 'none',
                 borderBottom: 'none',
                 marginTop: generateMarginTop(props, 0),

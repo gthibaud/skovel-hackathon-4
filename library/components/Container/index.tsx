@@ -1,32 +1,28 @@
-/** @jsxImportSource @emotion/react */
-import { Interpolation } from '@emotion/react';
 import { CSSProperties, FC, ReactNode } from 'react';
-import { generateHeight, generateMaxHeight, HeightProps } from '../../props/height';
 import {
+    MarginProps,
     generateMarginBottom,
     generateMarginLeft,
     generateMarginRight,
     generateMarginTop,
-    MarginProps,
 } from '../../props/margin';
 import {
+    PaddingProps,
     generatePaddingBottom,
     generatePaddingLeft,
     generatePaddingRight,
     generatePaddingTop,
-    PaddingProps,
 } from '../../props/padding';
-import { generateMaxWidth, generateMinWidth, generateWidth, WidthProps } from '../../props/width';
 
 export type AlignOptions = 'start' | 'end' | 'center' | 'stretch';
 
-export interface ContainerProps extends MarginProps, PaddingProps, WidthProps, HeightProps {
+export interface ContainerProps extends MarginProps, PaddingProps {
     spaceBetween?: boolean;
     gap?: number;
     wrap?: boolean;
     direction?: 'row' | 'column';
     children?: ReactNode;
-    style?: Interpolation<CSSProperties>;
+    style?: CSSProperties;
     alignContent?: AlignOptions;
     justifyContent?: AlignOptions;
     alignItems?: AlignOptions;
@@ -56,7 +52,7 @@ export const Container: FC<ContainerProps> = (props: ContainerProps) => {
     return (
         <div
             ref={innerRef}
-            css={{
+            style={{
                 display: 'flex',
                 flexDirection: direction,
                 flexWrap: wrap ? 'wrap' : 'nowrap',
@@ -64,11 +60,11 @@ export const Container: FC<ContainerProps> = (props: ContainerProps) => {
                 alignItems,
                 alignContent,
                 gap: `${gap}px`,
-                width: generateWidth(props, '100%'),
-                maxWidth: generateMaxWidth(props),
-                minWidth: generateMinWidth(props, 'auto'),
-                height: generateHeight(props, 'auto'),
-                maxHeight: generateMaxHeight(props),
+                // width: generateWidth(props, '100%'),
+                // maxWidth: generateMaxWidth(props),
+                // minWidth: generateMinWidth(props, 'auto'),
+                // height: generateHeight(props, 'auto'),
+                // maxHeight: generateMaxHeight(props),
                 marginTop: generateMarginTop(props, 0),
                 marginBottom: generateMarginBottom(props, 0),
                 marginRight: generateMarginRight(props, 'auto'),

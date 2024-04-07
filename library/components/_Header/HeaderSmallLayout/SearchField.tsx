@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Container } from '../../Container';
+import { Container } from '../../_Container';
 import { SearchField } from '../../_SearchField';
 import { usePageContext } from '../context';
 

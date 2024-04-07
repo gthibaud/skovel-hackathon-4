@@ -17,8 +17,8 @@ export const SkeletonSurface: FC<SkeletonSurfaceProps> = (props) => {
     return (
         <Surface
             variant={surfaceVariant}
-            height={minHeight || '100%'}
-            width={'100%'}
+            // height={minHeight || '100%'}
+            // width={'100%'}
             disableCorners={raw}
             disableBorders={raw}
         >
