@@ -19,16 +19,12 @@ export default function Events() {
                     margin: 'auto',
                 }}
             >
-                {events.map((event) => {
-                    // Return events
-                    return (
-                        <EventListItem
-                            key={event.id}
-                            event={event}
-                            // parentWidth={parentWidth}
-                        />
-                    );
-                })}
+                {events.map((event) => (
+                    <EventListItem
+                        key={event.id}
+                        event={event}
+                    />
+                ))}
                 <br />
                 <Divider orientation="horizontal">Fin des résultats</Divider>
             </div>

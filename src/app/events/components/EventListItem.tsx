@@ -84,7 +84,7 @@ export const EventListItem: FC<EventListItemProps> = (props) => {
         //     // maxWidth="md"
         //     onClick={handleClickEvent}
         // >
-        <div // TODO surface
+        <article // TODO surface
             style={{
                 padding: '22px 0',
                 display: 'flex',
@@ -111,6 +111,6 @@ export const EventListItem: FC<EventListItemProps> = (props) => {
             <EventLikes event={event} />
             {/* <EventComments event={event} /> */}
             {/* </VerticalContainer> */}
-        </div>
+        </article>
     );
 };

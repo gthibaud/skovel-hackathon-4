@@ -3,7 +3,7 @@ import { Event } from '../../library/types/Event';
 export const events: Event[] = [
     {
         id: 'slkdjhgsldjkfhg',
-        title: "L'affiche 😍",
+        title: "Présentation de l'affiche 😍",
         description:
             "C'est avec un grand plaisir que nous vous dévoilons l'affiche de cette 3ème édition de la Capybarun ! On espère qu'elle vous plaira autant qu'à nous 🥳. 🎨\n\nUn grand merci à notre artiste @lucie.illustration pour ce magnifique travail !",
         createdAt: new Date(),
@@ -73,7 +73,37 @@ export const events: Event[] = [
         distance: undefined,
         content: {
             id: 'dfvlkjh',
-            type: 'default',
+            type: 'image',
+            src: '/medias/dd.jpg',
+            fileType: 'image',
+            alt: 'Le développement durable',
+        },
+    },
+    {
+        id: 'slkdjhgsldhg',
+        title: "Annonce de l'édition 2024 !",
+        description:
+            "Toute l'équipe de la Capybarun est heureuse de vous annoncer que la 3ème édition de la Capybarun aura lieu du 24 au 25 août 2024 !\n\nNous avons hâte de vous retrouver pour cette nouvelle aventure \n🥳 De nouvelles informations arriveront très bientôt",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        publishedAt: new Date(),
+        visibility: 'published',
+        author: {
+            id: 'premium',
+            displayName: 'Michel Capy',
+        },
+        athletes: [],
+        categories: [],
+        isPartnership: false,
+        likes: 12,
+        position: undefined,
+        distance: undefined,
+        content: {
+            id: 'dfvlkjh',
+            type: 'image',
+            src: '/medias/capybara.jpg',
+            fileType: 'image',
+            alt: 'Toujours sous le signe du capybara',
         },
     },
 ];

@@ -1,7 +1,6 @@
 import { t } from 'i18next';
 import { FC } from 'react';
 import { VerticalContainer } from '../../../../../library/components/Container/Vertical';
-import { Typography } from '../../../../../library/components/Typography';
 import { Event } from '../../../../../library/types/Event';
 import { ContentRaceEvent } from '../../../../../library/types/Event/eventContent';
 import { formatRelativeDate } from '../../../../../library/utils/date';
@@ -37,7 +36,7 @@ export const EventTitle: FC<EventTitleProps> = (props) => {
     };
 
     return (
-        <div
+        <header
             style={{
                 gap: '8px',
                 display: 'flex',
@@ -55,11 +54,9 @@ export const EventTitle: FC<EventTitleProps> = (props) => {
             ) : null}
             <VerticalContainer>
                 {(event.title || event.content.type === 'raceEvent') && (
-                    <Typography
-                        w={600}
-                        s={18}
+                    <h2
                         style={{
-                            userSelect: 'text',
+                            fontSize: '18px',
                         }}
                     >
                         {event.title ||
@@ -68,7 +65,7 @@ export const EventTitle: FC<EventTitleProps> = (props) => {
                                     (event.content as ContentRaceEvent).eventType,
                                     (event.content as ContentRaceEvent).pointName,
                                 ))}
-                    </Typography>
+                    </h2>
                 )}
                 <p
                     style={{
@@ -85,6 +82,6 @@ export const EventTitle: FC<EventTitleProps> = (props) => {
                     {formatRelativeDate(event.publishedAt)}
                 </p>
             </VerticalContainer>
-        </div>
+        </header>
     );
 };

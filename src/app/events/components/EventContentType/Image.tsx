@@ -25,6 +25,8 @@ export const EventContentImage: FC<EventContentImageProps> = (props) => {
                 priority={false}
                 style={{
                     objectFit: 'contain',
+                    width: '100%',
+                    height: 'auto',
                 }}
             />
         </Zoom>
