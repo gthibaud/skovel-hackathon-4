@@ -24,7 +24,7 @@ export const EventsPreview: FC = () => {
                 >
                     <Image
                         src={event.content.src || '/assets/fallback-cropped.jpg'}
-                        alt={event.content.alt}
+                        alt={event.content.alt || 'Event image'}
                         width={56}
                         height={56}
                     />
