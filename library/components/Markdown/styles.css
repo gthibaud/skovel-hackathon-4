@@ -50,3 +50,8 @@
         margin-bottom: 24px;
     }
 }
+
+[data-rmiz-modal-overlay='visible'] {
+    background-color: var(--colors-background-translucent) !important;
+    backdrop-filter: blur(12px);
+}

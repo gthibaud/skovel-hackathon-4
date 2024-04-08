@@ -58,7 +58,7 @@ export const EventLikes: FC<EventLikesProps> = (props) => {
                 icon={eventId && isLiked(eventId) ? <HeartFill /> : <Heart />}
                 title={'Like'}
                 size={24}
-                style={{ fill: eventId && isLiked(eventId) ? '#FD1D1D' : 'var(--color-text)' }}
+                style={{ fill: eventId && isLiked(eventId) ? '#FD1D1D' : 'var(--colors-text)' }}
                 isLoading={!event}
                 onClick={handleLikeEvent}
             />

@@ -74,7 +74,6 @@ const CustomZoomContent: FC<CustomZoomContentProps> = (props) => {
             <figure>
                 {img}
                 <figcaption
-                    className={'hello'}
                     style={{
                         opacity: isLoaded ? 1 : 0,
                         position: 'absolute',

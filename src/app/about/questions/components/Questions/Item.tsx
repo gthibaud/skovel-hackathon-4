@@ -26,7 +26,7 @@ export const QuestionItem: FC<QuestionItemProps> = (props) => {
             <span
                 key={index}
                 style={{
-                    backgroundColor: part.highlight ? 'var(--colors-text-primary)' : 'transparent',
+                    backgroundColor: part.highlight ? 'var(--colors-primary)' : 'transparent',
                     color: part.highlight ? 'white' : 'inherit',
                 }}
             >

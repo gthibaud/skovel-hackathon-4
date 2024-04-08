@@ -101,7 +101,13 @@ export const Navbar: FC<NavbarProps> = (props) => {
                             title={
                                 <span style={{ display: 'flex', alignItems: 'center' }}>
                                     2024{' '}
-                                    <ChevronBottom style={{ fontSize: '10px', marginLeft: 4 }} />
+                                    <ChevronBottom
+                                        style={{
+                                            fill: 'var(--colors-text)',
+                                            fontSize: '10px',
+                                            marginLeft: 4,
+                                        }}
+                                    />
                                 </span>
                             }
                             dropdownItems={editions

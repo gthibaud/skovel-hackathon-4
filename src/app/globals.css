@@ -67,11 +67,12 @@
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
 
-        --colors-primary-light: #78faae;
-        --colors-secondary: #78faae;
+        /* --colors-primary-light: #78faae; */
+        --colors-primary-light: #419468;
+        --colors-secondary: #65d695;
 
         --colors-background: #090909;
-        --colors-background-card: #090909;
+        --colors-background-card: #16181a;
         --colors-background-translucent: #171717d7;
         --colors-border: #646464aa;
         --colors-text: #d8dadb;
