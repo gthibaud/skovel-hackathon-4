@@ -35,6 +35,7 @@ export const Countdown: FC<CountdownProps> = (props) => {
                 longitude={7.028784}
                 latitude={47.926232}
                 height={280}
+                disableInteractions
             />
         </div>
     );

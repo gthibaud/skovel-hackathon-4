@@ -9,10 +9,18 @@ interface MapProps {
     zoom?: number;
     height?: number;
     traceGpx?: any[];
+    disableInteractions?: boolean;
 }
 
 export const Map: FC<MapProps> = (props) => {
-    const { longitude, latitude, zoom = 4, height = 300, traceGpx } = props;
+    const {
+        longitude,
+        latitude,
+        zoom = 4,
+        height = 300,
+        traceGpx,
+        disableInteractions = false,
+    } = props;
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     const [map, setMap] = useState<MapRef | null>(null);
@@ -43,6 +51,11 @@ export const Map: FC<MapProps> = (props) => {
                     longitude,
                     zoom,
                 }}
+                scrollZoom={!disableInteractions}
+                dragPan={!disableInteractions}
+                dragRotate={!disableInteractions}
+                touchZoomRotate={!disableInteractions}
+                doubleClickZoom={false}
                 attributionControl={false}
                 mapStyle={getStyleUrl()}
                 style={{ width: '100%', height }}
