@@ -30,10 +30,12 @@ export const Map: FC<MapProps> = (props) => {
     }, [map]);
 
     useEffect(() => {
-        return window
-            .matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', (e) => setDarkMode(e.matches));
-    }, []);
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setDarkMode(true);
+        } else {
+            setDarkMode(false);
+        }
+    });
 
     const getStyleUrl = () => {
         if (darkMode) {
