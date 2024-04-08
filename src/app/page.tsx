@@ -1,4 +1,5 @@
 import { ContactSection } from '@/components/ContactSection';
+import { EventsPreview } from '@/components/EventsPreview';
 import { PartnersCarousel } from '@/components/Partners/Carousel';
 import { PastEditionsQuickinks } from '@/components/PastEditions';
 import { RaceQuicklinks } from '@/components/RaceQuicklinks';
@@ -109,7 +110,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                 <Card
                     title="Résultats"
                     actionTitle="Éditions précédentes"
-                    actionTo="/editions"
+                    actionTo="/about/the-race#past-editions"
                     style={{ flex: 2 }}
                 >
                     <span
@@ -129,7 +130,7 @@ Préparez-vous à découvrir les plus beaux paysages de la région au cours d'un
                     actionTo="/events"
                     style={{ flex: 3 }}
                 >
-                    Section en cours de développement.
+                    <EventsPreview />
                 </Card>
             </div>
             <Card

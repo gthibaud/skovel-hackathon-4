@@ -50,11 +50,15 @@ La CapybaRun est ouverte à tous les amateurs de course à pied, qu'ils soient s
 
 `}
             </CardText>
-            <CardText title={'Éditions précédentes'}>
-                <p>Retrouvez les résultats et médias des dernières éditions de la CapybaRun :</p>
-                <br />
-                <PastEditionsQuickinks />
-            </CardText>
+            <div id="past-editions">
+                <CardText title={'Éditions précédentes'}>
+                    <p>
+                        Retrouvez les résultats et médias des dernières éditions de la CapybaRun :
+                    </p>
+                    <br />
+                    <PastEditionsQuickinks />
+                </CardText>
+            </div>
             <NavigationFooter />
         </PageLayout>
     );

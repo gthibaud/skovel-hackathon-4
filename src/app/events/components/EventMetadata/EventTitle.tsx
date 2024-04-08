@@ -56,7 +56,7 @@ export const EventTitle: FC<EventTitleProps> = (props) => {
                 {(event.title || event.content.type === 'raceEvent') && (
                     <h2
                         style={{
-                            fontSize: '18px',
+                            fontSize: 20,
                         }}
                     >
                         {event.title ||

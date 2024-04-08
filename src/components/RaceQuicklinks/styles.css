@@ -34,7 +34,8 @@
         }
 
         .quicklink-summary {
-            font-size: 1rem;
+            font-size: 15px;
+            font-weight: 500;
             color: var(--colors-text-light);
         }
     }
